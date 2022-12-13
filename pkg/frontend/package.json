@@ -1,5 +1,5 @@
 {
-  "name": "com.github.loopholelabs.latensee",
+  "name": "io.loopholelabs.latensee",
   "version": "0.0.1",
   "description": "A Redis latency visualization tool.",
   "type": "module",

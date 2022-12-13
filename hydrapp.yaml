@@ -1,5 +1,5 @@
 app:
-  id: com.github.loopholelabs.latensee
+  id: io.loopholelabs.latensee
   name: LatenSee
   summary: Redis latency visualizer
   description: A Redis latency visualization tool.
