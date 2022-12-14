@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/go-redis/redis/v9"
@@ -93,59 +94,78 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 
 	for peerID, peer := range l.Peers() {
 		if peerID == rpc.GetRemoteID(ctx) {
-			ctx, cancel := context.WithCancel(l.ctx)
-			l.cancel = cancel
-
-			for _, command := range l.commands {
-				go func(command string) {
-					defer func() {
-						cancel()
-
-						_ = rdb.Close()
-
-						l.cancel = nil
-					}()
-
-					cmd := []any{}
-					for _, c := range strings.Split(command, " ") {
-						cmd = append(cmd, any(c))
-					}
-
-					res, errs := testCommandLatency(
-						ctx,
-
-						rdb,
-						cmd,
-						l.interval,
-					)
-
-					for {
-						select {
-						case r := <-res:
-							if err := peer.HandleLatencyMeasurement(l.ctx, command, r.Microseconds()); err != nil {
-								log.Println("could not call latency measurement handler, continuing:", err)
-
-								continue
-							}
-						case err := <-errs:
-							if errors.Is(err, context.Canceled) || errors.Is(err, redis.ErrClosed) {
-								return
-							}
-
-							if err := peer.HandleError(l.ctx, err.Error()); err != nil {
-								log.Println("could not call error handler, stopping:", err)
-
-								return
-							}
-
-							return
-						}
-					}
-				}(command)
-			}
 
 			break
 		}
+	}
+
+	ctx, cancel := context.WithCancel(l.ctx)
+	l.cancel = cancel
+
+	for _, command := range l.commands {
+		var wg sync.WaitGroup
+		wg.Add(1)
+
+		go func(command string) {
+			defer func() {
+				cancel()
+
+				_ = rdb.Close()
+
+				l.cancel = nil
+			}()
+
+			cmd := []any{}
+			for _, c := range strings.Split(command, " ") {
+				cmd = append(cmd, any(c))
+			}
+
+			res, errs := testCommandLatency(
+				ctx,
+
+				rdb,
+				cmd,
+				l.interval,
+			)
+
+			ranOnce := false
+			for {
+				select {
+				case r := <-res:
+					if !ranOnce {
+						wg.Done()
+
+						ranOnce = true
+					}
+
+					if err := peer.HandleLatencyMeasurement(l.ctx, command, r.Microseconds()); err != nil {
+						log.Println("could not call latency measurement handler, stopping:", err)
+
+						return
+					}
+				case err := <-errs:
+					if !ranOnce {
+						wg.Done()
+
+						ranOnce = true
+					}
+
+					if errors.Is(err, context.Canceled) || errors.Is(err, redis.ErrClosed) {
+						return
+					}
+
+					if err := peer.HandleError(l.ctx, err.Error()); err != nil {
+						log.Println("could not call error handler, stopping:", err)
+
+						return
+					}
+
+					return
+				}
+			}
+		}(command)
+
+		wg.Wait() // Ensures that the commands are run _in sequential order_ at least once
 	}
 
 	return nil
@@ -180,6 +200,7 @@ func StartServer(ctx context.Context, addr string, heartbeat time.Duration, loca
 
 		time.Second*10,
 		ctx,
+		nil,
 	)
 	l.Peers = registry.Peers
 
