@@ -80,6 +80,10 @@ func (l *local) SetCommands(ctx context.Context, commands []string) error {
 	return nil
 }
 
+func (l *local) GetIsLatencyMeasuring(ctx context.Context) (bool, error) {
+	return l.cancel != nil, nil
+}
+
 func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 	if l.cancel != nil {
 		return ErrAlreadyMeasuring
@@ -92,14 +96,7 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 
 	rdb := redis.NewClient(opt)
 
-	for peerID, peer := range l.Peers() {
-		if peerID == rpc.GetRemoteID(ctx) {
-
-			break
-		}
-	}
-
-	ctx, cancel := context.WithCancel(l.ctx)
+	latencyCtx, cancel := context.WithCancel(l.ctx)
 	l.cancel = cancel
 
 	for _, command := range l.commands {
@@ -121,7 +118,7 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 			}
 
 			res, errs := testCommandLatency(
-				ctx,
+				latencyCtx,
 
 				rdb,
 				cmd,
@@ -138,6 +135,21 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 						ranOnce = true
 					}
 
+					var peer *remote
+					for peerID, candidate := range l.Peers() {
+						if peerID == rpc.GetRemoteID(ctx) {
+							peer = &candidate
+
+							break
+						}
+					}
+
+					if peer == nil {
+						log.Println("could not find peer to write to, stopping")
+
+						return
+					}
+
 					if err := peer.HandleLatencyMeasurement(l.ctx, command, r.Microseconds()); err != nil {
 						log.Println("could not call latency measurement handler, stopping:", err)
 
@@ -151,6 +163,21 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 					}
 
 					if errors.Is(err, context.Canceled) || errors.Is(err, redis.ErrClosed) {
+						return
+					}
+
+					var peer *remote
+					for peerID, candidate := range l.Peers() {
+						if peerID == rpc.GetRemoteID(ctx) {
+							peer = &candidate
+
+							break
+						}
+					}
+
+					if peer == nil {
+						log.Println("could not find peer to write to, stopping")
+
 						return
 					}
 

@@ -7,3 +7,9 @@ $pf-global--image-path: "~@patternfly/patternfly/assets/images";
 
 @import "~@patternfly/patternfly/patternfly.scss";
 @import "~@patternfly/patternfly/patternfly-addons.scss";
+
+body,
+#root,
+.pf-x-chart {
+  height: 100%;
+}
