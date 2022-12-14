@@ -1,0 +1,13 @@
+---
+sdk_path: "/root/Android/Sdk"
+repo_url: "https://loopholelabs.github.io/latenseeapk/master"
+repo_name: Hydrapp F-Droid Repo
+repo_description: >-
+  Android apps for Hydrapp.
+repo_icon: icon.png
+repo_keyalias: io.loopholelabs.latensee
+keystore: keystore.p12
+keystorepass: "asdf"
+keypass: "asdf"
+keydname: CN=Loophole Labs Latensee Certificate
+apksigner: /usr/bin/apksigner

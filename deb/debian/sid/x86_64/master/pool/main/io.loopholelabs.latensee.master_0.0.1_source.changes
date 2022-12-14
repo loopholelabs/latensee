@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Tue, 13 Dec 2022 11:43:28 +0100
+Source: io.loopholelabs.latensee.master
+Architecture: source
+Version: 0.0.1
+Distribution: unstable
+Urgency: medium
+Maintainer: Felicitas Pojtinger <felicitas@pojtinger.com>
+Changed-By: Felicitas Pojtinger <felicitas@pojtinger.com>
+Changes:
+ io.loopholelabs.latensee.master (0.0.1) unstable; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ 70e18d7dc0aca2556ca6642cddaa0ec5b76858a6 972 io.loopholelabs.latensee.master_0.0.1.dsc
+ d214939f067c74f0a6572ee7ebcd4aebb1dc34d1 717280 io.loopholelabs.latensee.master_0.0.1.tar.xz
+ 0f6069472c82396e7ddaf33df8aee76f3163ec1e 20685 io.loopholelabs.latensee.master_0.0.1_amd64.buildinfo
+Checksums-Sha256:
+ 6bcdf41f3439b865ba4899dec530ee07b0131eac700772bce5c20b621bb707b0 972 io.loopholelabs.latensee.master_0.0.1.dsc
+ 22bc5b7f1cf536b785c8822f6e55a8cbda334d547a7ff063527b0c52dc1470f2 717280 io.loopholelabs.latensee.master_0.0.1.tar.xz
+ e1f92859cac9d326f212e3373099b1377817e846d0187525889dd804bbe339e9 20685 io.loopholelabs.latensee.master_0.0.1_amd64.buildinfo
+Files:
+ b1d2f28e531e1d55cf0aa3ce93355806 972 utils optional io.loopholelabs.latensee.master_0.0.1.dsc
+ f032eb5b17e3be35bb2808c1ceff05cc 717280 utils optional io.loopholelabs.latensee.master_0.0.1.tar.xz
+ d58bd3825e8eb4c56c3e298622d9566a 20685 utils optional io.loopholelabs.latensee.master_0.0.1_amd64.buildinfo
