@@ -1,0 +1,1 @@
+{"commandLine":["/usr/bin/fdroid gpgsign"],"endTimestamp":1671119436965,"signed":["io.loopholelabs.latensee.main.apk"],"startTimestamp":1671119436000,"subcommand":"gpgsign"}
