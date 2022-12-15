@@ -18,8 +18,8 @@ import (
 	frontend "github.com/loopholelabs/latensee/pkg/frontend"
 )
 
-//export Java_com_github_loopholelabs_latensee_MainActivity_LaunchBackend
-func Java_com_github_loopholelabs_latensee_MainActivity_LaunchBackend(env *C.JNIEnv, activity C.jobject) C.jstring {
+//export Java_io_loopholelabs_latensee_MainActivity_LaunchBackend
+func Java_io_loopholelabs_latensee_MainActivity_LaunchBackend(env *C.JNIEnv, activity C.jobject) C.jstring {
 	backendURL, _, err := backend.StartServer(context.Background(), "", time.Second*10, false)
 	if err != nil {
 		log.Fatalln("could not start backend:", err)
