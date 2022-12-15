@@ -11,6 +11,7 @@
   "author": "Felicitas Pojtinger <felicitas@pojtinger.com>",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
+    "@types/papaparse": "^5.3.5",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "react-scripts": "5.0.1",
@@ -23,6 +24,7 @@
     "@patternfly/react-core": "^4.264.0",
     "@patternfly/react-icons": "^4.93.0",
     "@pojntfx/dudirekta": "^0.3.0",
+    "papaparse": "^5.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "usehooks-ts": "^2.9.1"

@@ -14,11 +14,25 @@ import {
   PageSection,
   PageSectionVariants,
 } from "@patternfly/react-core";
-import { PauseIcon, PlayIcon } from "@patternfly/react-icons";
+import {
+  DownloadIcon,
+  PauseIcon,
+  PlayIcon,
+  TimesIcon,
+} from "@patternfly/react-icons";
 import { bind } from "@pojntfx/dudirekta";
+import Papa from "papaparse";
 import { useEffect, useState } from "react";
 import { useElementSize } from "usehooks-ts";
 import "./main.scss";
+
+const getSeconds = (
+  results: IResults,
+  intervalMilliSecond: number,
+  j: number
+) =>
+  (results.offset * intervalMilliSecond) / 1000 +
+  (j * intervalMilliSecond) / 1000;
 
 interface IResults {
   offset: number;
@@ -114,6 +128,8 @@ const App = () => {
 
   const [ref, { width, height }] = useElementSize();
 
+  const [isStoppable, setIsStoppable] = useState(false);
+
   return ready ? (
     <>
       <Page
@@ -123,19 +139,100 @@ const App = () => {
             logoComponent="span"
             headerTools={
               <PageHeaderTools>
+                {!isLatencyMeasuring && results.offset !== 0 && (
+                  <Button
+                    variant="tertiary"
+                    icon={<DownloadIcon />}
+                    onClick={() => {
+                      const element = document.createElement("a");
+                      element.setAttribute(
+                        "href",
+                        "data:text/plain;charset=utf-8," +
+                          encodeURIComponent(
+                            Papa.unparse({
+                              fields: [
+                                "timestampSeconds",
+                                "command",
+                                "latencyMicroSecond",
+                              ],
+                              data: Object.keys(results.commands)
+                                .map((command) =>
+                                  results.commands[command].map(
+                                    (latencyMicrosecond, j) => [
+                                      getSeconds(
+                                        results,
+                                        intervalMilliSecond,
+                                        j
+                                      ),
+                                      command,
+                                      latencyMicrosecond,
+                                    ]
+                                  )
+                                )
+                                .reduce((prev, curr) => [...prev, ...curr], []),
+                            })
+                          )
+                      );
+                      element.setAttribute("download", "latensee.csv");
+
+                      element.style.display = "none";
+                      document.body.appendChild(element);
+
+                      element.click();
+
+                      document.body.removeChild(element);
+                    }}
+                    className="pf-u-mr-md"
+                  >
+                    {" "}
+                    Download CSV
+                  </Button>
+                )}
+
+                {isStoppable && (
+                  <Button
+                    variant="danger"
+                    icon={<TimesIcon />}
+                    onClick={() => {
+                      remote.StopLatencyMeasurement();
+
+                      setIsStoppable(false);
+                      setIsLatencyMeasuring(false);
+                    }}
+                    className="pf-u-mr-md"
+                  >
+                    {" "}
+                    Stop test
+                  </Button>
+                )}
+
                 <Button
                   variant="primary"
                   icon={isLatencyMeasuring ? <PauseIcon /> : <PlayIcon />}
                   onClick={() => {
                     setIsLatencyMeasuring((latency) => !latency);
+                    setIsStoppable(true);
 
-                    isLatencyMeasuring
-                      ? remote.StopLatencyMeasurement()
-                      : remote.StartLatencyMeasurement();
+                    if (isLatencyMeasuring) {
+                      remote.StopLatencyMeasurement();
+
+                      return;
+                    }
+
+                    if (!isStoppable) {
+                      setResults({ offset: 0, commands: {} });
+                    }
+
+                    remote.StartLatencyMeasurement();
                   }}
                 >
                   {" "}
-                  {isLatencyMeasuring ? "Stop" : "Start"} test
+                  {isLatencyMeasuring
+                    ? "Pause"
+                    : isStoppable
+                    ? "Resume"
+                    : "Start"}{" "}
+                  test
                 </Button>
               </PageHeaderTools>
             }
@@ -194,9 +291,7 @@ const App = () => {
                       name={command}
                       data={results.commands[command].map(
                         (latencyMicroSecond, j) => ({
-                          x:
-                            (results.offset * intervalMilliSecond) / 1000 +
-                            (j * intervalMilliSecond) / 1000,
+                          x: getSeconds(results, intervalMilliSecond, j),
                           y: latencyMicroSecond,
                         })
                       )}
