@@ -12,4 +12,13 @@ body,
 #root,
 .pf-x-chart {
   height: 100%;
+  background: var(--pf-c-page__main-section--m-light--BackgroundColor);
+}
+
+.pf-c-toolbar__content {
+  overflow-x: auto;
+}
+
+.pf-c-toolbar__content-section {
+  flex-wrap: nowrap;
 }

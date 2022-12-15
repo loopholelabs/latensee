@@ -13,8 +13,12 @@ import {
   PageHeaderTools,
   PageSection,
   PageSectionVariants,
+  Toolbar,
+  ToolbarContent,
+  ToolbarItem,
 } from "@patternfly/react-core";
 import {
+  CogIcon,
   DownloadIcon,
   PauseIcon,
   PlayIcon,
@@ -139,101 +143,133 @@ const App = () => {
             logoComponent="span"
             headerTools={
               <PageHeaderTools>
-                {!isLatencyMeasuring && results.offset !== 0 && (
-                  <Button
-                    variant="tertiary"
-                    icon={<DownloadIcon />}
-                    onClick={() => {
-                      const element = document.createElement("a");
-                      element.setAttribute(
-                        "href",
-                        "data:text/plain;charset=utf-8," +
-                          encodeURIComponent(
-                            Papa.unparse({
-                              fields: [
-                                "timestampSeconds",
-                                "command",
-                                "latencyMicroSecond",
-                              ],
-                              data: Object.keys(results.commands)
-                                .map((command) =>
-                                  results.commands[command].map(
-                                    (latencyMicrosecond, j) => [
-                                      getSeconds(
-                                        results,
-                                        intervalMilliSecond,
-                                        j
+                <Toolbar>
+                  <ToolbarContent>
+                    <ToolbarItem>
+                      <Button
+                        variant="plain"
+                        onClick={() => console.log("Settings")}
+                      >
+                        <CogIcon />
+                      </Button>
+                    </ToolbarItem>
+
+                    {!isLatencyMeasuring && results.offset !== 0 && (
+                      <ToolbarItem>
+                        <Button
+                          variant="tertiary"
+                          onClick={() => {
+                            const element = document.createElement("a");
+                            element.setAttribute(
+                              "href",
+                              "data:text/plain;charset=utf-8," +
+                                encodeURIComponent(
+                                  Papa.unparse({
+                                    fields: [
+                                      "timestampSeconds",
+                                      "command",
+                                      "latencyMicroSecond",
+                                    ],
+                                    data: Object.keys(results.commands)
+                                      .map((command) =>
+                                        results.commands[command].map(
+                                          (latencyMicrosecond, j) => [
+                                            getSeconds(
+                                              results,
+                                              intervalMilliSecond,
+                                              j
+                                            ),
+                                            command,
+                                            latencyMicrosecond,
+                                          ]
+                                        )
+                                      )
+                                      .reduce(
+                                        (prev, curr) => [...prev, ...curr],
+                                        []
                                       ),
-                                      command,
-                                      latencyMicrosecond,
-                                    ]
-                                  )
+                                  })
                                 )
-                                .reduce((prev, curr) => [...prev, ...curr], []),
-                            })
-                          )
-                      );
-                      element.setAttribute("download", "latensee.csv");
+                            );
+                            element.setAttribute("download", "latensee.csv");
 
-                      element.style.display = "none";
-                      document.body.appendChild(element);
+                            element.style.display = "none";
+                            document.body.appendChild(element);
 
-                      element.click();
+                            element.click();
 
-                      document.body.removeChild(element);
-                    }}
-                    className="pf-u-mr-md"
-                  >
-                    {" "}
-                    Download CSV
-                  </Button>
-                )}
+                            document.body.removeChild(element);
+                          }}
+                        >
+                          <DownloadIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
 
-                {isStoppable && (
-                  <Button
-                    variant="danger"
-                    icon={<TimesIcon />}
-                    onClick={() => {
-                      remote.StopLatencyMeasurement();
+                          <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                            Download CSV
+                          </span>
+                        </Button>
+                      </ToolbarItem>
+                    )}
 
-                      setIsStoppable(false);
-                      setIsLatencyMeasuring(false);
-                    }}
-                    className="pf-u-mr-md"
-                  >
-                    {" "}
-                    Stop test
-                  </Button>
-                )}
+                    <ToolbarItem variant="separator" />
 
-                <Button
-                  variant="primary"
-                  icon={isLatencyMeasuring ? <PauseIcon /> : <PlayIcon />}
-                  onClick={() => {
-                    setIsLatencyMeasuring((latency) => !latency);
-                    setIsStoppable(true);
+                    {isStoppable && (
+                      <ToolbarItem>
+                        <Button
+                          variant="danger"
+                          onClick={() => {
+                            remote.StopLatencyMeasurement();
 
-                    if (isLatencyMeasuring) {
-                      remote.StopLatencyMeasurement();
+                            setIsStoppable(false);
+                            setIsLatencyMeasuring(false);
+                          }}
+                        >
+                          <TimesIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
 
-                      return;
-                    }
+                          <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                            Stop test
+                          </span>
+                        </Button>
+                      </ToolbarItem>
+                    )}
 
-                    if (!isStoppable) {
-                      setResults({ offset: 0, commands: {} });
-                    }
+                    <ToolbarItem>
+                      <Button
+                        variant="primary"
+                        onClick={() => {
+                          setIsLatencyMeasuring((latency) => !latency);
+                          setIsStoppable(true);
 
-                    remote.StartLatencyMeasurement();
-                  }}
-                >
-                  {" "}
-                  {isLatencyMeasuring
-                    ? "Pause"
-                    : isStoppable
-                    ? "Resume"
-                    : "Start"}{" "}
-                  test
-                </Button>
+                          if (isLatencyMeasuring) {
+                            remote.StopLatencyMeasurement();
+
+                            return;
+                          }
+
+                          if (!isStoppable) {
+                            setResults({ offset: 0, commands: {} });
+                          }
+
+                          remote.StartLatencyMeasurement();
+                        }}
+                      >
+                        {isLatencyMeasuring ? (
+                          <PauseIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                        ) : (
+                          <PlayIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                        )}
+
+                        <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                          {isLatencyMeasuring
+                            ? "Pause"
+                            : isStoppable
+                            ? "Resume"
+                            : "Start"}{" "}
+                          test
+                        </span>
+                      </Button>
+                    </ToolbarItem>
+                  </ToolbarContent>
+                </Toolbar>
               </PageHeaderTools>
             }
           />
