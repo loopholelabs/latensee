@@ -531,7 +531,7 @@ const App = () => {
                 containerComponent={
                   <CursorVoronoiContainer
                     cursorDimension="x"
-                    labels={({ datum }: any) => `${datum.y} µs`}
+                    labels={({ datum }: any) => `${datum.y / 1000} ms`}
                     labelComponent={
                       <ChartLegendTooltip
                         legendData={legendData}
@@ -556,7 +556,7 @@ const App = () => {
                 <ChartAxis tickFormat={(tick) => tick.toFixed(1) + " s"} />
                 <ChartAxis
                   dependentAxis
-                  tickFormat={(tick) => tick.toFixed(0) + " µs"}
+                  tickFormat={(tick) => tick.toFixed(0) / 1000 + " ms"}
                 />
 
                 <ChartGroup>
