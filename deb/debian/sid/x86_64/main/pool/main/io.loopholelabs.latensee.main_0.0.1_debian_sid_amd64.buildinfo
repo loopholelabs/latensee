@@ -4,17 +4,17 @@ Binary: io.loopholelabs.latensee.main
 Architecture: amd64 source
 Version: 0.0.1
 Checksums-Md5:
- 887087934282c6a556a28e10c21c7cbd 960 io.loopholelabs.latensee.main_0.0.1.dsc
- d6a79f7834bd2d1eb036e9fff90e57c2 7977496 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 7da66d17195aa78465b3ca48bda72253 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ 78ffba56d0635db5ca91ef4448382ec1 8081308 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Checksums-Sha1:
- c90418d0d94dbc261bee9ca866782e15ccfc67da 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 38c38b446789c21a6463b9e43f50af41e73ba057 7977496 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 3a1bfe0a09c9d66c1cd428661624350f19a46380 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ 16d5251219c8ef3be22a1350057119a639d515e1 8081308 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Checksums-Sha256:
- bac82e14b21bf5697dd0681a244e97b4329dfd23b9edb6d2eff1805c6ba23c75 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 1df2114d8b72b912cc2ba78b9dc46bd5a1aa8e606db42886b0d3a5b0512e4671 7977496 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 8ad230bef17f859f505603aa845bb33bdf337d38c65f59209abd4cdbc019d15f 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ 4e2982d5c299cfe502eac24c8bc925f87b8f3376267a66bcfff6fdc15e65c2ec 8081308 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Thu, 15 Dec 2022 17:24:52 +0000
+Build-Date: Fri, 16 Dec 2022 21:05:37 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.1
 Installed-Build-Depends:
  appstream-util (= 0.8.2-1),
@@ -43,7 +43,7 @@ Installed-Build-Depends:
  desktop-file-utils (= 0.26-1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.13.0-2),
- diffutils (= 1:3.8-1),
+ diffutils (= 1:3.8-2),
  dpkg (= 1.21.12),
  dpkg-dev (= 1.21.12),
  dwz (= 0.14+20220924-2),
@@ -165,7 +165,7 @@ Installed-Build-Depends:
  liblsan0 (= 12.2.0-10),
  libltdl7 (= 2.4.7-5),
  liblz4-1 (= 1.9.4-1),
- liblzma5 (= 5.2.10-0.0),
+ liblzma5 (= 5.4.0-0.1),
  libmagic-mgc (= 1:5.41-4),
  libmagic1 (= 1:5.41-4),
  libmagickcore-6.q16-6 (= 8:6.9.11.60+dfsg-1.3+b4),
@@ -613,7 +613,7 @@ Installed-Build-Depends:
  util-linux (= 2.38.1-4),
  util-linux-extra (= 2.38.1-4),
  webpack (= 5.75.0+dfsg+~cs17.16.14-1),
- xz-utils (= 5.2.10-0.0),
+ xz-utils (= 5.4.0-0.1),
  zlib1g (= 1:1.2.13.dfsg-1)
 Environment:
  DEB_BUILD_OPTIONS="parallel=2"
