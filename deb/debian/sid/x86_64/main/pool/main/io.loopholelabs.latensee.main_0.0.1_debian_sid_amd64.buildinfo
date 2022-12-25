@@ -4,17 +4,17 @@ Binary: io.loopholelabs.latensee.main
 Architecture: amd64 source
 Version: 0.0.1
 Checksums-Md5:
- 7e9300e53ebff396f92317c13eb480d7 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 43d3ccaafbedbec2c162d8854c030a9a 8082012 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 8cf884b72eed6b59e4dafff5724427ed 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ 2b81dfe3e1d26d44e28e5ee5c206e682 8082020 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Checksums-Sha1:
- 36278be2dbd27e1b546363c3c775c37948b68cfd 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 5f1f1c8058edc4ce30c6f176b8d8c1f9b1e4054a 8082012 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 907f357396c818b0f7a9f3f28b11e25c283ecc07 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ d79f91ec76d1907ec3f1e9f127028fa01b55fa10 8082020 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Checksums-Sha256:
- deb2435c86d4e55c4717c42e047764ba9c458d90256ec58d762a2bc8fd6e0f7a 960 io.loopholelabs.latensee.main_0.0.1.dsc
- a4147e4ed854216031d77f0c81a59ae1363e0bed82fcf025abfffc274fbb4888 8082012 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 126fef78089fab5ae52c896f019e1e3107aaa6ededa978d142278059817a1642 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ e34005193d60a31f123777f8b2d0dbe7521e9e916b53e161b73b83b68c4e6533 8082020 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 25 Dec 2022 00:10:37 +0000
+Build-Date: Sun, 25 Dec 2022 12:13:12 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.1
 Installed-Build-Depends:
  appstream-util (= 0.8.2-1),
@@ -81,7 +81,7 @@ Installed-Build-Depends:
  libaom3 (= 3.5.0-1),
  libappstream-glib8 (= 0.8.2-1),
  libarchive-zip-perl (= 1.68-1),
- libarchive13 (= 3.6.0-1),
+ libarchive13 (= 3.6.2-1),
  libasan8 (= 12.2.0-10),
  libatomic1 (= 12.2.0-10),
  libattr1 (= 1:2.5.1-3),

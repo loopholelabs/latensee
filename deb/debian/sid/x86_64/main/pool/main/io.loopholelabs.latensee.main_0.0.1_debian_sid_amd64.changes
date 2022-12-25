@@ -15,17 +15,17 @@ Changes:
  .
    * Initial release
 Checksums-Sha1:
- 36278be2dbd27e1b546363c3c775c37948b68cfd 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 4241e1a3940225f897bab2a9e9d46a1e03362672 721572 io.loopholelabs.latensee.main_0.0.1.tar.xz
- e974648fa6120af3c81c75cab11663c3e4574597 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
- 5f1f1c8058edc4ce30c6f176b8d8c1f9b1e4054a 8082012 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 907f357396c818b0f7a9f3f28b11e25c283ecc07 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ e89536b46781776e44e19eb95210db6b564132db 721828 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 2518b15ed977246884fd8d9d6b9032d13c56a0cd 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ d79f91ec76d1907ec3f1e9f127028fa01b55fa10 8082020 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Checksums-Sha256:
- deb2435c86d4e55c4717c42e047764ba9c458d90256ec58d762a2bc8fd6e0f7a 960 io.loopholelabs.latensee.main_0.0.1.dsc
- 2694c061d6d57ff4e73eb212467896b70441308207f20bb170a7ac476b5dcd64 721572 io.loopholelabs.latensee.main_0.0.1.tar.xz
- 97591ccb15582cca0e9993121433702eb49db4a294e95fc35f0c5b3922221e81 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
- a4147e4ed854216031d77f0c81a59ae1363e0bed82fcf025abfffc274fbb4888 8082012 io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 126fef78089fab5ae52c896f019e1e3107aaa6ededa978d142278059817a1642 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ b92683ce9c2ee11b8e721645e091deac01b727eaf44440b29858e2d8c5a7743c 721828 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 6d603f81946de0134fcfedff52c4812377d6d936cb3ddcf45b98edfb4e83dce8 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ e34005193d60a31f123777f8b2d0dbe7521e9e916b53e161b73b83b68c4e6533 8082020 io.loopholelabs.latensee.main_0.0.1_amd64.deb
 Files:
- 7e9300e53ebff396f92317c13eb480d7 960 utils optional io.loopholelabs.latensee.main_0.0.1.dsc
- d8752a49522db86746775c1583881593 721572 utils optional io.loopholelabs.latensee.main_0.0.1.tar.xz
- 3bd6bed10ebe4f45f730424b38dd3159 20665 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
- 43d3ccaafbedbec2c162d8854c030a9a 8082012 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.deb
+ 8cf884b72eed6b59e4dafff5724427ed 960 utils optional io.loopholelabs.latensee.main_0.0.1.dsc
+ b60945331b67e11000f1f9820fc60e2d 721828 utils optional io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 71b356d45527b79b40dfb99a1181040d 20665 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ 2b81dfe3e1d26d44e28e5ee5c206e682 8082020 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.deb
