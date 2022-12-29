@@ -33,9 +33,9 @@ deb:
 dmg:
   path: dmg
   packages: []
-flatpak:
-  - path: flatpak/x86_64
-    architecture: amd64
+# flatpak:
+#   - path: flatpak/x86_64
+#     architecture: amd64
 msi:
   - path: msi/x86_64
     architecture: amd64
