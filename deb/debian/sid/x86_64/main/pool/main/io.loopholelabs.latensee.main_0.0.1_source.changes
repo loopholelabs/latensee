@@ -12,14 +12,14 @@ Changes:
  .
    * Initial release
 Checksums-Sha1:
- 907f357396c818b0f7a9f3f28b11e25c283ecc07 960 io.loopholelabs.latensee.main_0.0.1.dsc
- e89536b46781776e44e19eb95210db6b564132db 721828 io.loopholelabs.latensee.main_0.0.1.tar.xz
- 2518b15ed977246884fd8d9d6b9032d13c56a0cd 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ 6776e40d6bf558c4d473060e725e579d06451c76 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ a6144511587690d51f7e51d133f8e1549164b263 721772 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ e17bb71db5d8957e2cdc4ffd327eddc6a02e74b9 20666 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
 Checksums-Sha256:
- 126fef78089fab5ae52c896f019e1e3107aaa6ededa978d142278059817a1642 960 io.loopholelabs.latensee.main_0.0.1.dsc
- b92683ce9c2ee11b8e721645e091deac01b727eaf44440b29858e2d8c5a7743c 721828 io.loopholelabs.latensee.main_0.0.1.tar.xz
- 6d603f81946de0134fcfedff52c4812377d6d936cb3ddcf45b98edfb4e83dce8 20665 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ 282a3d8c97adfdd57d4e0eae9053534de4b27c8c706952a837ba8220be8ad428 960 io.loopholelabs.latensee.main_0.0.1.dsc
+ 79cf6c147762930c6fb3f8600af521933371a7e64d45ba7903dfd691d3c75d4c 721772 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 18f0c419cf2ad7d6d607540f225313d08c8767b1d3e316cc6f8fe3586c217e7c 20666 io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
 Files:
- 8cf884b72eed6b59e4dafff5724427ed 960 utils optional io.loopholelabs.latensee.main_0.0.1.dsc
- b60945331b67e11000f1f9820fc60e2d 721828 utils optional io.loopholelabs.latensee.main_0.0.1.tar.xz
- 71b356d45527b79b40dfb99a1181040d 20665 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo
+ 1e36ed275f5b43ca398da80e9d44433e 960 utils optional io.loopholelabs.latensee.main_0.0.1.dsc
+ b5c72e921ade067cb1f3838ab3f5ef9a 721772 utils optional io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 0b68d73f6da440914286a94d6f3daa3e 20666 utils optional io.loopholelabs.latensee.main_0.0.1_amd64.buildinfo

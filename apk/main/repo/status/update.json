@@ -1,1 +1,1 @@
-{"antiFeatures":{},"commandLine":["/usr/bin/fdroid update","--create-metadata"],"disabled":[],"endTimestamp":1671970505886,"failedBuilds":{},"noPackages":["io.loopholelabs.latensee.main"],"startTimestamp":1671970501000,"subcommand":"update"}
+{"antiFeatures":{},"commandLine":["/usr/bin/fdroid update","--create-metadata"],"disabled":[],"endTimestamp":1672323563469,"failedBuilds":{},"noPackages":["io.loopholelabs.latensee.main"],"startTimestamp":1672323559000,"subcommand":"update"}
