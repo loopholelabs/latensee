@@ -1,6 +1,6 @@
 ---
 sdk_path: "/root/Android/Sdk"
-repo_url: "/https://loopholelabs.github.io/latenseeapk/main"
+repo_url: "/https://loopholelabs.github.io/latensee/apk/main"
 repo_name: Hydrapp F-Droid Repo
 repo_description: >-
   Android apps for Hydrapp.
