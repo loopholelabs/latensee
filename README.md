@@ -1,5 +1,7 @@
 ## LatenSee
 
+![Logo](./docs/logo-readme.png)
+
 Redis latency visualizer.
 
 [![hydrapp CI](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml/badge.svg)](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml)
@@ -31,6 +33,7 @@ All arguments passed to the binary will be forwarded to the browser used to disp
 ## Acknowledgements
 
 - [pojntfx/hydrapp](https://github.com/pojntfx/hydrapp) provides the application framework.
+- [Font Awesome](https://fontawesome.com/) provides the assets used for the icon
 
 ## Contributing
 
@@ -40,7 +43,7 @@ To build and start a development version of LatenSee locally, run the following:
 
 ```shell
 $ git clone https://github.com/loopholelabs/latensee.git
-$ cd myapp
+$ cd latensee
 $ go generate ./...
 $ go run .
 ```
@@ -49,6 +52,6 @@ Note that you can also set `HYDRAPP_BACKEND_LADDR` to a fixed value, `HYDRAPP_TY
 
 ## License
 
-LatenSee (c) 2022 Felicitas Pojtinger and contributors
+LatenSee (c) 2023 Felicitas Pojtinger and contributors
 
-SPDX-License-Identifier: AGPL-3.0-or-later
+SPDX-License-Identifier: Apache-2.0

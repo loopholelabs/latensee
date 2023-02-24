@@ -8,7 +8,7 @@
     "build": "BUILD_PATH=out react-scripts build"
   },
   "keywords": [],
-  "author": "Felicitas Pojtinger <felicitas@pojtinger.com>",
+  "author": "Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
     "@types/papaparse": "^5.3.5",
