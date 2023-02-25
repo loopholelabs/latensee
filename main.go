@@ -10,13 +10,13 @@ import (
 	"os"
 	"time"
 
-	"github.com/pojntfx/hydrapp/hydrapp-utils/pkg/config"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/config"
 	"github.com/loopholelabs/latensee/pkg/backend"
 	"github.com/loopholelabs/latensee/pkg/frontend"
-	"github.com/pojntfx/hydrapp/hydrapp-utils/pkg/browser"
-	_ "github.com/pojntfx/hydrapp/hydrapp-utils/pkg/fixes"
-	"github.com/pojntfx/hydrapp/hydrapp-utils/pkg/update"
-	"github.com/pojntfx/hydrapp/hydrapp-utils/pkg/utils"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/browser"
+	_ "github.com/pojntfx/hydrapp/hydrapp/pkg/fixes"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/update"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/utils"
 )
 
 //go:embed hydrapp.yaml

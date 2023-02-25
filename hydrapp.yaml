@@ -15,7 +15,7 @@ go:
   img: ghcr.io/pojntfx/hydrapp-build-tests:main
 releases:
 - version: 0.0.1
-  date: 2023-02-24T12:06:41.798844451+01:00
+  date: 2023-02-26T00:36:17.574849789+01:00
   description: Initial release
   author: Felicitas Pojtinger
   email: felicitaspojtinger@loopholelabs.io
@@ -51,7 +51,7 @@ apk:
   path: apk
 binaries:
   path: binaries
-  exclude: (android/*|ios/*|plan9/*|aix/*|linux/loong64|js/wasm)
+  exclude: (android/*|ios/*|plan9/*|aix/*|linux/loong64|js/wasm|openbsd/mips64)
   packages: []
 docs:
   path: docs

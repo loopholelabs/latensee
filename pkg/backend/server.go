@@ -13,7 +13,7 @@ import (
 
 	"github.com/go-redis/redis/v9"
 	"github.com/pojntfx/dudirekta/pkg/rpc"
-	"github.com/pojntfx/hydrapp/hydrapp-utils/pkg/utils"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/utils"
 	"nhooyr.io/websocket"
 )
 

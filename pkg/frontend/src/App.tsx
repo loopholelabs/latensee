@@ -265,7 +265,7 @@ const App = () => {
           <TextInputGroupMain
             placeholder="Command to add"
             value={command}
-            onChange={(e) => setCommand(e)}
+            onChange={(_, value) => setCommand(value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 setCommands((commands) => [...commands, command]);

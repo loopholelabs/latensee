@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "BUILD_PATH=out react-scripts start",
-    "build": "BUILD_PATH=out react-scripts build"
+    "build": "BUILD_PATH=out react-scripts build; cp ../../icon.png out/icon.png"
   },
   "keywords": [],
   "author": "Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>",
-  "license": "AGPL-3.0-or-later",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/papaparse": "^5.3.5",
     "@types/react": "^18.0.17",

@@ -13,7 +13,7 @@ A Redis latency visualization tool.
 
 ## Installation
 
-See [INSTALLATION.html](https://loopholelabs.github.io/latensee/docs/main/INSTALLATION.html).
+See [INSTALLATION.html](https://loopholelabs.github.io/latensee/docs/stable/INSTALLATION.html).
 
 ## Reference
 

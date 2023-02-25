@@ -77,8 +77,8 @@ jobs:
       - name: Set up hydrapp
         run: |
           # TODO: Use stable release URL here
-          curl -L -o /tmp/hydrapp-cli "https://github.com/pojntfx/hydrapp/releases/download/main/hydrapp-cli.linux-$(uname -m)" 
-          sudo install /tmp/hydrapp-cli /usr/local/bin
+          curl -L -o /tmp/hydrapp "https://github.com/pojntfx/hydrapp/releases/download/main/hydrapp.linux-$(uname -m)" 
+          sudo install /tmp/hydrapp /usr/local/bin
       - name: Setup PGP key
         working-directory: .
         env:
@@ -104,7 +104,7 @@ jobs:
             export BRANCH_NAME="$(echo ${BRANCH_ID^})"
           fi
 
-          hydrapp-cli build --config='./${{ matrix.target.pkg }}/hydrapp.yaml' --exclude='${{ matrix.target.exclude }}' \
+          hydrapp build --config='./${{ matrix.target.pkg }}/hydrapp.yaml' --exclude='${{ matrix.target.exclude }}' \
             --pull=true --tag='${{ matrix.target.tag }}' \
             --dst="${PWD}/out/${{ matrix.target.pkg }}" --src="${PWD}" \
             --pgp-key='/tmp/pgp.asc' --pgp-password="${PGP_PASSWORD}" --pgp-id="${PGP_ID}" \

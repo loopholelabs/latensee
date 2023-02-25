@@ -12,7 +12,7 @@ import (
 	"log"
 	"time"
 
-	_ "github.com/pojntfx/hydrapp/hydrapp-utils/pkg/fixes"
+	_ "github.com/pojntfx/hydrapp/hydrapp/pkg/fixes"
 
 	backend "github.com/loopholelabs/latensee/pkg/backend"
 	frontend "github.com/loopholelabs/latensee/pkg/frontend"
