@@ -9,13 +9,27 @@ Redis latency visualizer.
 
 ## Overview
 
-A Redis latency visualization tool.
+![Screenshot of the visualizer](./docs/screenshot-visualizer.png)
+
+LatenSee is a Redis latency visualization tool.
+
+It enables you to ...
+
+- **Visualize latency in real-time**: By providing a [hydrapp](https://github.com/pojntfx/hydrapp/)-based UI, it is able give insights into your Redis server's latency as the test is running.
+- **Monitor jitter and latency over a long period of time**: By giving you the option of pausing and resuming tests and providing various configuration options, LatenSee can be used to gather detailed long-term metrics.
+- **Analyze test results with external tools**: Thanks to its integrated CSV export feature, it's easy to export measurement results and analyze them using your preferred tooling, too.
 
 ## Installation
 
 See [INSTALLATION.html](https://loopholelabs.github.io/latensee/docs/stable/INSTALLATION.html).
 
 ## Reference
+
+### Settings
+
+You can open the settings through the settings button in the top right; here you can configure many aspects of the application such as the Redis URL and the maximum intervals to display:
+
+![A screenshot of the settings dialog](./docs/screenshot-settings.png)
 
 ### Command Line Arguments
 
