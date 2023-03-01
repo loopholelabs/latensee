@@ -1,6 +1,6 @@
 [hydrapp-repo]
 name=Hydrapp YUM repo
-baseurl=https://loopholelabs.github.io/latensee/rpm/fedora/37/x86_64/main
+baseurl=https://loopholelabs.github.io/latensee//rpm/fedora/37/x86_64/main
 enabled=1
 gpgcheck=1
-gpgkey=https://loopholelabs.github.io/latensee/rpm/fedora/37/x86_64/main/repodata/repo.asc
+gpgkey=https://loopholelabs.github.io/latensee//rpm/fedora/37/x86_64/main/repodata/repo.asc

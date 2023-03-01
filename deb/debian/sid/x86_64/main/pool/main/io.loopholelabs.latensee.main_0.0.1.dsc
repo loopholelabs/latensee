@@ -3,7 +3,7 @@ Source: io.loopholelabs.latensee.main
 Binary: io.loopholelabs.latensee.main
 Architecture: any
 Version: 0.0.1
-Maintainer: Felicitas Pojtinger <felicitas@pojtinger.com>
+Maintainer: Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>
 Homepage: https://github.com/loopholelabs/latensee
 Standards-Version: 4.5.1
 Vcs-Browser: https://github.com/loopholelabs/latensee.git
@@ -12,8 +12,8 @@ Build-Depends: debhelper (>= 12.10), git (>= 2.20.1), golang-go (>= 1.19), image
 Package-List:
  io.loopholelabs.latensee.main deb utils optional arch=any
 Checksums-Sha1:
- 54e22b050890313b5db95900d45f84c514a3f01b 721780 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ f25f1bb6a71624b4bdf903c2625186fb6edcecf2 1078500 io.loopholelabs.latensee.main_0.0.1.tar.xz
 Checksums-Sha256:
- a2b937a842900c99492ee0c1dd9ff508f97667f705710076a24b8e9159c9048f 721780 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ 618e9cb91c7dad59ccc0371b0a1e92d398e60cf88b1727f205477dcb8220dcbd 1078500 io.loopholelabs.latensee.main_0.0.1.tar.xz
 Files:
- 7b25f99705a2fdf4e78f5414afb9eede 721780 io.loopholelabs.latensee.main_0.0.1.tar.xz
+ f1ed762641fe5aa8d2eaa39ddec91b50 1078500 io.loopholelabs.latensee.main_0.0.1.tar.xz
