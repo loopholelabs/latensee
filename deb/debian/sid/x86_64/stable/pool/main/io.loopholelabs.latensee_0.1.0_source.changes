@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Wed, 01 Mar 2023 03:50:00 +0100
+Source: io.loopholelabs.latensee
+Architecture: source
+Version: 0.1.0
+Distribution: unstable
+Urgency: medium
+Maintainer: Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>
+Changed-By: Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>
+Changes:
+ io.loopholelabs.latensee (0.1.0) unstable; urgency=medium
+ .
+   * Initial release
+Checksums-Sha1:
+ c3702c15c33fdc21766953c1679cf758146ffb82 944 io.loopholelabs.latensee_0.1.0.dsc
+ dd299e081ee96677568d383dfe029ab4f851c19b 1302512 io.loopholelabs.latensee_0.1.0.tar.xz
+ 9ead9711f3211e930a49f67bea9b0b0060d3d32a 20406 io.loopholelabs.latensee_0.1.0_amd64.buildinfo
+Checksums-Sha256:
+ 124adc7bd52c3caea5b885d04cc612359bbdbc1b762eb511822c92a26e392be2 944 io.loopholelabs.latensee_0.1.0.dsc
+ 495daceaa04dc548a1edf39cf126b2f061a89e913aa6ebcf37b6618be19e9299 1302512 io.loopholelabs.latensee_0.1.0.tar.xz
+ a4d831608efc4dd19857975b3fa4ba544eac1043527ab561db5aaecdded2ca1b 20406 io.loopholelabs.latensee_0.1.0_amd64.buildinfo
+Files:
+ 625ec42ea81800a7d17b5c33c8c0b697 944 utils optional io.loopholelabs.latensee_0.1.0.dsc
+ f146dc721911068e724d87989a202ec2 1302512 utils optional io.loopholelabs.latensee_0.1.0.tar.xz
+ 7c88677cdc06b749946f40333614021e 20406 utils optional io.loopholelabs.latensee_0.1.0_amd64.buildinfo
