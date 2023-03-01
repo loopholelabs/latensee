@@ -7,6 +7,7 @@ import {
   createContainer,
 } from "@patternfly/react-charts";
 import {
+  Brand,
   Button,
   DataList,
   DataListAction,
@@ -46,6 +47,7 @@ import Papa from "papaparse";
 import { useEffect, useState } from "react";
 import { useElementSize } from "usehooks-ts";
 import "./main.scss";
+import logo from "./logo-dark.png";
 
 const getSeconds = (
   results: IResults,
@@ -379,8 +381,8 @@ const App = () => {
       <Page
         header={
           <PageHeader
-            logo="LatenSee"
-            logoComponent="span"
+            logo={<Brand src={logo} alt="LatenSee logo" />}
+            logoComponent="div"
             headerTools={
               <PageHeaderTools>
                 <Toolbar>
