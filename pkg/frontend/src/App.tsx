@@ -477,7 +477,7 @@ const App = () => {
             />
           </FormGroup>
 
-          <FormGroup label="Redis URL" isRequired fieldId="redis-url">
+          <FormGroup label="Redis/Valkey URL" isRequired fieldId="redis-url">
             <TextInput
               isRequired
               type="text"
@@ -488,7 +488,7 @@ const App = () => {
                 const v = e.trim();
 
                 if (v.length <= 0) {
-                  console.error("Could not work with empty Redis URL");
+                  console.error("Could not work with empty Redis/Valkey URL");
 
                   return;
                 }
