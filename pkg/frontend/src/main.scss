@@ -1,28 +1,29 @@
-@import "~@patternfly/patternfly/sass-utilities/all.scss";
+@import "../node_modules/@patternfly/patternfly/sass-utilities/all.scss";
 
-$pf-global--font-path: "~@patternfly/patternfly/assets/fonts";
-$fa-font-path: "~@patternfly/patternfly/assets/fonts/webfonts";
-$pf-global--fonticon-path: "~@patternfly/patternfly/assets/pficon";
-$pf-global--image-path: "~@patternfly/patternfly/assets/images";
+$pf-v5-global--font-path: "../node_modules/@patternfly/patternfly/assets/fonts";
+$fa-font-path: "../node_modules/@patternfly/patternfly/assets/fonts/webfonts";
+$pf-v5-global--fonticon-path: "../node_modules/@patternfly/patternfly/assets/pficon";
+$pf-v5-global--image-path: "data-url:../node_modules/@patternfly/patternfly/assets/images";
 
-@import "~@patternfly/patternfly/patternfly.scss";
-@import "~@patternfly/patternfly/patternfly-addons.scss";
+@import "../node_modules/@patternfly/patternfly/patternfly.scss";
+@import "../node_modules/@patternfly/patternfly/patternfly-addons.scss";
 
 body,
 #root,
-.pf-x-chart {
+.pf-v5-x-chart {
   height: 100%;
-  background: var(--pf-c-page__main-section--m-light--BackgroundColor);
+  background: var(--pf-v5-c-page__main-section--m-light--BackgroundColor);
 }
 
-.pf-c-toolbar__content {
+.pf-v5-c-toolbar__content {
   overflow-x: auto;
 }
 
-.pf-c-toolbar__content-section {
+.pf-v5-c-toolbar__content-section {
   flex-wrap: nowrap;
 }
 
-.pf-x-text--helper {
+.pf-v5-x-text--helper {
   justify-content: center;
 }
+

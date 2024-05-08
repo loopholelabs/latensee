@@ -1,3 +1,7 @@
+import { ILocalContext, IRemoteContext, Registry } from "@pojntfx/panrpc";
+import { JSONParser } from "@streamparser/json-whatwg";
+import { useEffect, useState } from "react";
+import useAsyncEffect from "use-async";
 import {
   Chart,
   ChartAxis,
@@ -21,8 +25,6 @@ import {
   HelperTextItem,
   Modal,
   Page,
-  PageHeader,
-  PageHeaderTools,
   PageSection,
   PageSectionVariants,
   TextInput,
@@ -34,6 +36,7 @@ import {
   ToolbarContent,
   ToolbarItem,
 } from "@patternfly/react-core";
+import { PageHeader, PageHeaderTools } from "@patternfly/react-core/deprecated";
 import {
   CogIcon,
   DownloadIcon,
@@ -42,12 +45,76 @@ import {
   PlusIcon,
   TimesIcon,
 } from "@patternfly/react-icons";
-import { bind } from "@pojntfx/dudirekta";
 import Papa from "papaparse";
-import { useEffect, useState } from "react";
 import { useElementSize } from "usehooks-ts";
 import "./main.scss";
 import logo from "./logo-dark.png";
+
+class Local {
+  constructor(
+    private setResults: React.Dispatch<React.SetStateAction<IResults>>,
+    private maxIntervalsToDisplay: number
+  ) {
+    this.HandleLatencyMeasurement = this.HandleLatencyMeasurement.bind(this);
+  }
+
+  async HandleLatencyMeasurement(
+    ctx: ILocalContext,
+    command: string,
+    latencyMicroSecond: number
+  ) {
+    this.setResults((oldResults) => {
+      const newResults = { ...oldResults };
+
+      newResults.offset++;
+
+      if (!newResults.commands[command]) {
+        newResults.commands[command] = [latencyMicroSecond];
+      } else {
+        newResults.commands[command].push(latencyMicroSecond);
+      }
+
+      if (newResults.commands[command].length > this.maxIntervalsToDisplay) {
+        newResults.commands[command].shift();
+      }
+
+      return newResults;
+    });
+  }
+
+  async HandleError(ctx: ILocalContext, err: string) {
+    alert(err);
+  }
+}
+
+class Remote {
+  async SetURL(ctx: IRemoteContext, url: string): Promise<void> {
+    return;
+  }
+
+  async SetInterval(
+    ctx: IRemoteContext,
+    intervalMilliSecond: number
+  ): Promise<void> {
+    return;
+  }
+
+  async SetCommands(ctx: IRemoteContext, commands: string[]): Promise<void> {
+    return;
+  }
+
+  async StartLatencyMeasurement(ctx: IRemoteContext): Promise<void> {
+    return;
+  }
+
+  async StopLatencyMeasurement(ctx: IRemoteContext): Promise<void> {
+    return;
+  }
+
+  async GetIsLatencyMeasuring(ctx: IRemoteContext): Promise<boolean> {
+    return false;
+  }
+}
 
 const getSeconds = (
   results: IResults,
@@ -65,16 +132,8 @@ interface IResults {
 }
 
 const App = () => {
-  const [remote, setRemote] = useState({
-    SetURL: (url: string) => Promise<void>,
-    SetInterval: (intervalMilliSecond: number) => Promise<void>,
-    SetCommands: (commands: string[]) => Promise<void>,
-    StartLatencyMeasurement: () => Promise<void>,
-    StopLatencyMeasurement: () => Promise<void>,
-    GetIsLatencyMeasuring: () => Promise<boolean>,
-  });
-
-  const [ready, setReady] = useState(false);
+  const [clients, setClients] = useState(0);
+  useEffect(() => console.log(clients, "clients connected"), [clients]);
 
   const [results, setResults] = useState<IResults>({
     offset: 0,
@@ -82,60 +141,125 @@ const App = () => {
   });
   let maxIntervalsToDisplay = 60;
 
-  useEffect(() => {
-    bind(
-      () =>
-        new WebSocket(
-          new URLSearchParams(window.location.search).get("socketURL") ||
-            "ws://localhost:1337"
-        ),
+  const [reconnect, setReconnect] = useState(false);
+  const [registry] = useState(
+    new Registry(
+      new Local(setResults, maxIntervalsToDisplay),
+      new Remote(),
+
       {
-        HandleLatencyMeasurement: (
-          command: string,
-          latencyMicroSecond: number
-        ) => {
-          setResults((oldResults) => {
-            const newResults = { ...oldResults };
-
-            newResults.offset++;
-
-            if (!newResults.commands[command]) {
-              newResults.commands[command] = [latencyMicroSecond];
-            } else {
-              newResults.commands[command].push(latencyMicroSecond);
+        onClientConnect: () => setClients((v) => v + 1),
+        onClientDisconnect: () =>
+          setClients((v) => {
+            if (v === 1) {
+              setReconnect(true);
             }
 
-            if (newResults.commands[command].length > maxIntervalsToDisplay) {
-              newResults.commands[command].shift();
-            }
-
-            return newResults;
-          });
-        },
-        HandleError: (err: string) => {
-          alert(err);
-        },
-      },
-      remote,
-      setRemote,
-      {
-        onOpen: () => setReady(true),
+            return v - 1;
+          }),
       }
+    )
+  );
+
+  useAsyncEffect(async () => {
+    if (reconnect) {
+      await new Promise((r) => {
+        setTimeout(r, 100);
+      });
+
+      setReconnect(false);
+
+      return () => {};
+    }
+
+    const addr =
+      new URLSearchParams(window.location.search).get("socketURL") ||
+      "ws://localhost:1337";
+
+    const socket = new WebSocket(addr);
+
+    socket.addEventListener("error", (e) => {
+      console.error("Disconnected with error, reconnecting:", e);
+
+      setReconnect(true);
+    });
+
+    await new Promise<void>((res, rej) => {
+      socket.addEventListener("open", () => res());
+      socket.addEventListener("error", rej);
+    });
+
+    const encoder = new WritableStream({
+      write(chunk) {
+        socket.send(JSON.stringify(chunk));
+      },
+    });
+
+    const parser = new JSONParser({
+      paths: ["$"],
+      separator: "",
+    });
+    const parserWriter = parser.writable.getWriter();
+    const parserReader = parser.readable.getReader();
+    const decoder = new ReadableStream({
+      start(controller) {
+        parserReader
+          .read()
+          .then(async function process({ done, value }) {
+            if (done) {
+              controller.close();
+
+              return;
+            }
+
+            controller.enqueue(value?.value);
+
+            parserReader
+              .read()
+              .then(process)
+              .catch((e) => controller.error(e));
+          })
+          .catch((e) => controller.error(e));
+      },
+    });
+    socket.addEventListener("message", (m) =>
+      parserWriter.write(m.data as string)
     );
-  }, []);
+    socket.addEventListener("close", () => {
+      parserReader.cancel();
+      parserWriter.abort();
+    });
+
+    registry.linkStream(
+      encoder,
+      decoder,
+
+      (v) => v,
+      (v) => v
+    );
+
+    console.log("Connected to", addr);
+
+    return () => socket.close();
+  }, [reconnect]);
 
   const [isLatencyMeasuring, setIsLatencyMeasuring] = useState(false);
 
   useEffect(() => {
-    if (!ready) {
+    if (clients <= 0) {
       return;
     }
 
-    (async () =>
-      (await remote.GetIsLatencyMeasuring())
-        ? setIsLatencyMeasuring(true)
-        : setIsLatencyMeasuring(false))();
-  }, [ready]);
+    registry.forRemotes(async (_, remote) => {
+      try {
+        (await remote.GetIsLatencyMeasuring(undefined))
+          ? setIsLatencyMeasuring(true)
+          : setIsLatencyMeasuring(false);
+      } catch (e) {
+        alert(JSON.stringify((e as Error).message));
+      }
+    });
+  }, [clients]);
 
   const CursorVoronoiContainer = createContainer("voronoi", "cursor");
   const legendData = Object.keys(results.commands).map((command) => ({
@@ -151,49 +275,72 @@ const App = () => {
   const [commands, setCommands] = useState(["set test 0", "get test"]);
 
   useEffect(() => {
-    if (!ready) {
+    if (clients <= 0) {
       return;
     }
 
-    (async () => await remote.SetCommands(commands))();
-  }, [ready, commands]);
+    registry.forRemotes(async (_, remote) => {
+      try {
+        await remote.SetCommands(undefined, commands);
+      } catch (e) {
+        alert(JSON.stringify((e as Error).message));
+      }
+    });
+  }, [clients, commands]);
 
   const [command, setCommand] = useState("");
 
   const [intervalMilliSecond, setIntervalMilliSecond] = useState(500);
 
   useEffect(() => {
-    if (!ready) {
+    if (clients <= 0) {
       return;
     }
 
-    (async () => await remote.SetInterval(intervalMilliSecond))();
-  }, [ready, intervalMilliSecond]);
+    registry.forRemotes(async (_, remote) => {
+      try {
+        await remote.SetInterval(undefined, intervalMilliSecond);
+      } catch (e) {
+        alert(JSON.stringify((e as Error).message));
+      }
+    });
+  }, [clients, intervalMilliSecond]);
 
   const [redisURL, setRedisURL] = useState("redis://localhost:6379/0");
 
   useEffect(() => {
-    if (!ready) {
+    if (clients <= 0) {
       return;
     }
 
-    (async () => await remote.SetURL(redisURL))();
-  }, [ready, redisURL]);
+    registry.forRemotes(async (_, remote) => {
+      try {
+        await remote.SetURL(undefined, redisURL);
+      } catch (e) {
+        alert(JSON.stringify((e as Error).message));
+      }
+    });
+  }, [clients, redisURL]);
 
   useEffect(() => {
-    if (!ready && isSettingsOpen) {
+    if (clients <= 0 && isSettingsOpen) {
       return;
     }
 
-    (async () =>
-      await Promise.all([
-        await remote.SetCommands(commands),
-        await remote.SetInterval(intervalMilliSecond),
-        await remote.SetURL(redisURL),
-      ]))();
-  }, [ready, isSettingsOpen]);
+    registry.forRemotes(async (_, remote) => {
+      try {
+        await Promise.all([
+          await remote.SetCommands(undefined, commands),
+          await remote.SetInterval(undefined, intervalMilliSecond),
+          await remote.SetURL(undefined, redisURL),
+        ]);
+      } catch (e) {
+        alert(JSON.stringify((e as Error).message));
+      }
+    });
+  }, [clients, isSettingsOpen]);
 
-  return ready ? (
+  return clients > 0 ? (
     <>
       <Modal
         isOpen={isSettingsOpen}
@@ -216,15 +363,15 @@ const App = () => {
         <Title headingLevel="h2">Commands</Title>
 
         {commands.length <= 0 ? (
-          <HelperText className="pf-u-py-sm">
-            <HelperTextItem className="pf-x-text--helper">
+          <HelperText className="pf-v5-u-py-sm">
+            <HelperTextItem className="pf-v5-x-text--helper">
               No commands have been set up yet.
             </HelperTextItem>
           </HelperText>
         ) : (
           <DataList
             isCompact
-            className="pf-u-my-md"
+            className="pf-v5-u-my-md"
             aria-label="List of commands to test"
           >
             {commands.map((command, i) => (
@@ -233,7 +380,7 @@ const App = () => {
                   <DataListItemCells
                     dataListCells={[
                       <DataListCell
-                        className="pf-u-display-flex pf-u-justify-content-flex-start pf-u-align-self-center"
+                        className="pf-v5-u-display-flex pf-v5-u-justify-content-flex-start pf-v5-u-align-self-center"
                         key={1}
                       >
                         <span id={`command-${i}`}>{command}</span>
@@ -263,7 +410,7 @@ const App = () => {
           </DataList>
         )}
 
-        <TextInputGroup className="pf-u-mt-sm">
+        <TextInputGroup className="pf-v5-u-mt-sm">
           <TextInputGroupMain
             placeholder="Command to add"
             value={command}
@@ -285,16 +432,16 @@ const App = () => {
                 setCommand("");
               }}
             >
-              <PlusIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+              <PlusIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
 
-              <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+              <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
                 Add command
               </span>
             </Button>
           </TextInputGroupUtilities>
         </TextInputGroup>
 
-        <Title headingLevel="h2" className="pf-u-pt-lg pf-u-pb-sm">
+        <Title headingLevel="h2" className="pf-v5-u-pt-lg pf-v5-u-pb-sm">
           Connection
         </Title>
 
@@ -316,7 +463,7 @@ const App = () => {
               id="test-interval"
               name="test-interval"
               value={intervalMilliSecond}
-              onChange={(e) => {
+              onChange={(_, e) => {
                 const v = parseInt(e);
 
                 if (isNaN(v)) {
@@ -337,7 +484,7 @@ const App = () => {
               id="redis-url"
               name="redis-url"
               value={redisURL}
-              onChange={(e) => {
+              onChange={(_, e) => {
                 const v = e.trim();
 
                 if (v.length <= 0) {
@@ -362,7 +509,7 @@ const App = () => {
               id="maximum-interval"
               name="maximum-interval"
               defaultValue={maxIntervalsToDisplay}
-              onChange={(e) => {
+              onChange={(_, e) => {
                 const v = parseInt(e);
 
                 if (isNaN(v)) {
@@ -445,9 +592,9 @@ const App = () => {
                             document.body.removeChild(element);
                           }}
                         >
-                          <DownloadIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                          <DownloadIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
 
-                          <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                          <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
                             Download CSV
                           </span>
                         </Button>
@@ -459,15 +606,21 @@ const App = () => {
                         <Button
                           variant="danger"
                           onClick={() => {
-                            remote.StopLatencyMeasurement();
+                            registry.forRemotes(async (_, remote) => {
+                              try {
+                                remote.StopLatencyMeasurement(undefined);
+                              } catch (e) {
+                                alert(JSON.stringify((e as Error).message));
+                              }
+                            });
 
                             setIsStoppable(false);
                             setIsLatencyMeasuring(false);
                           }}
                         >
-                          <TimesIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                          <TimesIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
 
-                          <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                          <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
                             Stop test
                           </span>
                         </Button>
@@ -482,7 +635,13 @@ const App = () => {
                           setIsStoppable(true);
 
                           if (isLatencyMeasuring) {
-                            remote.StopLatencyMeasurement();
+                            registry.forRemotes(async (_, remote) => {
+                              try {
+                                remote.StopLatencyMeasurement(undefined);
+                              } catch (e) {
+                                alert(JSON.stringify((e as Error).message));
+                              }
+                            });
 
                             return;
                           }
@@ -491,16 +650,22 @@ const App = () => {
                             setResults({ offset: 0, commands: {} });
                           }
 
-                          remote.StartLatencyMeasurement();
+                          registry.forRemotes(async (_, remote) => {
+                            try {
+                              remote.StartLatencyMeasurement(undefined);
+                            } catch (e) {
+                              alert(JSON.stringify((e as Error).message));
+                            }
+                          });
                         }}
                       >
                         {isLatencyMeasuring ? (
-                          <PauseIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                          <PauseIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
                         ) : (
-                          <PlayIcon className="pf-u-mr-0 pf-u-mr-sm-on-md" />
+                          <PlayIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
                         )}
 
-                        <span className="pf-u-display-none pf-u-display-inline-block-on-md">
+                        <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
                           {isLatencyMeasuring
                             ? "Pause"
                             : isStoppable
@@ -517,17 +682,17 @@ const App = () => {
           />
         }
       >
-        <div ref={ref} className="pf-x-chart">
+        <div ref={ref} className="pf-v5-x-chart">
           <PageSection variant={PageSectionVariants.light}>
             <div
               style={{
-                height: height - 48,
-                width: width - 48,
+                height: (height || 0) - 48,
+                width: (width || 0) - 48,
               }}
             >
               <Chart
-                height={height - 48}
-                width={width - 48}
+                height={(height || 0) - 48}
+                width={(width || 0) - 48}
                 ariaTitle="Latency results"
                 ariaDesc="Graph displaying the latency results"
                 containerComponent={
@@ -583,7 +748,7 @@ const App = () => {
       </Page>
     </>
   ) : (
-    <span>Loading ...</span>
+    "Connecting ..."
   );
 };
 

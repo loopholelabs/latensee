@@ -1,50 +1,38 @@
 {
   "name": "io.loopholelabs.latensee",
   "version": "0.0.1",
-  "description": "A Redis latency visualization tool.",
+  "description": "A Redis/Valkey latency visualization tool.",
   "type": "module",
   "scripts": {
-    "dev": "BUILD_PATH=out react-scripts start",
-    "build": "BUILD_PATH=out react-scripts build; cp ../../icon.png out/icon.png"
+    "dev": "parcel index.html --dist-dir out",
+    "build": "tsc && parcel build index.html --dist-dir out"
   },
   "keywords": [],
   "author": "Felicitas Pojtinger <felicitaspojtinger@loopholelabs.io>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/papaparse": "^5.3.5",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "react-scripts": "5.0.1",
-    "sass": "^1.56.1",
-    "typescript": "^4.9.3"
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@patternfly/patternfly": "^4.221.2",
-    "@patternfly/react-charts": "^6.94.12",
-    "@patternfly/react-core": "^4.264.0",
-    "@patternfly/react-icons": "^4.93.0",
-    "@pojntfx/dudirekta": "^0.3.0",
-    "papaparse": "^5.3.2",
+    "@patternfly/patternfly": "^5.3.1",
+    "@patternfly/react-charts": "^7.3.0",
+    "@patternfly/react-core": "^5.3.3",
+    "@patternfly/react-icons": "^5.3.2",
+    "@pojntfx/panrpc": "^0.7.1",
+    "@streamparser/json-whatwg": "^0.0.20",
+    "papaparse": "^5.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "use-async": "^1.1.0",
     "usehooks-ts": "^2.9.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "@parcel/resolver-default": {
+    "packageExports": true
   }
 }
