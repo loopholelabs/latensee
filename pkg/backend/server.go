@@ -2,6 +2,7 @@ package backend
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"log"
 	"net"
@@ -11,9 +12,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-redis/redis/v9"
-	"github.com/pojntfx/dudirekta/pkg/rpc"
 	"github.com/pojntfx/hydrapp/hydrapp/pkg/utils"
+	"github.com/pojntfx/panrpc/go/pkg/rpc"
+	"github.com/redis/go-redis/v9"
 	"nhooyr.io/websocket"
 )
 
@@ -51,8 +52,6 @@ func testCommandLatency(
 }
 
 type local struct {
-	Peers func() map[string]remote
-
 	ctx context.Context
 
 	url      string
@@ -60,6 +59,10 @@ type local struct {
 	commands []string
 
 	cancel context.CancelFunc
+
+	ForRemotes func(
+		cb func(remoteID string, remote remote) error,
+	) error
 }
 
 func (l *local) SetURL(ctx context.Context, url string) error {
@@ -136,13 +139,13 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 					}
 
 					var peer *remote
-					for peerID, candidate := range l.Peers() {
-						if peerID == rpc.GetRemoteID(ctx) {
-							peer = &candidate
-
-							break
+					_ = l.ForRemotes(func(remoteID string, remote remote) error {
+						if remoteID == rpc.GetRemoteID(ctx) {
+							peer = &remote
 						}
-					}
+
+						return nil
+					})
 
 					if peer == nil {
 						log.Println("could not find peer to write to, stopping")
@@ -167,13 +170,13 @@ func (l *local) StartLatencyMeasurement(ctx context.Context) error {
 					}
 
 					var peer *remote
-					for peerID, candidate := range l.Peers() {
-						if peerID == rpc.GetRemoteID(ctx) {
-							peer = &candidate
-
-							break
+					_ = l.ForRemotes(func(remoteID string, remote remote) error {
+						if remoteID == rpc.GetRemoteID(ctx) {
+							peer = &remote
 						}
-					}
+
+						return nil
+					})
 
 					if peer == nil {
 						log.Println("could not find peer to write to, stopping")
@@ -218,41 +221,48 @@ func StartServer(ctx context.Context, addr string, heartbeat time.Duration, loca
 		addr = ":0"
 	}
 
-	l := &local{
+	service := &local{
 		ctx: ctx,
-	}
-	registry := rpc.NewRegistry(
-		l,
-		remote{},
-
-		time.Second*10,
-		ctx,
-		nil,
-	)
-	l.Peers = registry.Peers
-
-	listener, err := net.Listen("tcp", addr)
-	if err != nil {
-		return "", nil, err
 	}
 
 	clients := 0
-	go func() {
-		if err := http.Serve(listener, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-			clients++
+	registry := rpc.NewRegistry[remote, json.RawMessage](
+		service,
 
-			log.Printf("%v clients connected", clients)
+		ctx,
 
-			defer func() {
+		&rpc.Options{
+			OnClientConnect: func(remoteID string) {
+				clients++
+
+				log.Printf("%v clients connected", clients)
+			},
+			OnClientDisconnect: func(remoteID string) {
 				clients--
 
+				log.Printf("%v clients connected", clients)
+			},
+		},
+	)
+	service.ForRemotes = registry.ForRemotes
+
+	listener, err := net.Listen("tcp", addr)
+	if err != nil {
+		panic(err)
+	}
+
+	log.Println("Listening on", listener.Addr())
+
+	go func() {
+		defer listener.Close()
+
+		if err := http.Serve(listener, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			defer func() {
 				if err := recover(); err != nil {
 					w.WriteHeader(http.StatusInternalServerError)
 
 					log.Printf("Client disconnected with error: %v", err)
 				}
-
-				log.Printf("%v clients connected", clients)
 			}()
 
 			switch r.Method {
@@ -281,8 +291,30 @@ func StartServer(ctx context.Context, addr string, heartbeat time.Duration, loca
 				conn := websocket.NetConn(ctx, c, websocket.MessageText)
 				defer conn.Close()
 
+				encoder := json.NewEncoder(conn)
+				decoder := json.NewDecoder(conn)
+
 				go func() {
-					if err := registry.Link(conn); err != nil {
+					if err := registry.LinkStream(
+						func(v rpc.Message[json.RawMessage]) error {
+							return encoder.Encode(v)
+						},
+						func(v *rpc.Message[json.RawMessage]) error {
+							return decoder.Decode(v)
+						},
+
+						func(v any) (json.RawMessage, error) {
+							b, err := json.Marshal(v)
+							if err != nil {
+								return nil, err
+							}
+
+							return json.RawMessage(b), nil
+						},
+						func(data json.RawMessage, v any) error {
+							return json.Unmarshal([]byte(data), v)
+						},
+					); err != nil {
 						errs <- err
 
 						return

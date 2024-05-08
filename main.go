@@ -4,16 +4,17 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	_ "embed"
 	"log"
 	"os"
 	"time"
 
-	"github.com/pojntfx/hydrapp/hydrapp/pkg/config"
 	"github.com/loopholelabs/latensee/pkg/backend"
 	"github.com/loopholelabs/latensee/pkg/frontend"
 	"github.com/pojntfx/hydrapp/hydrapp/pkg/browser"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/config"
 	_ "github.com/pojntfx/hydrapp/hydrapp/pkg/fixes"
 	"github.com/pojntfx/hydrapp/hydrapp/pkg/update"
 	"github.com/pojntfx/hydrapp/hydrapp/pkg/utils"
@@ -26,7 +27,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	cfg, err := config.Parse(configFile)
+	cfg, err := config.Parse(bytes.NewBuffer(configFile))
 	if err != nil {
 		utils.HandlePanic("App", "could not parse config file", err)
 

@@ -13,21 +13,26 @@ import (
 	"time"
 
 	_ "github.com/pojntfx/hydrapp/hydrapp/pkg/fixes"
+	"github.com/pojntfx/hydrapp/hydrapp/pkg/utils"
 
 	backend "github.com/loopholelabs/latensee/pkg/backend"
 	frontend "github.com/loopholelabs/latensee/pkg/frontend"
 )
 
 //export Java_io_loopholelabs_latensee_MainActivity_LaunchBackend
-func Java_io_loopholelabs_latensee_MainActivity_LaunchBackend(env *C.JNIEnv, activity C.jobject) C.jstring {
-	backendURL, _, err := backend.StartServer(context.Background(), "", time.Second*10, false)
+func Java_io_loopholelabs_latensee_MainActivity_LaunchBackend(env *C.JNIEnv, activity C.jobject, filesDir C.jstring) C.jstring {
+	if err := utils.PolyfillEnvironment(C.GoString(C.get_c_string(env, filesDir))); err != nil {
+		log.Fatalln("could not polyfill environment:", err)
+	}
+	
+	backendURL, _, err := backend.StartServer(context.Background(), "", time.Second*10, true)
 	if err != nil {
 		log.Fatalln("could not start backend:", err)
 	}
 
 	log.Println("Backend URL:", backendURL)
 
-	frontendURL, _, err := frontend.StartServer(context.Background(), "", backendURL, false)
+	frontendURL, _, err := frontend.StartServer(context.Background(), "", backendURL, true)
 	if err != nil {
 		log.Fatalln("could not start frontend:", err)
 	}
