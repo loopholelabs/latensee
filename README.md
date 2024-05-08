@@ -1,19 +1,22 @@
+<img alt="Project icon" style="vertical-align: middle;" src="./docs/icon.svg" width="128" height="128" align="left">
+
 ## LatenSee
 
-![Logo](./docs/logo-readme.png)
+Redis/Valkey latency visualizer.
 
-Redis latency visualizer.
+<br/>
+
+<p align="center">
+  <img alt="Screenshot of the visualizer" width="90%" src="./docs/screenshot-visualizer.png" />
+</p>
 
 [![hydrapp CI](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml/badge.svg)](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Overview
 
-![Screenshot of the visualizer](./docs/screenshot-visualizer.png)
+LatenSee is A Redis/Valkey latency visualization tool.
 
-LatenSee is a Redis latency visualization tool.
-
-It enables you to ...
+It enables you to:
 
 - **Visualize latency in real-time**: By providing a [hydrapp](https://github.com/pojntfx/hydrapp/)-based UI, it is able give insights into your Redis server's latency as the test is running.
 - **Monitor jitter and latency over a long period of time**: By giving you the option of pausing and resuming tests and providing various configuration options, LatenSee can be used to gather detailed long-term metrics.
@@ -21,7 +24,7 @@ It enables you to ...
 
 ## Installation
 
-See [INSTALLATION.html](https://loopholelabs.github.io/latensee/docs/stable/INSTALLATION.html).
+See [INSTALLATION.html](https://loopholelabs.github.io/latensee//docs/main/INSTALLATION.html).
 
 ## Reference
 
@@ -49,11 +52,11 @@ All arguments passed to the binary will be forwarded to the browser used to disp
 
 - [pojntfx/hydrapp](https://github.com/pojntfx/hydrapp) provides the application framework.
 - [Font Awesome](https://fontawesome.com/) provides the assets used for the icon and logo.
-- [go-redis/redis](https://github.com/redis/go-redis) provides the Redis client.
+- [go-redis/redis](https://github.com/redis/go-redis) provides the Redis/Valkey client.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/loopholelabs/latensee][gitrepo]. For more contribution information check out [the contribution guide](https://github.com/loopholelabs/latensee/blob/master/CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/loopholelabs/latensee][gitrepo]. For more contribution information check out [the contribution guide](./CONTRIBUTING.md).
 
 ## License
 
@@ -61,7 +64,7 @@ The LatenSee project is available as open source under the terms of the [Apache 
 
 ## Code of Conduct
 
-Everyone interacting in the LatenSee project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+Everyone interacting in the LatenSee project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 ## Project Managed By:
 
