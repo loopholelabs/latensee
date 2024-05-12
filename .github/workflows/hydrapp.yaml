@@ -33,13 +33,12 @@ jobs:
             exclude: apk|deb|flatpak|msi|rpm|binaries|tests
             tag: main
             dst: out/*
-          # Disable Flatpak due to "Error opening file /proc/sys/net/ipv4/route/flush: Permission denied" during build
-          # - id: hydrapp-flatpak.io.loopholelabs.latensee
-          #   src: .
-          #   pkg: .
-          #   exclude: apk|deb|dmg|msi|rpm|binaries|tests
-          #   tag: main
-          #   dst: out/*
+          - id: hydrapp-flatpak.io.loopholelabs.latensee
+            src: .
+            pkg: .
+            exclude: apk|deb|dmg|msi|rpm|binaries|tests
+            tag: main
+            dst: out/*
           - id: hydrapp-msi.io.loopholelabs.latensee
             src: .
             pkg: .

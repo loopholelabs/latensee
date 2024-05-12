@@ -33,10 +33,9 @@ deb:
 dmg:
   path: dmg
   packages: []
-# Disable Flatpak due to "Error opening file /proc/sys/net/ipv4/route/flush: Permission denied" during build
-# flatpak:
-# - path: flatpak/x86_64
-#   architecture: amd64
+flatpak:
+- path: flatpak/x86_64
+  architecture: amd64
 msi:
 - path: msi/x86_64
   architecture: amd64
