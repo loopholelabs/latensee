@@ -1,7 +1,3 @@
-import { ILocalContext, IRemoteContext, Registry } from "@pojntfx/panrpc";
-import { JSONParser } from "@streamparser/json-whatwg";
-import { useEffect, useState } from "react";
-import useAsyncEffect from "use-async";
 import {
   Chart,
   ChartAxis,
@@ -19,6 +15,8 @@ import {
   DataListItem,
   DataListItemCells,
   DataListItemRow,
+  Flex,
+  FlexItem,
   Form,
   FormGroup,
   HelperText,
@@ -27,6 +25,7 @@ import {
   Page,
   PageSection,
   PageSectionVariants,
+  Spinner,
   TextInput,
   TextInputGroup,
   TextInputGroupMain,
@@ -45,10 +44,14 @@ import {
   PlusIcon,
   TimesIcon,
 } from "@patternfly/react-icons";
+import { ILocalContext, IRemoteContext, Registry } from "@pojntfx/panrpc";
+import { JSONParser } from "@streamparser/json-whatwg";
 import Papa from "papaparse";
+import { useEffect, useState } from "react";
+import useAsyncEffect from "use-async";
 import { useElementSize } from "usehooks-ts";
-import "./main.scss";
 import logo from "./logo-dark.png";
+import "./main.scss";
 
 const DARK_THEME_CLASS_NAME = "pf-v5-theme-dark";
 
@@ -785,7 +788,21 @@ const App = () => {
       </Page>
     </>
   ) : (
-    "Connecting ..."
+    <Flex
+      className="pf-v5-u-p-md pf-v5-u-h-100"
+      spaceItems={{ default: "spaceItemsMd" }}
+      direction={{ default: "column" }}
+      justifyContent={{ default: "justifyContentCenter" }}
+      alignItems={{ default: "alignItemsCenter" }}
+    >
+      <FlexItem>
+        <Spinner aria-label="Loading spinner" />
+      </FlexItem>
+
+      <FlexItem>
+        <Title headingLevel="h1">Connecting to backend ...</Title>
+      </FlexItem>
+    </Flex>
   );
 };
 
