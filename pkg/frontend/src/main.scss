@@ -12,7 +12,6 @@ body,
 #root,
 .pf-v5-x-chart {
   height: 100%;
-  background: var(--pf-v5-c-page__main-section--m-light--BackgroundColor);
 }
 
 .pf-v5-c-toolbar__content {
@@ -27,3 +26,11 @@ body,
   justify-content: center;
 }
 
+.pf-v5-c-toolbar {
+  background: transparent;
+}
+
+:root {
+  --pf-v5-chart-axis--tick-label--Fill: var(--pf-v5-global--Color--200);
+  --pf-v5-chart-container--cursor--line--Fill: var(--pf-v5-global--Color--100);
+}

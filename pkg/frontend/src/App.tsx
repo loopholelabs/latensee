@@ -50,6 +50,8 @@ import { useElementSize } from "usehooks-ts";
 import "./main.scss";
 import logo from "./logo-dark.png";
 
+const DARK_THEME_CLASS_NAME = "pf-v5-theme-dark";
+
 class Local {
   constructor(
     private setResults: React.Dispatch<React.SetStateAction<IResults>>,
@@ -132,6 +134,41 @@ interface IResults {
 }
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const darkModeMediaQuery = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+
+    const updateTheme = () => {
+      if (darkModeMediaQuery.matches) {
+        setDarkMode(true);
+
+        return;
+      }
+
+      setDarkMode(false);
+    };
+
+    darkModeMediaQuery.addEventListener("change", updateTheme);
+
+    updateTheme();
+
+    return () => {
+      darkModeMediaQuery.removeEventListener("change", updateTheme);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add(DARK_THEME_CLASS_NAME);
+
+      return;
+    }
+
+    document.documentElement.classList.remove(DARK_THEME_CLASS_NAME);
+  }, [darkMode]);
+
   const [clients, setClients] = useState(0);
   useEffect(() => console.log(clients, "clients connected"), [clients]);
 
