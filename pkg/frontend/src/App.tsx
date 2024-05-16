@@ -764,6 +764,40 @@ const App = () => {
                     voronoiPadding={50}
                   />
                 }
+                minDomain={{
+                  y:
+                    Object.values(results.commands)
+                      .map(
+                        (array) =>
+                          Math.floor(
+                            array.reduce(
+                              (min, current) => Math.min(min, current),
+                              Infinity
+                            ) / 100
+                          ) * 100
+                      )
+                      .reduce(
+                        (min, current) => Math.min(min, current),
+                        Infinity
+                      ) * 0.9,
+                }}
+                maxDomain={{
+                  y:
+                    Object.values(results.commands)
+                      .map(
+                        (array) =>
+                          Math.ceil(
+                            array.reduce(
+                              (max, current) => Math.max(max, current),
+                              -Infinity
+                            ) / 100
+                          ) * 100
+                      )
+                      .reduce(
+                        (max, current) => Math.max(max, current),
+                        -Infinity
+                      ) * 1.1,
+                }}
                 legendData={legendData}
                 legendOrientation="horizontal"
                 legendPosition="bottom"
