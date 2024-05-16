@@ -783,7 +783,7 @@ const App = () => {
                 <ChartGroup>
                   {Object.keys(results.commands).map((command, i) => (
                     <ChartLine
-                      interpolation="basis"
+                      interpolation="step"
                       key={i}
                       name={command}
                       data={results.commands[command].map(
