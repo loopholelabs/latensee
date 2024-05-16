@@ -24,7 +24,6 @@ import {
   Modal,
   Page,
   PageSection,
-  PageSectionVariants,
   Spinner,
   TextInput,
   TextInputGroup,
@@ -47,13 +46,14 @@ import {
 import { ILocalContext, IRemoteContext, Registry } from "@pojntfx/panrpc";
 import { JSONParser } from "@streamparser/json-whatwg";
 import Papa from "papaparse";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useAsyncEffect from "use-async";
 import { useElementSize } from "usehooks-ts";
-import logo from "./logo-dark.png";
+import logoDark from "./logo-dark.png";
+import logoLight from "./logo-light.png";
 import "./main.scss";
 
-const DARK_THEME_CLASS_NAME = "pf-v5-theme-dark";
+const DARK_THEME_CLASS_NAME = "pf-v6-theme-dark";
 
 class Local {
   constructor(
@@ -403,15 +403,15 @@ const App = () => {
         <Title headingLevel="h2">Commands</Title>
 
         {commands.length <= 0 ? (
-          <HelperText className="pf-v5-u-py-sm">
-            <HelperTextItem className="pf-v5-x-text--helper">
+          <HelperText className="pf-v6-u-py-sm">
+            <HelperTextItem className="pf-v6-x-text--helper">
               No commands have been set up yet.
             </HelperTextItem>
           </HelperText>
         ) : (
           <DataList
             isCompact
-            className="pf-v5-u-my-md"
+            className="pf-v6-u-my-md"
             aria-label="List of commands to test"
           >
             {commands.map((command, i) => (
@@ -420,7 +420,7 @@ const App = () => {
                   <DataListItemCells
                     dataListCells={[
                       <DataListCell
-                        className="pf-v5-u-display-flex pf-v5-u-justify-content-flex-start pf-v5-u-align-self-center"
+                        className="pf-v6-u-display-flex pf-v6-u-justify-content-flex-start pf-v6-u-align-self-center"
                         key={1}
                       >
                         <span id={`command-${i}`}>{command}</span>
@@ -450,7 +450,7 @@ const App = () => {
           </DataList>
         )}
 
-        <TextInputGroup className="pf-v5-u-mt-sm">
+        <TextInputGroup className="pf-v6-u-mt-sm">
           <TextInputGroupMain
             placeholder="Command to add"
             value={command}
@@ -472,16 +472,16 @@ const App = () => {
                 setCommand("");
               }}
             >
-              <PlusIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
+              <PlusIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
 
-              <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
+              <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
                 Add command
               </span>
             </Button>
           </TextInputGroupUtilities>
         </TextInputGroup>
 
-        <Title headingLevel="h2" className="pf-v5-u-pt-lg pf-v5-u-pb-sm">
+        <Title headingLevel="h2" className="pf-v6-u-pt-lg pf-v6-u-pb-sm">
           Connection
         </Title>
 
@@ -568,12 +568,26 @@ const App = () => {
       <Page
         header={
           <PageHeader
-            logo={<Brand src={logo} alt="LatenSee logo" />}
+            logo={
+              <>
+                <Brand
+                  src={logoDark}
+                  className="pf-v6-c-brand--dark pf-v6-u-py-sm"
+                  alt="LatenSee logo (dark variant)"
+                />
+
+                <Brand
+                  src={logoLight}
+                  className="pf-v6-c-brand--light pf-v6-u-py-sm"
+                  alt="LatenSee logo (light variant)"
+                />
+              </>
+            }
             logoComponent="div"
             headerTools={
               <PageHeaderTools>
                 <Toolbar>
-                  <ToolbarContent>
+                  <ToolbarContent className="pf-v6-u-pr-0">
                     <ToolbarItem>
                       <Button
                         variant="plain"
@@ -632,9 +646,9 @@ const App = () => {
                             document.body.removeChild(element);
                           }}
                         >
-                          <DownloadIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
+                          <DownloadIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
 
-                          <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
+                          <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
                             Download CSV
                           </span>
                         </Button>
@@ -658,9 +672,9 @@ const App = () => {
                             setIsLatencyMeasuring(false);
                           }}
                         >
-                          <TimesIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
+                          <TimesIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
 
-                          <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
+                          <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
                             Stop test
                           </span>
                         </Button>
@@ -700,12 +714,12 @@ const App = () => {
                         }}
                       >
                         {isLatencyMeasuring ? (
-                          <PauseIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
+                          <PauseIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
                         ) : (
-                          <PlayIcon className="pf-v5-u-mr-0 pf-v5-u-mr-sm-on-md" />
+                          <PlayIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
                         )}
 
-                        <span className="pf-v5-u-display-none pf-v5-u-display-inline-block-on-md">
+                        <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
                           {isLatencyMeasuring
                             ? "Pause"
                             : isStoppable
@@ -722,17 +736,17 @@ const App = () => {
           />
         }
       >
-        <div ref={ref} className="pf-v5-x-chart">
-          <PageSection variant={PageSectionVariants.light}>
+        <div ref={ref} className="pf-v6-x-chart">
+          <PageSection>
             <div
               style={{
-                height: (height || 0) - 48,
-                width: (width || 0) - 48,
+                height: (height || 0) - 8,
+                width: width || 0,
               }}
             >
               <Chart
-                height={(height || 0) - 48}
-                width={(width || 0) - 48}
+                height={(height || 0) - 8}
+                width={width || 0}
                 ariaTitle="Latency results"
                 ariaDesc="Graph displaying the latency results"
                 containerComponent={
@@ -756,8 +770,8 @@ const App = () => {
                 padding={{
                   bottom: 75, // Adjusted to accommodate legend
                   left: 75, // Adjusted to accommodate legend
-                  right: 50,
-                  top: 50,
+                  right: 0,
+                  top: 0,
                 }}
               >
                 <ChartAxis tickFormat={(tick) => tick.toFixed(1) + " s"} />
@@ -789,7 +803,7 @@ const App = () => {
     </>
   ) : (
     <Flex
-      className="pf-v5-u-p-md pf-v5-u-h-100"
+      className="pf-v6-u-p-md pf-v6-u-h-100"
       spaceItems={{ default: "spaceItemsMd" }}
       direction={{ default: "column" }}
       justifyContent={{ default: "justifyContentCenter" }}

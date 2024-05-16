@@ -1,36 +1,66 @@
-@import "../node_modules/@patternfly/patternfly/sass-utilities/all.scss";
+@import "../node_modules/@patternfly/patternfly/sass-utilities";
 
-$pf-v5-global--font-path: "../node_modules/@patternfly/patternfly/assets/fonts";
+$pf-v6-global--font-path: "../node_modules/@patternfly/patternfly/assets/fonts";
 $fa-font-path: "../node_modules/@patternfly/patternfly/assets/fonts/webfonts";
-$pf-v5-global--fonticon-path: "../node_modules/@patternfly/patternfly/assets/pficon";
-$pf-v5-global--image-path: "data-url:../node_modules/@patternfly/patternfly/assets/images";
+$pf-v6-global--fonticon-path: "../node_modules/@patternfly/patternfly/assets/pficon";
+$pf-v6-global--image-path: "data-url:../node_modules/@patternfly/patternfly/assets/images";
 
 @import "../node_modules/@patternfly/patternfly/patternfly.scss";
 @import "../node_modules/@patternfly/patternfly/patternfly-addons.scss";
 
 body,
 #root,
-.pf-v5-x-chart {
+.pf-v6-x-chart,
+.pf-v6-c-page__main,
+.pf-v6-c-page__main-section,
+.pf-v6-c-page__main-section > div {
   height: 100%;
 }
 
-.pf-v5-c-toolbar__content {
+.pf-v6-c-page__main-section {
+  padding-top: 0;
+}
+
+.pf-v6-c-page__main-container {
+  height: var(--pf-v6-c-page__main-container--MaxHeight);
+  border: 0;
+}
+
+.pf-v6-c-toolbar__content {
   overflow-x: auto;
 }
 
-.pf-v5-c-toolbar__content-section {
+.pf-v6-c-toolbar__content-section {
   flex-wrap: nowrap;
 }
 
-.pf-v5-x-text--helper {
+.pf-v6-x-text--helper {
   justify-content: center;
 }
 
-.pf-v5-c-toolbar {
-  background: transparent;
+:root {
+  --pf-v6-chart-axis--tick-label--Fill: var(
+    --pf-v6-c-content--blockquote--Color
+  );
+  --pf-v6-chart-container--cursor--line--Fill: var(
+    --pf-v6-c-content--blockquote--Color
+  );
+  --pf-v6-chart-global--label--Fill: var(--pf-v6-c-content--Color);
 }
 
-:root {
-  --pf-v5-chart-axis--tick-label--Fill: var(--pf-v5-global--Color--200);
-  --pf-v5-chart-container--cursor--line--Fill: var(--pf-v5-global--Color--100);
+// There seems to be a bug in PatternFly V6 that renders a phantom `<ToolbarContent>`
+.pf-m-hidden {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .pf-v6-c-brand--dark {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pf-v6-c-brand--light {
+    display: none;
+  }
 }
