@@ -231,7 +231,7 @@ func StartServer(ctx context.Context, addr string, heartbeat time.Duration, loca
 
 		ctx,
 
-		&rpc.Options{
+		&rpc.RegistryHooks{
 			OnClientConnect: func(remoteID string) {
 				clients++
 
@@ -314,6 +314,8 @@ func StartServer(ctx context.Context, addr string, heartbeat time.Duration, loca
 						func(data json.RawMessage, v any) error {
 							return json.Unmarshal([]byte(data), v)
 						},
+
+						nil,
 					); err != nil {
 						errs <- err
 
