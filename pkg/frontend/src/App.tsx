@@ -21,6 +21,10 @@ import {
   FormGroup,
   HelperText,
   HelperTextItem,
+  Masthead,
+  MastheadBrand,
+  MastheadContent,
+  MastheadMain,
   Modal,
   Page,
   PageSection,
@@ -32,9 +36,9 @@ import {
   Title,
   Toolbar,
   ToolbarContent,
+  ToolbarGroup,
   ToolbarItem,
 } from "@patternfly/react-core";
-import { PageHeader, PageHeaderTools } from "@patternfly/react-core/deprecated";
 import {
   CogIcon,
   DownloadIcon,
@@ -567,27 +571,30 @@ const App = () => {
 
       <Page
         header={
-          <PageHeader
-            logo={
-              <>
+          <Masthead display={{ default: "stack", sm: "inline" }}>
+            <MastheadMain>
+              {/* <MastheadBrand>
                 <Brand
                   src={logoDark}
                   className="pf-v6-c-brand--dark pf-v6-u-py-sm"
                   alt="LatenSee logo (dark variant)"
                 />
+              </MastheadBrand> */}
 
+              <MastheadBrand>
                 <Brand
                   src={logoLight}
-                  className="pf-v6-c-brand--light pf-v6-u-py-sm"
+                  className="pf-v6-c-brand--light"
                   alt="LatenSee logo (light variant)"
+                  heights={{ default: "36px" }}
                 />
-              </>
-            }
-            logoComponent="div"
-            headerTools={
-              <PageHeaderTools>
-                <Toolbar>
-                  <ToolbarContent className="pf-v6-u-pr-0">
+              </MastheadBrand>
+            </MastheadMain>
+
+            <MastheadContent>
+              <Toolbar>
+                <ToolbarContent>
+                  <ToolbarGroup align={{ default: "alignEnd" }}>
                     <ToolbarItem>
                       <Button
                         variant="plain"
@@ -729,11 +736,11 @@ const App = () => {
                         </span>
                       </Button>
                     </ToolbarItem>
-                  </ToolbarContent>
-                </Toolbar>
-              </PageHeaderTools>
-            }
-          />
+                  </ToolbarGroup>
+                </ToolbarContent>
+              </Toolbar>
+            </MastheadContent>
+          </Masthead>
         }
       >
         <div ref={ref} className="pf-v6-x-chart">

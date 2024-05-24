@@ -26,14 +26,6 @@ body,
   border: 0;
 }
 
-.pf-v6-c-toolbar__content {
-  overflow-x: auto;
-}
-
-.pf-v6-c-toolbar__content-section {
-  flex-wrap: nowrap;
-}
-
 .pf-v6-x-text--helper {
   justify-content: center;
 }
@@ -63,4 +55,17 @@ body,
   .pf-v6-c-brand--light {
     display: none;
   }
+}
+
+.pf-v6-c-masthead__main {
+  margin-left: calc(0px - var(--pf-v6-c-masthead--ColumnGap));
+}
+
+.pf-v6-c-masthead__brand {
+  margin: 0 auto;
+}
+
+.pf-v6-c-toolbar__group {
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
