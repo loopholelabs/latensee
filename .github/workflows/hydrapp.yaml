@@ -17,77 +17,77 @@ jobs:
           # io.loopholelabs.latensee
           - id: hydrapp-apk.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: deb|dmg|flatpak|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-deb-amd64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: deb/arm64|apk|dmg|flatpak|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-deb-arm64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: deb/amd64|apk|dmg|flatpak|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-arm-32
           - id: hydrapp-dmg.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-flatpak-amd64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak/arm64|dmg|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-flatpak-arm64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak/amd64|dmg|msi|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-arm-32
           - id: hydrapp-msi.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|dmg|rpm|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-rpm-amd64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|dmg|rpm/arm64|msi|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-rpm-arm64.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|dmg|rpm/amd64|msi|binaries|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-arm-32
           - id: hydrapp-binaries.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|dmg|msi|rpm|tests
             tag: main
             dst: out/*
             runner: depot-ubuntu-22.04-32
           - id: hydrapp-tests.io.loopholelabs.latensee
             src: .
-            pkg: io.loopholelabs.latensee
+            pkg: .
             exclude: apk|deb|flatpak|dmg|msi|rpm|binaries
             tag: main
             dst: out/*
