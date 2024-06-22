@@ -14,9 +14,9 @@ Redis/Valkey latency visualizer.
 
 ## Overview
 
-LatenSee is A Redis/Valkey latency visualization tool.
+LatenSee is a Redis/Valkey latency visualization tool.
 
-It enables you to:
+It enables you to ...
 
 - **Visualize latency in real-time**: By providing a [hydrapp](https://github.com/pojntfx/hydrapp/)-based UI, it is able give insights into your Redis/Valkey server's latency as the test is running.
 - **Monitor jitter and latency over a long period of time**: By giving you the option of pausing and resuming tests and providing various configuration options, LatenSee can be used to gather detailed long-term metrics.
@@ -56,7 +56,7 @@ All arguments passed to the binary will be forwarded to the browser used to disp
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/loopholelabs/latensee][gitrepo]. For more contribution information check out [the contribution guide](./CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/loopholelabs/latensee](https://github.com/loopholelabs/latensee). For more contribution information check out [the contribution guide](./CONTRIBUTING.md).
 
 ## License
 
@@ -68,8 +68,4 @@ Everyone interacting in the LatenSee project's codebases, issue trackers, chat r
 
 ## Project Managed By:
 
-[![https://loopholelabs.io][loopholelabs]](https://loopholelabs.io)
-
-[gitrepo]: https://github.com/loopholelabs/latensee
-[loopholelabs]: https://cdn.loopholelabs.io/loopholelabs/LoopholeLabsLogo.svg
-[loophomepage]: https://loopholelabs.io
+[![https://loopholelabs.io](https://cdn.loopholelabs.io/loopholelabs/LoopholeLabsLogo.svg)](https://loopholelabs.io)
