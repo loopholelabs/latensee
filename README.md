@@ -1,16 +1,22 @@
-<img alt="Project icon" style="vertical-align: middle;" src="./docs/icon.svg" width="128" height="128" align="left">
+<div align="center">
 
-# LatenSee
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/logo-dark.svg">
+  <img alt="Logo" src="./docs/logo-light.svg">
+</picture>
 
-Redis/Valkey latency visualizer.
-
-<br/>
-
-<p align="center">
-  <img alt="Screenshot of the visualizer" width="90%" src="./docs/screenshot-visualizer.png" />
-</p>
-
+[![License: AGPL 3.0](https://img.shields.io/github/license/loopholelabs/latensee)](https://www.gnu.org/licenses/agpl-3.0.en.html)
+[![Discord](https://dcbadge.vercel.app/api/server/JYmFhtdPeu?style=flat)](https://loopholelabs.io/discord)
 [![hydrapp CI](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml/badge.svg)](https://github.com/loopholelabs/latensee/actions/workflows/hydrapp.yaml)
+![Go Version](https://img.shields.io/badge/go%20version-%3E=1.21-61CFDD.svg)
+[![Go Reference](https://pkg.go.dev/badge/github.com/loopholelabs/latensee.svg)](https://pkg.go.dev/github.com/loopholelabs/latensee)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/screenshot-visualizer-dark.png">
+  <img alt="Screenshot of the visualizer" src="./docs/screenshot-visualizer-light.png">
+</picture>
+
+</div>
 
 ## Overview
 
@@ -32,7 +38,10 @@ See [INSTALLATION.html](https://loopholelabs.github.io/latensee//docs/main/INSTA
 
 You can open the settings through the settings button in the top right; here you can configure many aspects of the application such as the Redis/Valkey URL and the maximum intervals to display:
 
-![A screenshot of the settings dialog](./docs/screenshot-settings.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./docs/screenshot-settings-dark.png">
+  <img alt="Screenshot of the settings dialog" src="./docs/screenshot-settings-light.png">
+</picture>
 
 ### Command Line Arguments
 
