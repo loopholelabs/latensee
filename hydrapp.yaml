@@ -1,8 +1,8 @@
 app:
   id: io.loopholelabs.latensee
   name: LatenSee
-  summary: Redis/Valkey latency visualizer
-  description: A Redis/Valkey latency visualization tool.
+  summary: Valkey/Redis latency visualizer
+  description: A Valkey/Redis latency visualization tool.
   license: Apache-2.0
   homepage: https://github.com/loopholelabs/latensee
   git: https://github.com/loopholelabs/latensee.git

@@ -1,7 +1,7 @@
 {
   "name": "io.loopholelabs.latensee",
   "version": "0.0.1",
-  "description": "A Redis/Valkey latency visualization tool.",
+  "description": "A Valkey/Redis latency visualization tool.",
   "type": "module",
   "scripts": {
     "dev": "parcel index.html --dist-dir out",
