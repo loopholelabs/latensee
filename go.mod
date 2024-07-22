@@ -5,7 +5,7 @@ go 1.21.1
 require (
 	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240715213343-ceb622bc2ff4
 	github.com/pojntfx/panrpc/go v0.0.0-20240702184342-b89dd0c1dde5
-	github.com/redis/go-redis/v9 v9.5.3
+	github.com/redis/go-redis/v9 v9.6.0
 	nhooyr.io/websocket v1.8.11
 )
 
