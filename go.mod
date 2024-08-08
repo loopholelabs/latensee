@@ -3,9 +3,9 @@ module github.com/loopholelabs/latensee
 go 1.21.1
 
 require (
-	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240715213343-ceb622bc2ff4
-	github.com/pojntfx/panrpc/go v0.0.0-20240702184342-b89dd0c1dde5
-	github.com/redis/go-redis/v9 v9.5.3
+	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240807225249-46f23eed592e
+	github.com/pojntfx/panrpc/go v0.0.0-20240727035459-583758c47d9f
+	github.com/redis/go-redis/v9 v9.6.1
 	nhooyr.io/websocket v1.8.11
 )
 
@@ -26,10 +26,10 @@ require (
 	github.com/ncruces/zenity v0.10.13 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/randall77/makefat v0.0.0-20210315173500-7ddd0e42c844 // indirect
-	golang.org/x/crypto v0.25.0 // indirect
-	golang.org/x/image v0.18.0 // indirect
-	golang.org/x/sys v0.22.0 // indirect
-	golang.org/x/text v0.16.0 // indirect
+	golang.org/x/crypto v0.26.0 // indirect
+	golang.org/x/image v0.19.0 // indirect
+	golang.org/x/sys v0.24.0 // indirect
+	golang.org/x/text v0.17.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	yrh.dev/icns v0.0.0-20210608051050-de3ea6a57b33 // indirect
 )
