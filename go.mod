@@ -3,8 +3,8 @@ module github.com/loopholelabs/latensee
 go 1.21.1
 
 require (
-	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240807225249-46f23eed592e
-	github.com/pojntfx/panrpc/go v0.0.0-20240727035459-583758c47d9f
+	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240816012558-362be364b952
+	github.com/pojntfx/panrpc/go v0.0.0-20240816011753-7169be8c89fb
 	github.com/redis/go-redis/v9 v9.6.1
 	nhooyr.io/websocket v1.8.17
 )
