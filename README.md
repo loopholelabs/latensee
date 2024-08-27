@@ -22,7 +22,7 @@
 
 LatenSee is a Valkey/Redis latency visualization tool.
 
-It enables you to ...
+It enables you to:
 
 - **Visualize latency in real-time**: By providing a [hydrapp](https://github.com/pojntfx/hydrapp/)-based UI, it is able give insights into your Valkey/Redis server's latency as the test is running.
 - **Monitor jitter and latency over a long period of time**: By giving you the option of pausing and resuming tests and providing various configuration options, LatenSee can be used to gather detailed long-term metrics.

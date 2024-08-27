@@ -3,7 +3,7 @@ module github.com/loopholelabs/latensee
 go 1.21.1
 
 require (
-	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240816012558-362be364b952
+	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20240827002308-22c8dc1ea9b8
 	github.com/pojntfx/panrpc/go v0.0.0-20240816011753-7169be8c89fb
 	github.com/redis/go-redis/v9 v9.6.1
 	nhooyr.io/websocket v1.8.17
@@ -17,7 +17,7 @@ require (
 	github.com/akavel/rsrc v0.10.2 // indirect
 	github.com/breml/rootcerts v0.2.17 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/cloudflare/circl v1.3.9 // indirect
+	github.com/cloudflare/circl v1.4.0 // indirect
 	github.com/dchest/jsmin v0.0.0-20220218165748-59f39799265f // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
