@@ -1,0 +1,13 @@
+---
+sdk_path: "/root/Android/Sdk"
+repo_url: "https://loopholelabs.github.io/latensee//apk/main/repo"
+repo_name: LatenSee (Main) F-Droid Repo
+repo_description: >-
+  Android apps for LatenSee (Main).
+repo_icon: icon.png
+repo_keyalias: loophole labs latensee repository
+keystore: keystore.p12
+keystorepass: "yvO3TPGlhaLVUVCRw02ba2CqnEK1Hub1"
+keypass: "X4YvGIxJLyQEbvlVhMyhiGEAsPvPHjYJ"
+keydname: CN=Loophole Labs LatenSee Repository
+apksigner: /usr/bin/apksigner
