@@ -18,7 +18,7 @@ body,
 }
 
 .pf-v6-c-page__main-section {
-  padding-top: 0;
+  padding: 0;
 }
 
 .pf-v6-c-page__main-container {
@@ -68,4 +68,8 @@ body,
 .pf-v6-c-toolbar__group {
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+.pf-v6-c-masthead__brand--minimal {
+  border: 0;
 }

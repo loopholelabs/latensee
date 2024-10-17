@@ -5,7 +5,7 @@ import {
   ChartLegendTooltip,
   ChartLine,
   createContainer,
-} from "@patternfly/react-charts";
+} from "@patternfly/react-charts/dist/esm/victory";
 import {
   Brand,
   Button,
@@ -26,6 +26,9 @@ import {
   MastheadContent,
   MastheadMain,
   Modal,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
   Page,
   PageSection,
   Spinner,
@@ -395,9 +398,176 @@ const App = () => {
         isOpen={isSettingsOpen}
         onEscapePress={() => setIsSettingsOpen(false)}
         onClose={() => setIsSettingsOpen(false)}
-        title="Settings"
         variant="medium"
-        actions={[
+        aria-labelledby="settings-modal-title"
+        aria-describedby="modal-box-body-settings"
+      >
+        <ModalHeader title="Settings" labelId="settings-modal-title" />
+
+        <ModalBody id="modal-box-body-settings">
+          <Title headingLevel="h2">Commands</Title>
+
+          {commands.length <= 0 ? (
+            <HelperText className="pf-v6-u-py-sm">
+              <HelperTextItem className="pf-v6-x-text--helper">
+                No commands have been set up yet.
+              </HelperTextItem>
+            </HelperText>
+          ) : (
+            <DataList
+              isCompact
+              className="pf-v6-u-my-md"
+              aria-label="List of commands to test"
+            >
+              {commands.map((command, i) => (
+                <DataListItem key={i} aria-labelledby={`command-${i}`}>
+                  <DataListItemRow>
+                    <DataListItemCells
+                      dataListCells={[
+                        <DataListCell
+                          className="pf-v6-u-display-flex pf-v6-u-justify-content-flex-start pf-v6-u-align-self-center"
+                          key={1}
+                        >
+                          <span id={`command-${i}`}>{command}</span>
+                        </DataListCell>,
+                      ]}
+                    />
+                    <DataListAction
+                      aria-labelledby={`command-${i} action-${i}`}
+                      id={`action-${i}`}
+                      aria-label="Actions"
+                    >
+                      <Button
+                        variant="plain"
+                        key={1}
+                        onClick={() =>
+                          setCommands((oldCommands) =>
+                            oldCommands.filter((_, j) => i !== j)
+                          )
+                        }
+                      >
+                        <TimesIcon />
+                      </Button>
+                    </DataListAction>
+                  </DataListItemRow>
+                </DataListItem>
+              ))}
+            </DataList>
+          )}
+          <TextInputGroup className="pf-v6-u-mt-sm">
+            <TextInputGroupMain
+              placeholder="Command to add"
+              value={command}
+              onChange={(_, value) => setCommand(value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  setCommands((commands) => [...commands, command]);
+                  setCommand("");
+                }
+              }}
+            />
+
+            <TextInputGroupUtilities>
+              <Button
+                variant="plain"
+                aria-label="Add command"
+                onClick={(e) => {
+                  setCommands((commands) => [...commands, command]);
+                  setCommand("");
+                }}
+              >
+                <PlusIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
+
+                <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
+                  Add command
+                </span>
+              </Button>
+            </TextInputGroupUtilities>
+          </TextInputGroup>
+          <Title headingLevel="h2" className="pf-v6-u-pt-lg pf-v6-u-pb-sm">
+            Connection
+          </Title>
+          <Form
+            id="settings"
+            onSubmit={(e) => {
+              e.preventDefault();
+              setIsSettingsOpen(false);
+            }}
+          >
+            <FormGroup
+              label="Test interval (in milliseconds)"
+              isRequired
+              fieldId="test-interval"
+            >
+              <TextInput
+                isRequired
+                type="number"
+                id="test-interval"
+                name="test-interval"
+                value={intervalMilliSecond}
+                onChange={(_, e) => {
+                  const v = parseInt(e);
+
+                  if (isNaN(v)) {
+                    console.error("Could not parse test interval");
+
+                    return;
+                  }
+
+                  setIntervalMilliSecond(v);
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup label="Valkey/Redis URL" isRequired fieldId="redis-url">
+              <TextInput
+                isRequired
+                type="text"
+                id="redis-url"
+                name="redis-url"
+                value={redisURL}
+                onChange={(_, e) => {
+                  const v = e.trim();
+
+                  if (v.length <= 0) {
+                    console.error("Could not work with empty Valkey/Redis URL");
+
+                    return;
+                  }
+
+                  setRedisURL(v);
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup
+              label="Maximum intervals to display"
+              isRequired
+              fieldId="maximum-interval"
+            >
+              <TextInput
+                isRequired
+                type="number"
+                id="maximum-interval"
+                name="maximum-interval"
+                defaultValue={maxIntervalsToDisplay}
+                onChange={(_, e) => {
+                  const v = parseInt(e);
+
+                  if (isNaN(v)) {
+                    console.error("Could not parse max intervals to display");
+
+                    return;
+                  }
+
+                  maxIntervalsToDisplay = v;
+                }}
+              />
+            </FormGroup>
+          </Form>
+        </ModalBody>
+
+        <ModalFooter>
           <Button
             key={1}
             variant="primary"
@@ -406,187 +576,22 @@ const App = () => {
             form="settings"
           >
             OK
-          </Button>,
-        ]}
-      >
-        <Title headingLevel="h2">Commands</Title>
-
-        {commands.length <= 0 ? (
-          <HelperText className="pf-v6-u-py-sm">
-            <HelperTextItem className="pf-v6-x-text--helper">
-              No commands have been set up yet.
-            </HelperTextItem>
-          </HelperText>
-        ) : (
-          <DataList
-            isCompact
-            className="pf-v6-u-my-md"
-            aria-label="List of commands to test"
-          >
-            {commands.map((command, i) => (
-              <DataListItem key={i} aria-labelledby={`command-${i}`}>
-                <DataListItemRow>
-                  <DataListItemCells
-                    dataListCells={[
-                      <DataListCell
-                        className="pf-v6-u-display-flex pf-v6-u-justify-content-flex-start pf-v6-u-align-self-center"
-                        key={1}
-                      >
-                        <span id={`command-${i}`}>{command}</span>
-                      </DataListCell>,
-                    ]}
-                  />
-                  <DataListAction
-                    aria-labelledby={`command-${i} action-${i}`}
-                    id={`action-${i}`}
-                    aria-label="Actions"
-                  >
-                    <Button
-                      variant="plain"
-                      key={1}
-                      onClick={() =>
-                        setCommands((oldCommands) =>
-                          oldCommands.filter((_, j) => i !== j)
-                        )
-                      }
-                    >
-                      <TimesIcon />
-                    </Button>
-                  </DataListAction>
-                </DataListItemRow>
-              </DataListItem>
-            ))}
-          </DataList>
-        )}
-
-        <TextInputGroup className="pf-v6-u-mt-sm">
-          <TextInputGroupMain
-            placeholder="Command to add"
-            value={command}
-            onChange={(_, value) => setCommand(value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                setCommands((commands) => [...commands, command]);
-                setCommand("");
-              }
-            }}
-          />
-
-          <TextInputGroupUtilities>
-            <Button
-              variant="plain"
-              aria-label="Add command"
-              onClick={(e) => {
-                setCommands((commands) => [...commands, command]);
-                setCommand("");
-              }}
-            >
-              <PlusIcon className="pf-v6-u-mr-0 pf-v6-u-mr-sm-on-md" />
-
-              <span className="pf-v6-u-display-none pf-v6-u-display-inline-block-on-md">
-                Add command
-              </span>
-            </Button>
-          </TextInputGroupUtilities>
-        </TextInputGroup>
-
-        <Title headingLevel="h2" className="pf-v6-u-pt-lg pf-v6-u-pb-sm">
-          Connection
-        </Title>
-
-        <Form
-          id="settings"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setIsSettingsOpen(false);
-          }}
-        >
-          <FormGroup
-            label="Test interval (in milliseconds)"
-            isRequired
-            fieldId="test-interval"
-          >
-            <TextInput
-              isRequired
-              type="number"
-              id="test-interval"
-              name="test-interval"
-              value={intervalMilliSecond}
-              onChange={(_, e) => {
-                const v = parseInt(e);
-
-                if (isNaN(v)) {
-                  console.error("Could not parse test interval");
-
-                  return;
-                }
-
-                setIntervalMilliSecond(v);
-              }}
-            />
-          </FormGroup>
-
-          <FormGroup label="Valkey/Redis URL" isRequired fieldId="redis-url">
-            <TextInput
-              isRequired
-              type="text"
-              id="redis-url"
-              name="redis-url"
-              value={redisURL}
-              onChange={(_, e) => {
-                const v = e.trim();
-
-                if (v.length <= 0) {
-                  console.error("Could not work with empty Valkey/Redis URL");
-
-                  return;
-                }
-
-                setRedisURL(v);
-              }}
-            />
-          </FormGroup>
-
-          <FormGroup
-            label="Maximum intervals to display"
-            isRequired
-            fieldId="maximum-interval"
-          >
-            <TextInput
-              isRequired
-              type="number"
-              id="maximum-interval"
-              name="maximum-interval"
-              defaultValue={maxIntervalsToDisplay}
-              onChange={(_, e) => {
-                const v = parseInt(e);
-
-                if (isNaN(v)) {
-                  console.error("Could not parse max intervals to display");
-
-                  return;
-                }
-
-                maxIntervalsToDisplay = v;
-              }}
-            />
-          </FormGroup>
-        </Form>
+          </Button>
+        </ModalFooter>
       </Modal>
 
       <Page
-        header={
+        masthead={
           <Masthead display={{ default: "stack", sm: "inline" }}>
             <MastheadMain>
-              {/* <MastheadBrand>
+              <MastheadBrand className="pf-v6-c-masthead__brand--minimal">
                 <Brand
                   src={logoDark}
-                  className="pf-v6-c-brand--dark pf-v6-u-py-sm"
+                  className="pf-v6-c-brand--dark"
                   alt="LatenSee logo (dark variant)"
+                  heights={{ default: "36px" }}
                 />
-              </MastheadBrand> */}
 
-              <MastheadBrand>
                 <Brand
                   src={logoLight}
                   className="pf-v6-c-brand--light"
