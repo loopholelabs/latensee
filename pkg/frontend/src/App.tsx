@@ -5,7 +5,7 @@ import {
   ChartLegendTooltip,
   ChartLine,
   createContainer,
-} from "@patternfly/react-charts";
+} from "@patternfly/react-charts/dist/esm/victory";
 import {
   Brand,
   Button,
