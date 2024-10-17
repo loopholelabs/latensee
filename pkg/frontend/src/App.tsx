@@ -584,15 +584,14 @@ const App = () => {
         masthead={
           <Masthead display={{ default: "stack", sm: "inline" }}>
             <MastheadMain>
-              {/* <MastheadBrand>
+              <MastheadBrand className="pf-v6-c-masthead__brand--minimal">
                 <Brand
                   src={logoDark}
-                  className="pf-v6-c-brand--dark pf-v6-u-py-sm"
+                  className="pf-v6-c-brand--dark"
                   alt="LatenSee logo (dark variant)"
+                  heights={{ default: "36px" }}
                 />
-              </MastheadBrand> */}
 
-              <MastheadBrand>
                 <Brand
                   src={logoLight}
                   className="pf-v6-c-brand--light"
