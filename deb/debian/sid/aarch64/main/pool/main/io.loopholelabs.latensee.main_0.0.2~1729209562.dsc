@@ -8,12 +8,12 @@ Homepage: https://github.com/loopholelabs/latensee
 Standards-Version: 4.5.1
 Vcs-Browser: https://github.com/loopholelabs/latensee.git
 Vcs-Git: https://github.com/loopholelabs/latensee.git
-Build-Depends: debhelper (>= 12.10), git (>= 2.20.1), golang-go (>= 1.21), ca-certificates, desktop-file-utils (>= 0.24), appstream-util (>= 0.7.16), npm (>= 7.5.2)
+Build-Depends: debhelper (>= 12.10), git (>= 2.20.1), golang-go (>= 1.21), ca-certificates, desktop-file-utils (>= 0.24), appstream (>= 0.12.5), npm (>= 7.5.2)
 Package-List:
  io.loopholelabs.latensee.main deb utils optional arch=any
 Checksums-Sha1:
- f89286d0f40e7e6ee90e1fe76093066ea29611e1 840900 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
+ a97e1c08eec21ea62146dd8e39dd031281f3636d 840916 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
 Checksums-Sha256:
- 7873ed4eebd56254e554123ee6592ad45e4e70cf069618fa9e19f803bdb65266 840900 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
+ ffb897802360377f77f7da14cff7a47e280166ab0934455940b841e57cfbcb29 840916 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
 Files:
- 9e08d6166dd6ab57624a84536c138bba 840900 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
+ a684adcbd112f6f3b232cf885a45ebeb 840916 io.loopholelabs.latensee.main_0.0.2~1729209562.tar.xz
