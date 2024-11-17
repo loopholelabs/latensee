@@ -41,6 +41,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024308-2169ed184339 h1:DT/RESnJTaVSH4uwS/OjDSlGJAldfyWugwDpbFTPR24=
 github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024308-2169ed184339/go.mod h1:m9HMIrC7dHef7D5YUTC0vNomaqcn1fBpMO/x33BD5Ts=
+github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024959-42c8dea80dda h1:8fEi8oRzMRcyuwMQpf2csqU1QNUFQPkOp6mP8BOUmIo=
+github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024959-42c8dea80dda/go.mod h1:m9HMIrC7dHef7D5YUTC0vNomaqcn1fBpMO/x33BD5Ts=
 github.com/pojntfx/panrpc/go v0.0.0-20241003051136-b93809e92a15 h1:4RI9bEX39FgZo9/12015R/sPehT14oX3sffksnuNh7I=
 github.com/pojntfx/panrpc/go v0.0.0-20241003051136-b93809e92a15/go.mod h1:G9YawT9jiXDf6z7WEv7KMIca+A41mjm8KL8AfBxN37U=
 github.com/randall77/makefat v0.0.0-20210315173500-7ddd0e42c844 h1:GranzK4hv1/pqTIhMTXt2X8MmMOuH3hMeUR0o9SP5yc=

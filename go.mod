@@ -5,7 +5,7 @@ go 1.23.1
 toolchain go1.23.2
 
 require (
-	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024308-2169ed184339
+	github.com/pojntfx/hydrapp/hydrapp v0.0.0-20241117024959-42c8dea80dda
 	github.com/pojntfx/panrpc/go v0.0.0-20241003051136-b93809e92a15
 	github.com/redis/go-redis/v9 v9.7.0
 	nhooyr.io/websocket v1.8.17
