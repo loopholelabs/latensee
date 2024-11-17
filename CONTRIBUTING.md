@@ -1,6 +1,6 @@
 # Contributing
 
-To build and start a development version of LatenSee locally, run the following:
+To build and start a development version of LatenSee locally, first install [Go](https://go.dev/) and [npm](https://www.npmjs.com/), then run the following:
 
 ```shell
 $ git clone https://github.com/loopholelabs/latensee.git
