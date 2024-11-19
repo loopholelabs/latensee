@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 26 Aug 2024 15:00:00 +0100
+Source: io.loopholelabs.latensee.main
+Architecture: source
+Version: 0.0.2~1732033440
+Distribution: unstable
+Urgency: medium
+Maintainer: Felicitas Pojtinger <felicitas@pojtinger.com>
+Changed-By: Felicitas Pojtinger <felicitas@pojtinger.com>
+Changes:
+ io.loopholelabs.latensee.main (0.0.2~1732033440) unstable; urgency=medium
+ .
+   * Maintenance updates to match the state of the art of hydrapp apps
+Checksums-Sha1:
+ 49f39a3781de7995d980beec5d7dabcb0ebcdc80 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 0931bbf7b18febdd782889d6a7074a3f80a3404d 840248 io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ 858d6c790fae8e7e7f55f616bba8178542d38c5c 20242 io.loopholelabs.latensee.main_0.0.2~1732033440_arm64.buildinfo
+Checksums-Sha256:
+ 1bf4dcdd29d92b1eac408fd8943255c0621eb70be67c3219cca7cf6cf59aa0f9 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 15a35478b5bf3c565487505087463da28e4012b531b282b3609a0beaccc8155c 840248 io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ f5cf9c0ae9694e4fef9b45288803147b2d1591b67f25e8ce9e925f8e6f2a618c 20242 io.loopholelabs.latensee.main_0.0.2~1732033440_arm64.buildinfo
+Files:
+ 0d65826d60853ecf36cad08aa1100927 986 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ cfb143c3fad2a40e4428ee603e04022c 840248 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ 71f8cb494d1597d4713c4c795da51af0 20242 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440_arm64.buildinfo

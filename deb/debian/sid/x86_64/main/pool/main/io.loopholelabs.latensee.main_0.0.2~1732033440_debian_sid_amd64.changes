@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Mon, 26 Aug 2024 15:00:00 +0100
+Source: io.loopholelabs.latensee.main
+Binary: io.loopholelabs.latensee.main
+Architecture: source amd64
+Version: 0.0.2~1732033440
+Distribution: unstable
+Urgency: medium
+Maintainer: Felicitas Pojtinger <felicitas@pojtinger.com>
+Changed-By: Felicitas Pojtinger <felicitas@pojtinger.com>
+Description:
+ io.loopholelabs.latensee.main - Redis/Valkey latency visualizer
+Changes:
+ io.loopholelabs.latensee.main (0.0.2~1732033440) unstable; urgency=medium
+ .
+   * Maintenance updates to match the state of the art of hydrapp apps
+Checksums-Sha1:
+ 3f7e01a5bcffa23ee42aa75c812f07cc944ff37c 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 7469e12772f585868d7744904c9c4370e0c0aa54 840264 io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ dc119aded746853071bc6626b0057c777264b0e1 20233 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.buildinfo
+ 0f575f82705078bbee4ff0366925b2fd9540aab7 5635564 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
+Checksums-Sha256:
+ 4cd2e6580d09a44ebd69d85d6726d09d7edb765cd212097486480c37f01c8fa5 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ aeb8a2a2b0312a63c81515323e4979b18dcc7adf48b304d2d55a25701c957867 840264 io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ 65cbc5f83e8523c384f8dfc6c38ba31e1cf70417ce889a0db23ba4e19f3636a3 20233 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.buildinfo
+ bf0a25945754ed35dc9ae10bb4ea8b2c1bfb07fa3fd09462bf4a409a5371c1e7 5635564 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
+Files:
+ 2c0c2921e70e530efa26b473fae14a05 986 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 5030c67c1ba53db6f618dd2469c189fd 840264 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440.tar.xz
+ c758c9486419767e4e369e6ca2b2d58d 20233 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.buildinfo
+ 93dbae6674f56219d60360a4f6151c14 5635564 utils optional io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
