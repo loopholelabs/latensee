@@ -4,17 +4,17 @@ Binary: io.loopholelabs.latensee.main
 Architecture: amd64 source
 Version: 0.0.2~1732033440
 Checksums-Md5:
- 2c0c2921e70e530efa26b473fae14a05 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 772bb3dd11ade22be735c8057fab4699 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
  93dbae6674f56219d60360a4f6151c14 5635564 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
 Checksums-Sha1:
- 3f7e01a5bcffa23ee42aa75c812f07cc944ff37c 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 24664ac7141814913beaf5f87558cc78981edc1e 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
  0f575f82705078bbee4ff0366925b2fd9540aab7 5635564 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
 Checksums-Sha256:
- 4cd2e6580d09a44ebd69d85d6726d09d7edb765cd212097486480c37f01c8fa5 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
+ 2bbe9b5027ab6c15c73a00ab7a72eeb373a1418253ad964d5dc7814bc4c42ff5 986 io.loopholelabs.latensee.main_0.0.2~1732033440.dsc
  bf0a25945754ed35dc9ae10bb4ea8b2c1bfb07fa3fd09462bf4a409a5371c1e7 5635564 io.loopholelabs.latensee.main_0.0.2~1732033440_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Tue, 19 Nov 2024 16:28:29 +0000
+Build-Date: Sun, 24 Nov 2024 00:13:04 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1732033440
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
@@ -24,7 +24,7 @@ Installed-Build-Depends:
  automake (= 1:1.16.5-1.3),
  autopoint (= 0.22.5-2),
  autotools-dev (= 20220109.1),
- base-files (= 13.5),
+ base-files (= 13.6),
  base-passwd (= 3.6.5),
  bash (= 5.2.32-1+b2),
  binutils (= 2.43.1-5),
@@ -91,10 +91,10 @@ Installed-Build-Depends:
  libblkid1 (= 2.40.2-11),
  libbrotli1 (= 1.1.0-2+b6),
  libbz2-1.0 (= 1.0.8-6),
- libc-bin (= 2.40-3),
- libc-dev-bin (= 2.40-3),
- libc6 (= 2.40-3),
- libc6-dev (= 2.40-3),
+ libc-bin (= 2.40-4),
+ libc-dev-bin (= 2.40-4),
+ libc6 (= 2.40-4),
+ libc6-dev (= 2.40-4),
  libcap-ng0 (= 0.8.5-3+b1),
  libcap2 (= 1:2.66-5+b1),
  libcares2 (= 1.34.2-1),
@@ -168,7 +168,7 @@ Installed-Build-Depends:
  libpam-runtime (= 1.5.3-7),
  libpam0g (= 1.5.3-7+b1),
  libpcre2-8-0 (= 10.44-4),
- libperl5.40 (= 5.40.0-7),
+ libperl5.40 (= 5.40.0-8),
  libpipeline1 (= 1.5.8-1),
  libpsl5t64 (= 0.21.2-1.1+b1),
  libpython3-stdlib (= 3.12.7-1),
@@ -561,9 +561,9 @@ Installed-Build-Depends:
  openssl (= 3.3.2-2),
  openssl-provider-legacy (= 3.3.2-2),
  patch (= 2.7.6-7),
- perl (= 5.40.0-7),
- perl-base (= 5.40.0-7),
- perl-modules-5.40 (= 5.40.0-7),
+ perl (= 5.40.0-8),
+ perl-base (= 5.40.0-8),
+ perl-modules-5.40 (= 5.40.0-8),
  po-debconf (= 1.0.21+nmu1),
  python3 (= 3.12.7-1),
  python3-autocommand (= 2.2.2-3),
