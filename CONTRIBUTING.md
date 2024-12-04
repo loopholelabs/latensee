@@ -3,7 +3,7 @@
 To build and start a development version of LatenSee locally, first install [Go](https://go.dev/) and [npm](https://www.npmjs.com/), then run the following:
 
 ```shell
-$ git clone https://github.com/loopholelabs/latensee.git
+$ git clone https://github.com/loopholelabs/latensee.git --single-branch
 $ cd latensee
 $ go generate ./...
 $ go run .
