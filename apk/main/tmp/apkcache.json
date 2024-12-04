@@ -2,7 +2,7 @@
   "METADATA_VERSION": 20002,
   "allow_disabled_algorithms": false,
   "io.loopholelabs.latensee.main.apk": {
-    "hash": "e4448b54df0de8c631f57040d3c242f7ee100679670b2b0a435886500058540e",
+    "hash": "8784484401fae12f010c3ca8bbc80994689300296fcb9ab4d7084fa9d65e8168",
     "hashType": "sha256",
     "uses-permission": [
       [
@@ -17,15 +17,15 @@
       "-1": "res/drawable/icon.png"
     },
     "icons": {
-      "160": "io.loopholelabs.latensee.main.1732033440.png",
-      "640": "io.loopholelabs.latensee.main.1732033440.png",
-      "0": "io.loopholelabs.latensee.main.1732033440.png"
+      "160": "io.loopholelabs.latensee.main.1733276200.png",
+      "640": "io.loopholelabs.latensee.main.1733276200.png",
+      "0": "io.loopholelabs.latensee.main.1733276200.png"
     },
     "antiFeatures": [],
     "packageName": "io.loopholelabs.latensee.main",
-    "versionCode": 1732033440,
+    "versionCode": 1733276200,
     "name": "LatenSee (Main)",
-    "versionName": "0.0.2-1732033440",
+    "versionName": "0.0.2-1733276200",
     "minSdkVersion": 8,
     "targetSdkVersion": 34,
     "nativecode": [
@@ -37,9 +37,9 @@
     ],
     "sig": "f9f03391df254346608f000aaa228745",
     "signer": "f6152dc2d11ba208697dca56e3e6bbd66263ad7b454bf555660036320fe42425",
-    "size": 56493803,
+    "size": 56559339,
     "apkName": "io.loopholelabs.latensee.main.apk",
-    "icon": "io.loopholelabs.latensee.main.1732033440.png",
-    "added": 1733011930.072048
+    "icon": "io.loopholelabs.latensee.main.1733276200.png",
+    "added": 1733276465.952761
   }
 }
