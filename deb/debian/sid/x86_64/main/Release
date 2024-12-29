@@ -1,14 +1,14 @@
 Codename: sid
 Components: main
-Date: Sun, 22 Dec 2024 00:12:11 +0000
+Date: Sun, 29 Dec 2024 00:12:01 +0000
 Label: DEB packages for LatenSee (Main)
 Origin: LatenSee (Main) APT Repo
 Suite: sid
 MD5Sum:
- b08d952cf23e3f6fcd828e7d097c9cdd              153 Release
+ 9d8eb61d72bd3644cac65d274c3570f8              153 Release
 SHA1:
- 7d42c7453d0141ae4624c7af5659b00663d6d1e9              153 Release
+ 6e9988f1edeb63fe39e8eb4855fd0f8e2a4c77d4              153 Release
 SHA256:
- 050bd9cca563351de9c70b82a3f551bd772e9174ef59d78945e90a6ab7f939c6              153 Release
+ b1385c31951e15c35e20e3a67edc45a4ba1274b97293dbc66c2b5f9589e3f321              153 Release
 SHA512:
- 2adab90c2a4c4561a9263e74267f83478ee6099f3f2dbaf22a4fcd8c6be64f8e20f27b0093ebfd48a1a9505fff1d94a7b924333db03bc42da22c5678a7f57685              153 Release
+ 9892991a2ae96ba6e434639b0e33c87b61d4c63f394e11b57ab984219362bc6302a01046f96dec67cddc1da142ae6f56af0495d9ff12d15673dd76ae09b01160              153 Release

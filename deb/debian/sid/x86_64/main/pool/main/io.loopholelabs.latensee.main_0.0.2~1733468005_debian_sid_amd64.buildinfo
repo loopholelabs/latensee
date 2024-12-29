@@ -4,17 +4,17 @@ Binary: io.loopholelabs.latensee.main
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- 5292f2927e8b8718667d6f8bdfb6d454 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ a6c301af1fc1aa850789e723bc2a57d9 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  be9f0c1a398a4385acb24f688f2a688a 5641860 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 9bbccc1e089bb50e93011ed348ef1e1a22c0b7f8 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ b0f3c0220934f776343ddc51f0c5eac31925c531 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  fb69195ae42a7aa35c87130dbf06be63e0b3d960 5641860 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- 955d2774411cd8a305275e55c734be5c01b9b1f37c9e964de03cd23eb4712e0f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 68026f3705c2b756a761445b5ed6b09cfb77bbc31897ecc41198f375f2ed4c11 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  6d9e8a20680274779c683e036fc68a44448ce6512a1e77709399f535d915569a 5641860 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 22 Dec 2024 00:12:08 +0000
+Build-Date: Sun, 29 Dec 2024 00:11:58 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
@@ -30,19 +30,19 @@ Installed-Build-Depends:
  binutils (= 2.43.50.20241221-1),
  binutils-common (= 2.43.50.20241221-1),
  binutils-x86-64-linux-gnu (= 2.43.50.20241221-1),
- bsdextrautils (= 2.40.2-12),
- bsdutils (= 1:2.40.2-12),
+ bsdextrautils (= 2.40.2-13),
+ bsdutils (= 1:2.40.2-13),
  build-essential (= 12.12),
  bzip2 (= 1.0.8-6),
- ca-certificates (= 20240203),
+ ca-certificates (= 20241223),
  coreutils (= 9.5-1+b1),
  cpp (= 4:14.2.0-1),
  cpp-14 (= 14.2.0-11),
  cpp-14-x86-64-linux-gnu (= 14.2.0-11),
  cpp-x86-64-linux-gnu (= 4:14.2.0-1),
  dash (= 0.5.12-9),
- debconf (= 1.5.87),
- debhelper (= 13.22),
+ debconf (= 1.5.89),
+ debhelper (= 13.23),
  debianutils (= 5.21),
  desktop-file-utils (= 0.28-1),
  dh-autoreconf (= 20),
@@ -65,14 +65,14 @@ Installed-Build-Depends:
  gcc-x86-64-linux-gnu (= 4:14.2.0-1),
  gettext (= 0.22.5-3),
  gettext-base (= 0.22.5-3),
- git (= 1:2.45.2-1.2),
- git-man (= 1:2.45.2-1.2),
+ git (= 1:2.45.2-1.3),
+ git-man (= 1:2.45.2-1.3),
  golang-1.23-go (= 1.23.4-1),
  golang-1.23-src (= 1.23.4-1),
  golang-go (= 2:1.23~2),
  golang-src (= 2:1.23~2),
  grep (= 3.11-4),
- groff-base (= 1.23.0-6),
+ groff-base (= 1.23.0-7),
  gyp (= 0.16.2-1),
  gzip (= 1.12-1.2),
  handlebars (= 3:4.7.7+~4.1.0-1),
@@ -88,7 +88,7 @@ Installed-Build-Depends:
  libaudit-common (= 1:4.0.2-2),
  libaudit1 (= 1:4.0.2-2),
  libbinutils (= 2.43.50.20241221-1),
- libblkid1 (= 2.40.2-12),
+ libblkid1 (= 2.40.2-13),
  libbrotli1 (= 1.1.0-2+b6),
  libbz2-1.0 (= 1.0.8-6),
  libc-bin (= 2.40-4),
@@ -106,8 +106,8 @@ Installed-Build-Depends:
  libctf0 (= 2.43.50.20241221-1),
  libcurl3t64-gnutls (= 8.11.1-1),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
- libdebconfclient0 (= 0.274),
- libdebhelper-perl (= 13.22),
+ libdebconfclient0 (= 0.276),
+ libdebhelper-perl (= 13.23),
  libdpkg-perl (= 1.22.11),
  libelf1t64 (= 0.192-4),
  liberror-perl (= 0.17029-2),
@@ -144,13 +144,13 @@ Installed-Build-Depends:
  libkeyutils1 (= 1.6.3-4),
  libkrb5-3 (= 1.21.3-3),
  libkrb5support0 (= 1.21.3-3),
- libldap-2.5-0 (= 2.5.18+dfsg-3+b1),
+ libldap-2.5-0 (= 2.5.19+dfsg-1),
  liblsan0 (= 14.2.0-11),
  liblzma5 (= 5.6.3-1+b1),
  libmagic-mgc (= 1:5.45-3+b1),
  libmagic1t64 (= 1:5.45-3+b1),
  libmd0 (= 1.1.0-2+b1),
- libmount1 (= 2.40.2-12),
+ libmount1 (= 2.40.2-13),
  libmpc3 (= 1.3.1-1+b3),
  libmpfr6 (= 4.2.1-1+b2),
  libncursesw6 (= 6.5-2+b1),
@@ -162,7 +162,7 @@ Installed-Build-Depends:
  libnode-dev (= 20.18.1+dfsg-1),
  libnode115 (= 20.18.1+dfsg-1),
  libnsl2 (= 1.3.0-3+b3),
- libp11-kit0 (= 0.25.5-2+b1),
+ libp11-kit0 (= 0.25.5-3),
  libpam-modules (= 1.5.3-7+b1),
  libpam-modules-bin (= 1.5.3-7+b1),
  libpam-runtime (= 1.5.3-7),
@@ -171,7 +171,7 @@ Installed-Build-Depends:
  libperl5.40 (= 5.40.0-8),
  libpipeline1 (= 1.5.8-1),
  libpsl5t64 (= 0.21.2-1.1+b1),
- libpython3-stdlib (= 3.12.7-1),
+ libpython3-stdlib (= 3.12.8-1),
  libpython3.12-minimal (= 3.12.8-3),
  libpython3.12-stdlib (= 3.12.8-3),
  libquadmath0 (= 14.2.0-11),
@@ -182,7 +182,7 @@ Installed-Build-Depends:
  libseccomp2 (= 2.5.5-2),
  libselinux1 (= 3.7-3+b1),
  libsframe1 (= 2.43.50.20241221-1),
- libsmartcols1 (= 2.40.2-12),
+ libsmartcols1 (= 2.40.2-13),
  libsqlite3-0 (= 3.46.1-1),
  libssh2-1t64 (= 1.11.1-1),
  libssl-dev (= 3.3.2-2),
@@ -190,7 +190,7 @@ Installed-Build-Depends:
  libstdc++-14-dev (= 14.2.0-11),
  libstdc++6 (= 14.2.0-11),
  libstemmer0d (= 2.2.0-4+b2),
- libsystemd0 (= 257.1-3),
+ libsystemd0 (= 257.1-5),
  libtasn1-6 (= 4.19.0-3+b3),
  libtinfo6 (= 6.5-2+b1),
  libtirpc-common (= 1.3.4+ds-1.3),
@@ -199,9 +199,9 @@ Installed-Build-Depends:
  libtsan2 (= 14.2.0-11),
  libubsan1 (= 14.2.0-11),
  libuchardet0 (= 0.0.8-1+b2),
- libudev1 (= 257.1-3),
+ libudev1 (= 257.1-5),
  libunistring5 (= 1.3-1),
- libuuid1 (= 2.40.2-12),
+ libuuid1 (= 2.40.2-13),
  libuv1-dev (= 1.48.0-7),
  libuv1t64 (= 1.48.0-7),
  libxml2 (= 2.12.7+dfsg+really2.9.14-0.2+b1),
@@ -565,12 +565,12 @@ Installed-Build-Depends:
  perl-base (= 5.40.0-8),
  perl-modules-5.40 (= 5.40.0-8),
  po-debconf (= 1.0.21+nmu1),
- python3 (= 3.12.7-1),
+ python3 (= 3.12.8-1),
  python3-autocommand (= 2.2.2-3),
  python3-inflect (= 7.3.1-2),
  python3-jaraco.context (= 6.0.0-1),
  python3-jaraco.functools (= 4.1.0-1),
- python3-minimal (= 3.12.7-1),
+ python3-minimal (= 3.12.8-1),
  python3-more-itertools (= 10.5.0-1),
  python3-packaging (= 24.2-1),
  python3-pkg-resources (= 75.6.0-1),
@@ -588,7 +588,7 @@ Installed-Build-Depends:
  terser (= 5.31.3-1),
  tzdata (= 2024b-4),
  usr-is-merged (= 39),
- util-linux (= 2.40.2-12),
+ util-linux (= 2.40.2-13),
  webpack (= 5.97.1+dfsg1+~cs11.18.27-1),
  xz-utils (= 5.6.3-1+b1),
  zlib1g (= 1:1.3.dfsg+really1.3.1-1+b1)
