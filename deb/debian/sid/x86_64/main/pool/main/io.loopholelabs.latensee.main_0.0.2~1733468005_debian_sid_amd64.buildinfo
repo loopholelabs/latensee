@@ -4,25 +4,25 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- 1bc840cd4bf57626dd95301f0f5b51a8 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 4238f55f14d6ff9b114edd8717e4f62c 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  3c878873a921a32b07cf3f317eb00235 4359468 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  4e9657600efcec2370cc538ce8fe8537 5889164 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- f4803599b97327ff6d3e684a9928793058420a2b 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ c9ead1f751ee56a4a51327764ce35e156d50180b 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  7cf5bea6b74c721177737481ed4d6c8edda14cfa 4359468 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  d73efeaf38ca221b3f109e53a03ec2d6df0c5d39 5889164 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- 13a6785a1c564dfe54034d1fbb4bb085fdb2a77fb780c13706554c7a8420490f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ f63978c272c04a8ffb8685ca82f4b9f88cb71683e22a6cc1fd592a345a1ed82e 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  0e066dc4fa95a709153bdd87b0d1e870566635c34f19e9c2de55e9cc8148d033 4359468 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  c48f2b268777716b83986351aef636764bebe2ce2435832c4d3ef06469d3ba70 5889164 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 16 Mar 2025 00:12:48 +0000
+Build-Date: Sun, 23 Mar 2025 00:12:35 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.4-1),
  autoconf (= 2.72-3),
- automake (= 1:1.17-3),
+ automake (= 1:1.17-4),
  autopoint (= 0.23.1-1),
  autotools-dev (= 20220109.1),
  base-files (= 13.7),
@@ -48,12 +48,12 @@ Installed-Build-Depends:
  desktop-file-utils (= 0.28-1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.14.1-2),
- diffutils (= 1:3.10-2),
+ diffutils (= 1:3.10-3),
  dpkg (= 1.22.18),
  dpkg-dev (= 1.22.18),
  dwz (= 0.15-1+b1),
  eslint (= 6.4.0~dfsg+~6.1.9-12),
- file (= 1:5.46-2),
+ file (= 1:5.46-3),
  findutils (= 4.10.0-3),
  g++ (= 4:14.2.0-1),
  g++-14 (= 14.2.0-19),
@@ -66,8 +66,8 @@ Installed-Build-Depends:
  gcc-x86-64-linux-gnu (= 4:14.2.0-1),
  gettext (= 0.23.1-1),
  gettext-base (= 0.23.1-1),
- git (= 1:2.47.2-0.1),
- git-man (= 1:2.47.2-0.1),
+ git (= 1:2.49.0-1),
+ git-man (= 1:2.49.0-1),
  golang-1.24-go (= 1.24.1-1),
  golang-1.24-src (= 1.24.1-1),
  golang-go (= 2:1.24~2),
@@ -97,7 +97,7 @@ Installed-Build-Depends:
  libc6 (= 2.41-6),
  libc6-dev (= 2.41-6),
  libcap-ng0 (= 0.8.5-4+b1),
- libcap2 (= 1:2.75-2),
+ libcap2 (= 1:2.75-3),
  libcares2 (= 1.34.4-2.1),
  libcc1-0 (= 14.2.0-19),
  libcom-err2 (= 1.47.2-1+b1),
@@ -105,7 +105,7 @@ Installed-Build-Depends:
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
  libctf0 (= 2.44-3),
- libcurl3t64-gnutls (= 8.12.1-3),
+ libcurl3t64-gnutls (= 8.13.0~rc2-2),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
  libdebconfclient0 (= 0.277),
  libdebhelper-perl (= 13.24.1),
@@ -148,8 +148,8 @@ Installed-Build-Depends:
  libldap2 (= 2.6.9+dfsg-2),
  liblsan0 (= 14.2.0-19),
  liblzma5 (= 5.6.4-1),
- libmagic-mgc (= 1:5.46-2),
- libmagic1t64 (= 1:5.46-2),
+ libmagic-mgc (= 1:5.46-3),
+ libmagic1t64 (= 1:5.46-3),
  libmd0 (= 1.1.0-2+b1),
  libmount1 (= 2.40.4-5),
  libmpc3 (= 1.3.1-1+b3),
@@ -179,8 +179,8 @@ Installed-Build-Depends:
  librtmp1 (= 2.4+20151223.gitfa8646d.1-2+b5),
  libsasl2-2 (= 2.1.28+dfsg1-9),
  libsasl2-modules-db (= 2.1.28+dfsg1-9),
- libseccomp2 (= 2.5.5-2+b1),
- libselinux1 (= 3.8-4),
+ libseccomp2 (= 2.6.0-2),
+ libselinux1 (= 3.8.1-1),
  libsframe1 (= 2.44-3),
  libsmartcols1 (= 2.40.4-5),
  libsqlite3-0 (= 3.46.1-2),
@@ -203,10 +203,10 @@ Installed-Build-Depends:
  libuv1-dev (= 1.50.0-2),
  libuv1t64 (= 1.50.0-2),
  libxml2 (= 2.12.7+dfsg+really2.9.14-0.3+b1),
- libxmlb2 (= 0.3.21-1),
+ libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.17-1),
+ linux-libc-dev (= 6.12.19-1),
  m4 (= 1.4.19-7),
  make (= 4.4.1-1),
  man-db (= 2.13.0-1),
@@ -214,7 +214,7 @@ Installed-Build-Depends:
  media-types (= 13.0.0),
  ncurses-base (= 6.5+20250216-2),
  ncurses-bin (= 6.5+20250216-2),
- netbase (= 6.4),
+ netbase (= 6.5),
  node-abbrev (= 1.1.1+~1.1.2-1),
  node-acorn (= 8.8.1+ds+~cs25.17.7-2),
  node-agent-base (= 7.1.1~0~2024040606-5),
@@ -250,7 +250,7 @@ Installed-Build-Depends:
  node-builtins (= 5.0.1-1),
  node-cacache (= 17.0.3+~cs10.3.7-2),
  node-camelcase (= 7.0.0-3),
- node-caniuse-lite (= 1.0.30001701+dfsg+~1.0.5-1),
+ node-caniuse-lite (= 1.0.30001705+dfsg+~1.0.5-1),
  node-chalk (= 5.3.0-1),
  node-chokidar (= 3.6.0-2),
  node-chownr (= 2.0.0-3),
@@ -408,7 +408,7 @@ Installed-Build-Depends:
  node-memory-fs (= 0.5.0+~0.3.3-2),
  node-merge-stream (= 2.0.0+~1.1.2-2),
  node-micromatch (= 4.0.7+~4.0.9-1),
- node-mime (= 3.0.0+dfsg+~cs6.97.2-1),
+ node-mime (= 3.0.0+dfsg+~cs6.97.2-2),
  node-mime-types (= 2.1.35-2),
  node-mimic-fn (= 4.0.0-5),
  node-mimic-response (= 3.1.0-9),
@@ -498,7 +498,7 @@ Installed-Build-Depends:
  node-slice-ansi (= 5.0.0+~cs9.0.0-5),
  node-source-list-map (= 2.0.1+dfsg+~0.1.2-1),
  node-source-map (= 0.7.0++dfsg2+really.0.6.1-15),
- node-source-map-support (= 0.5.21+ds+~0.5.4-1),
+ node-source-map-support (= 0.5.21+ds+~0.5.10-1),
  node-spdx-correct (= 3.1.1-2),
  node-spdx-exceptions (= 2.3.0-2),
  node-spdx-expression-parse (= 3.0.1+~3.0.1-1),
@@ -579,7 +579,7 @@ Installed-Build-Depends:
  terser (= 5.38.0-1),
  tzdata (= 2025a-2),
  util-linux (= 2.40.4-5),
- webpack (= 5.97.1+dfsg1+~cs11.18.27-1),
+ webpack (= 5.97.1+dfsg1+~cs11.18.27-2),
  xz-utils (= 5.6.4-1),
  zlib1g (= 1:1.3.dfsg+really1.3.1-1+b1)
 Environment:
