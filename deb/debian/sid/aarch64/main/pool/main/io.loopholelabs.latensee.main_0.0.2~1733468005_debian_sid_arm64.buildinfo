@@ -4,23 +4,23 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- e9e20d0d6c4e8e03d20fab0f90a3f911 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 261ef312f39738b410337d59690233b8 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  771634c3f54ef6f8f4d0eabdf4e9002f 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  c9473294a50e4272dff33b7e218c17ad 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- 678acacd0237a329307928e33a25d55f7d50289a 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ abffddbdd6dcff5f006fabdfcf05e06ef6bf8b68 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  310f22e261afe7f254efb713b2eeaaef18e86c10 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  4592de92b667d4c8c3ca73711ce2be67dec42070 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- d73641a25fa0a47165007223f658f04bdf6cd50cf19c4172aca7dadcc30a59a5 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 05d06bb66c94a5228c7c090409c0386dbbb7a5cdd6dedb96ac1da948e038b602 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  6edc031e20bc1bbd4d12ecba6044b29ed8857baebec52faa1798730424cc9bd3 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  a5788f04207354d5d355f82f8e95e8fe6037c753d9d6effcbb7991806af90261 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 20 Apr 2025 00:12:06 +0000
+Build-Date: Sun, 27 Apr 2025 00:12:46 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
- appstream (= 1.0.4-1),
+ appstream (= 1.0.5-1),
  autoconf (= 2.72-3.1),
  automake (= 1:1.17-4),
  autopoint (= 0.23.1-1),
@@ -38,7 +38,7 @@ Installed-Build-Depends:
  build-essential (= 12.12),
  bzip2 (= 1.0.8-6),
  ca-certificates (= 20250419),
- coreutils (= 9.7-1),
+ coreutils (= 9.7-2),
  cpp (= 4:14.2.0-1),
  cpp-14 (= 14.2.0-19),
  cpp-14-aarch64-linux-gnu (= 14.2.0-19),
@@ -50,7 +50,7 @@ Installed-Build-Depends:
  desktop-file-utils (= 0.28-1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.14.1-2),
- diffutils (= 1:3.10-3),
+ diffutils (= 1:3.10-4),
  dpkg (= 1.22.18),
  dpkg-dev (= 1.22.18),
  dwz (= 0.15-1+b1),
@@ -83,7 +83,7 @@ Installed-Build-Depends:
  init-system-helpers (= 1.68),
  intltool-debian (= 0.35.0+20060710.6),
  libacl1 (= 2.3.2-2+b1),
- libappstream5 (= 1.0.4-1),
+ libappstream5 (= 1.0.5-1),
  libarchive-zip-perl (= 1.68-1),
  libasan8 (= 14.2.0-19),
  libatomic1 (= 14.2.0-19),
@@ -99,7 +99,7 @@ Installed-Build-Depends:
  libc6 (= 2.41-7),
  libc6-dev (= 2.41-7),
  libcap-ng0 (= 0.8.5-4+b1),
- libcap2 (= 1:2.75-6),
+ libcap2 (= 1:2.75-7),
  libcares2 (= 1.34.5-1),
  libcc1-0 (= 14.2.0-19),
  libcom-err2 (= 1.47.2-1+b1),
@@ -107,7 +107,7 @@ Installed-Build-Depends:
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
  libctf0 (= 2.44-3),
- libcurl3t64-gnutls (= 8.13.0-2),
+ libcurl3t64-gnutls (= 8.13.0-5),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
  libdebconfclient0 (= 0.278),
  libdebhelper-perl (= 13.24.2),
@@ -115,13 +115,13 @@ Installed-Build-Depends:
  libelf1t64 (= 0.192-4),
  liberror-perl (= 0.17030-1),
  libexpat1 (= 2.7.1-1),
- libffi8 (= 3.4.7-1),
+ libffi8 (= 3.4.8-2),
  libfile-stripnondeterminism-perl (= 1.14.1-2),
  libgcc-14-dev (= 14.2.0-19),
  libgcc-s1 (= 14.2.0-19),
  libgdbm-compat4t64 (= 1.24-2),
  libgdbm6t64 (= 1.24-2),
- libglib2.0-0t64 (= 2.84.1-1),
+ libglib2.0-0t64 (= 2.84.1-2),
  libgmp10 (= 2:6.3.0+dfsg-3),
  libgnutls30t64 (= 3.8.9-2),
  libgomp1 (= 14.2.0-19),
@@ -208,8 +208,8 @@ Installed-Build-Depends:
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.22-1),
- m4 (= 1.4.19-7),
+ linux-libc-dev (= 6.12.25-1),
+ m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.0-1),
  mawk (= 1.3.4.20250131-1),
@@ -363,7 +363,7 @@ Installed-Build-Depends:
  node-inherits (= 2.0.4-6),
  node-ini (= 3.0.1-2),
  node-interpret (= 2.2.0-3),
- node-ip (= 2.0.1+~1.1.3-1),
+ node-ip (= 2.0.1+~1.1.3-3),
  node-ip-regex (= 4.3.0+~4.1.1-1),
  node-is-arrayish (= 0.3.2-3),
  node-is-binary-path (= 2.1.0-5),
@@ -568,13 +568,13 @@ Installed-Build-Depends:
  po-debconf (= 1.0.21+nmu1),
  python3 (= 3.13.3-1),
  python3-minimal (= 3.13.3-1),
- python3-packaging (= 24.2-3),
+ python3-packaging (= 25.0-1),
  python3.13 (= 3.13.3-2),
  python3.13-minimal (= 3.13.3-2),
  readline-common (= 8.2-6),
  rpcsvc-proto (= 1.4.3-1+b1),
  sed (= 4.9-2+b1),
- sensible-utils (= 0.0.24),
+ sensible-utils (= 0.0.25),
  shared-mime-info (= 2.4-5+b2),
  sysvinit-utils (= 3.14-4),
  tar (= 1.35+dfsg-3.1),
