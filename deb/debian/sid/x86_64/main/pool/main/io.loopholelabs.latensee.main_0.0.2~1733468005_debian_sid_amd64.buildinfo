@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- a6a423aad2768bb5219d0dad8d20d87f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ f88e54433bfbfebf57d8845fa432faec 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  a26bf0d1522ea5e3ce5274627523b4a9 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  473ece359bf64b828ead716876acab6d 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 9c92cb270bbd50bb3283e7c536505fbb79ae542e 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 73d21cf6ce9cca878bdb061a19d0312577babe15 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  5aaf4fe8216053ba1b8c01981e60cf0783db9629 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  b5ee98cb350655ac07fb518c2e9a5f6ac99164fa 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- 30377cc4d2908e20bc27ed8b7a335a33f195a7a549fc4bf9bd0ed4b680bd8fef 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 63d32bfdacc68426076a0004a5a1ca7740464c1e3645e128d8b124616006ddac 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  02971c0010aea67e965cdb98577b87aa4be5399749d4643122123668c9203c45 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  fa56416fd831050df1820bc5430d244ac45eb586907ee45f9b1c6e8776b6aa1c 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 27 Apr 2025 00:12:28 +0000
+Build-Date: Sun, 04 May 2025 00:12:37 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -161,8 +161,8 @@ Installed-Build-Depends:
  libnghttp3-9 (= 1.8.0-1),
  libngtcp2-16 (= 1.11.0-1),
  libngtcp2-crypto-gnutls8 (= 1.11.0-1),
- libnode-dev (= 20.19.0+dfsg-2),
- libnode115 (= 20.19.0+dfsg-2),
+ libnode-dev (= 20.19.0+dfsg1-1),
+ libnode115 (= 20.19.0+dfsg1-1),
  libp11-kit0 (= 0.25.5-3),
  libpam-modules (= 1.7.0-3),
  libpam-modules-bin (= 1.7.0-3),
@@ -210,7 +210,7 @@ Installed-Build-Depends:
  linux-libc-dev (= 6.12.25-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
- man-db (= 2.13.0-1),
+ man-db (= 2.13.1-1),
  mawk (= 1.3.4.20250131-1),
  media-types (= 13.0.0),
  ncurses-base (= 6.5+20250216-2),
@@ -556,7 +556,7 @@ Installed-Build-Depends:
  node-yallist (= 4.0.0+~4.0.1-1),
  node-yargs (= 16.2.0+~16.0.4-7),
  node-yargs-parser (= 21.1.1+~21.0.0-4),
- nodejs (= 20.19.0+dfsg-2),
+ nodejs (= 20.19.0+dfsg1-1),
  npm (= 9.2.0~ds1-3),
  openssl (= 3.5.0-1),
  openssl-provider-legacy (= 3.5.0-1),
@@ -578,7 +578,7 @@ Installed-Build-Depends:
  sysvinit-utils (= 3.14-4),
  tar (= 1.35+dfsg-3.1),
  terser (= 5.38.0-1),
- tzdata (= 2025b-2),
+ tzdata (= 2025b-3),
  util-linux (= 2.41-4),
  webpack (= 5.97.1+dfsg1+~cs11.18.27-2),
  xz-utils (= 5.8.1-1),
