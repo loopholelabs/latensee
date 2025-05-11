@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- f88e54433bfbfebf57d8845fa432faec 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ e1c105d79b12c567c7396e23e820a4b2 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  a26bf0d1522ea5e3ce5274627523b4a9 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  473ece359bf64b828ead716876acab6d 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 73d21cf6ce9cca878bdb061a19d0312577babe15 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 5cdd24d02b589a16e09a4eee3dbfb208ffb2f137 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  5aaf4fe8216053ba1b8c01981e60cf0783db9629 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  b5ee98cb350655ac07fb518c2e9a5f6ac99164fa 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- 63d32bfdacc68426076a0004a5a1ca7740464c1e3645e128d8b124616006ddac 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ b25a118f039c31e30e73cb9ce2340d273bc887610d90027e039a9b6fdaa1f9c0 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  02971c0010aea67e965cdb98577b87aa4be5399749d4643122123668c9203c45 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  fa56416fd831050df1820bc5430d244ac45eb586907ee45f9b1c6e8776b6aa1c 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 04 May 2025 00:12:37 +0000
+Build-Date: Sun, 11 May 2025 00:12:46 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -27,12 +27,12 @@ Installed-Build-Depends:
  autotools-dev (= 20240727.1),
  base-files (= 13.7),
  base-passwd (= 3.6.7),
- bash (= 5.2.37-2),
+ bash (= 5.2.37-2+b1),
  binutils (= 2.44-3),
  binutils-common (= 2.44-3),
  binutils-x86-64-linux-gnu (= 2.44-3),
- bsdextrautils (= 2.41-4),
- bsdutils (= 1:2.41-4),
+ bsdextrautils (= 2.41-5),
+ bsdutils (= 1:2.41-5),
  build-essential (= 12.12),
  bzip2 (= 1.0.8-6),
  ca-certificates (= 20250419),
@@ -73,7 +73,7 @@ Installed-Build-Depends:
  golang-go (= 2:1.24~2),
  golang-src (= 2:1.24~2),
  grep (= 3.11-4),
- groff-base (= 1.23.0-7),
+ groff-base (= 1.23.0-8),
  gyp (= 0.16.2-2),
  gzip (= 1.13-1),
  handlebars (= 3:4.7.7+~4.1.0-1),
@@ -89,7 +89,7 @@ Installed-Build-Depends:
  libaudit-common (= 1:4.0.2-2),
  libaudit1 (= 1:4.0.2-2+b2),
  libbinutils (= 2.44-3),
- libblkid1 (= 2.41-4),
+ libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
  libbz2-1.0 (= 1.0.8-6),
  libc-bin (= 2.41-7),
@@ -145,14 +145,14 @@ Installed-Build-Depends:
  libkeyutils1 (= 1.6.3-6),
  libkrb5-3 (= 1.21.3-5),
  libkrb5support0 (= 1.21.3-5),
- liblastlog2-2 (= 2.41-4),
+ liblastlog2-2 (= 2.41-5),
  libldap2 (= 2.6.9+dfsg-2),
  liblsan0 (= 14.2.0-19),
  liblzma5 (= 5.8.1-1),
  libmagic-mgc (= 1:5.46-5),
  libmagic1t64 (= 1:5.46-5),
  libmd0 (= 1.1.0-2+b1),
- libmount1 (= 2.41-4),
+ libmount1 (= 2.41-5),
  libmpc3 (= 1.3.1-1+b3),
  libmpfr6 (= 4.2.2-1),
  libncursesw6 (= 6.5+20250216-2),
@@ -183,8 +183,8 @@ Installed-Build-Depends:
  libseccomp2 (= 2.6.0-2),
  libselinux1 (= 3.8.1-1),
  libsframe1 (= 2.44-3),
- libsmartcols1 (= 2.41-4),
- libsqlite3-0 (= 3.46.1-3),
+ libsmartcols1 (= 2.41-5),
+ libsqlite3-0 (= 3.46.1-4),
  libssh2-1t64 (= 1.11.1-1),
  libssl-dev (= 3.5.0-1),
  libssl3t64 (= 3.5.0-1),
@@ -200,14 +200,14 @@ Installed-Build-Depends:
  libuchardet0 (= 0.0.8-1+b2),
  libudev1 (= 257.5-2),
  libunistring5 (= 1.3-2),
- libuuid1 (= 2.41-4),
+ libuuid1 (= 2.41-5),
  libuv1-dev (= 1.50.0-2),
  libuv1t64 (= 1.50.0-2),
  libxml2 (= 2.12.7+dfsg+really2.9.14-0.4),
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.25-1),
+ linux-libc-dev (= 6.12.27-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -579,7 +579,7 @@ Installed-Build-Depends:
  tar (= 1.35+dfsg-3.1),
  terser (= 5.38.0-1),
  tzdata (= 2025b-3),
- util-linux (= 2.41-4),
+ util-linux (= 2.41-5),
  webpack (= 5.97.1+dfsg1+~cs11.18.27-2),
  xz-utils (= 5.8.1-1),
  zlib1g (= 1:1.3.dfsg+really1.3.1-1+b1)
