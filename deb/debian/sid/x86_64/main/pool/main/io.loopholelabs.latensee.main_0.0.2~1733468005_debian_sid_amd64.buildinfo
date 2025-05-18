@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- e1c105d79b12c567c7396e23e820a4b2 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ b5b13c5a42d41ba2b3778b9978255272 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  a26bf0d1522ea5e3ce5274627523b4a9 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  473ece359bf64b828ead716876acab6d 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 5cdd24d02b589a16e09a4eee3dbfb208ffb2f137 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ c17e4bc5a85ecfb2d6293e356c24fa5ef8cf064f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  5aaf4fe8216053ba1b8c01981e60cf0783db9629 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  b5ee98cb350655ac07fb518c2e9a5f6ac99164fa 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- b25a118f039c31e30e73cb9ce2340d273bc887610d90027e039a9b6fdaa1f9c0 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 03d9cdde441dd18082cdbf80f5f834ee20da7d3a306a361dd0b0428ce3e34119 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  02971c0010aea67e965cdb98577b87aa4be5399749d4643122123668c9203c45 4359228 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  fa56416fd831050df1820bc5430d244ac45eb586907ee45f9b1c6e8776b6aa1c 5886976 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 11 May 2025 00:12:46 +0000
+Build-Date: Sun, 18 May 2025 00:13:02 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -25,7 +25,7 @@ Installed-Build-Depends:
  automake (= 1:1.17-4),
  autopoint (= 0.23.1-2),
  autotools-dev (= 20240727.1),
- base-files (= 13.7),
+ base-files (= 13.8),
  base-passwd (= 3.6.7),
  bash (= 5.2.37-2+b1),
  binutils (= 2.44-3),
@@ -92,10 +92,10 @@ Installed-Build-Depends:
  libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
  libbz2-1.0 (= 1.0.8-6),
- libc-bin (= 2.41-7),
- libc-dev-bin (= 2.41-7),
- libc6 (= 2.41-7),
- libc6-dev (= 2.41-7),
+ libc-bin (= 2.41-8),
+ libc-dev-bin (= 2.41-8),
+ libc6 (= 2.41-8),
+ libc6-dev (= 2.41-8),
  libcap-ng0 (= 0.8.5-4+b1),
  libcap2 (= 1:2.75-7),
  libcares2 (= 1.34.5-1),
@@ -203,7 +203,7 @@ Installed-Build-Depends:
  libuuid1 (= 2.41-5),
  libuv1-dev (= 1.50.0-2),
  libuv1t64 (= 1.50.0-2),
- libxml2 (= 2.12.7+dfsg+really2.9.14-0.4),
+ libxml2 (= 2.12.7+dfsg+really2.9.14-1),
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
@@ -526,7 +526,7 @@ Installed-Build-Depends:
  node-type-check (= 0.4.0+dfsg-3),
  node-typedarray (= 0.0.7-1),
  node-typedarray-to-buffer (= 4.0.0-2),
- node-undici (= 7.3.0+dfsg1+~cs24.12.11-1),
+ node-undici (= 7.3.0+dfsg1+~cs24.12.11-2),
  node-unicode-canonical-property-names-ecmascript (= 2.0.0-2),
  node-unicode-match-property-ecmascript (= 2.0.0-2),
  node-unicode-match-property-value-ecmascript (= 2.1.0+ds-1),
