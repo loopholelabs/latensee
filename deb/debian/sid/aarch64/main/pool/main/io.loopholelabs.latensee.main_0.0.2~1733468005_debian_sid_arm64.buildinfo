@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- f69294a598654884230fdcdeb50690c0 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 0433ff99441f072a3d2441febd21db33 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  771634c3f54ef6f8f4d0eabdf4e9002f 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  c9473294a50e4272dff33b7e218c17ad 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- 3b26def61d92edb6094f675eebe570acff3005e6 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 0e974c563233b776d8c47c5c01f068bf0c6b1992 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  310f22e261afe7f254efb713b2eeaaef18e86c10 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  4592de92b667d4c8c3ca73711ce2be67dec42070 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- 010768818a3b1558511462d32909e7f69008e4c72a2332cb90c7f61decea0827 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 87e42f75cf72c7d51f0fec19e8fb5d1889b5adc9abfcb182a6545e7874814a75 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  6edc031e20bc1bbd4d12ecba6044b29ed8857baebec52faa1798730424cc9bd3 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  a5788f04207354d5d355f82f8e95e8fe6037c753d9d6effcbb7991806af90261 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 25 May 2025 00:13:22 +0000
+Build-Date: Sun, 01 Jun 2025 00:14:01 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -68,8 +68,8 @@ Installed-Build-Depends:
  gcc-aarch64-linux-gnu (= 4:14.2.0-1),
  gettext (= 0.23.1-2),
  gettext-base (= 0.23.1-2),
- git (= 1:2.49.0-1),
- git-man (= 1:2.49.0-1),
+ git (= 1:2.49.0-2),
+ git-man (= 1:2.49.0-2),
  golang-1.24-go (= 1.24.2-2),
  golang-1.24-src (= 1.24.2-2),
  golang-go (= 2:1.24~2),
@@ -129,7 +129,7 @@ Installed-Build-Depends:
  libgssapi-krb5-2 (= 1.21.3-5),
  libhogweed6t64 (= 3.10.1-1),
  libhwasan0 (= 14.2.0-19),
- libicu76 (= 76.1-3),
+ libicu76 (= 76.1-4),
  libidn2-0 (= 2.3.8-2),
  libisl23 (= 0.27-1),
  libitm1 (= 14.2.0-19),
@@ -148,7 +148,7 @@ Installed-Build-Depends:
  libkrb5-3 (= 1.21.3-5),
  libkrb5support0 (= 1.21.3-5),
  liblastlog2-2 (= 2.41-5),
- libldap2 (= 2.6.9+dfsg-2),
+ libldap2 (= 2.6.10+dfsg-1),
  liblsan0 (= 14.2.0-19),
  liblzma5 (= 5.8.1-1),
  libmagic-mgc (= 1:5.46-5),
@@ -185,21 +185,21 @@ Installed-Build-Depends:
  libselinux1 (= 3.8.1-1),
  libsframe1 (= 2.44-3),
  libsmartcols1 (= 2.41-5),
- libsqlite3-0 (= 3.46.1-4),
+ libsqlite3-0 (= 3.46.1-6),
  libssh2-1t64 (= 1.11.1-1),
- libssl-dev (= 3.5.0-1),
- libssl3t64 (= 3.5.0-1),
+ libssl-dev (= 3.5.0-2),
+ libssl3t64 (= 3.5.0-2),
  libstdc++-14-dev (= 14.2.0-19),
  libstdc++6 (= 14.2.0-19),
  libstemmer0d (= 2.2.0-4+b2),
- libsystemd0 (= 257.5-2),
+ libsystemd0 (= 257.6-1),
  libtasn1-6 (= 4.20.0-2),
  libtinfo6 (= 6.5+20250216-2),
  libtool (= 2.5.4-4),
  libtsan2 (= 14.2.0-19),
  libubsan1 (= 14.2.0-19),
  libuchardet0 (= 0.0.8-1+b2),
- libudev1 (= 257.5-2),
+ libudev1 (= 257.6-1),
  libunistring5 (= 1.3-2),
  libuuid1 (= 2.41-5),
  libuv1-dev (= 1.50.0-2),
@@ -208,7 +208,7 @@ Installed-Build-Depends:
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.29-1),
+ linux-libc-dev (= 6.12.30-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -559,8 +559,8 @@ Installed-Build-Depends:
  node-yargs-parser (= 21.1.1+~21.0.0-4),
  nodejs (= 20.19.2+dfsg-1),
  npm (= 9.2.0~ds1-3),
- openssl (= 3.5.0-1),
- openssl-provider-legacy (= 3.5.0-1),
+ openssl (= 3.5.0-2),
+ openssl-provider-legacy (= 3.5.0-2),
  patch (= 2.8-1),
  perl (= 5.40.1-3),
  perl-base (= 5.40.1-3),
