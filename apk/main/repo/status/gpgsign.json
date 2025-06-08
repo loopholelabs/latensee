@@ -1,1 +1,1 @@
-{"/etc/issue.net":"Debian GNU/Linux 12","commandLine":["/usr/bin/fdroid gpgsign"],"endTimestamp":1748736825376,"signed":["entry.json","index-v1.json","index-v2.json","io.loopholelabs.latensee.main.apk"],"startTimestamp":1748736824000,"subcommand":"gpgsign"}
+{"/etc/issue.net":"Debian GNU/Linux 12","commandLine":["/usr/bin/fdroid gpgsign"],"endTimestamp":1749341568985,"signed":["entry.json","index-v1.json","index-v2.json","io.loopholelabs.latensee.main.apk"],"startTimestamp":1749341567000,"subcommand":"gpgsign"}

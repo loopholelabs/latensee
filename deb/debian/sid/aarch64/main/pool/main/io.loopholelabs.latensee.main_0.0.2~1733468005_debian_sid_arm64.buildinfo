@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- 0433ff99441f072a3d2441febd21db33 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ bc02b89aa93a7632999416c65268d471 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  771634c3f54ef6f8f4d0eabdf4e9002f 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  c9473294a50e4272dff33b7e218c17ad 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- 0e974c563233b776d8c47c5c01f068bf0c6b1992 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 549a08f4f17d6b05343a42282312704007773cba 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  310f22e261afe7f254efb713b2eeaaef18e86c10 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  4592de92b667d4c8c3ca73711ce2be67dec42070 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- 87e42f75cf72c7d51f0fec19e8fb5d1889b5adc9abfcb182a6545e7874814a75 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ a6be23634f7a192533ffac67b498c5c4a582cc66406c5a1276119a4e54d00810 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  6edc031e20bc1bbd4d12ecba6044b29ed8857baebec52faa1798730424cc9bd3 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  a5788f04207354d5d355f82f8e95e8fe6037c753d9d6effcbb7991806af90261 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 01 Jun 2025 00:14:01 +0000
+Build-Date: Sun, 08 Jun 2025 00:13:27 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -38,7 +38,7 @@ Installed-Build-Depends:
  build-essential (= 12.12),
  bzip2 (= 1.0.8-6),
  ca-certificates (= 20250419),
- coreutils (= 9.7-2),
+ coreutils (= 9.7-3),
  cpp (= 4:14.2.0-1),
  cpp-14 (= 14.2.0-19),
  cpp-14-aarch64-linux-gnu (= 14.2.0-19),
@@ -46,13 +46,13 @@ Installed-Build-Depends:
  dash (= 0.5.12-12),
  debconf (= 1.5.91),
  debhelper (= 13.24.2),
- debianutils (= 5.22),
+ debianutils (= 5.23.1),
  desktop-file-utils (= 0.28-1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.14.1-2),
  diffutils (= 1:3.10-4),
- dpkg (= 1.22.19),
- dpkg-dev (= 1.22.19),
+ dpkg (= 1.22.20),
+ dpkg-dev (= 1.22.20),
  dwz (= 0.15-1+b1),
  eslint (= 6.4.0~dfsg+~6.1.9-12),
  file (= 1:5.46-5),
@@ -75,7 +75,7 @@ Installed-Build-Depends:
  golang-go (= 2:1.24~2),
  golang-src (= 2:1.24~2),
  grep (= 3.11-4+b1),
- groff-base (= 1.23.0-8),
+ groff-base (= 1.23.0-9),
  gyp (= 0.16.2-2),
  gzip (= 1.13-1),
  handlebars (= 3:4.7.7+~4.1.0-1),
@@ -99,7 +99,7 @@ Installed-Build-Depends:
  libc6 (= 2.41-8),
  libc6-dev (= 2.41-8),
  libcap-ng0 (= 0.8.5-4+b1),
- libcap2 (= 1:2.75-7),
+ libcap2 (= 1:2.75-8),
  libcares2 (= 1.34.5-1),
  libcc1-0 (= 14.2.0-19),
  libcom-err2 (= 1.47.2-1+b1),
@@ -107,11 +107,11 @@ Installed-Build-Depends:
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
  libctf0 (= 2.44-3),
- libcurl3t64-gnutls (= 8.13.0-5),
+ libcurl3t64-gnutls (= 8.14.1-1),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
  libdebconfclient0 (= 0.278),
  libdebhelper-perl (= 13.24.2),
- libdpkg-perl (= 1.22.19),
+ libdpkg-perl (= 1.22.20),
  libelf1t64 (= 0.192-4),
  liberror-perl (= 0.17030-1),
  libexpat1 (= 2.7.1-1),
@@ -174,9 +174,9 @@ Installed-Build-Depends:
  libperl5.40 (= 5.40.1-3),
  libpipeline1 (= 1.5.8-1),
  libpsl5t64 (= 0.21.2-1.1+b1),
- libpython3-stdlib (= 3.13.3-1),
- libpython3.13-minimal (= 3.13.3-4),
- libpython3.13-stdlib (= 3.13.3-4),
+ libpython3-stdlib (= 3.13.4-1),
+ libpython3.13-minimal (= 3.13.4-1),
+ libpython3.13-stdlib (= 3.13.4-1),
  libreadline8t64 (= 8.2-6),
  librtmp1 (= 2.4+20151223.gitfa8646d.1-2+b5),
  libsasl2-2 (= 2.1.28+dfsg1-9),
@@ -566,11 +566,11 @@ Installed-Build-Depends:
  perl-base (= 5.40.1-3),
  perl-modules-5.40 (= 5.40.1-3),
  po-debconf (= 1.0.21+nmu1),
- python3 (= 3.13.3-1),
- python3-minimal (= 3.13.3-1),
+ python3 (= 3.13.4-1),
+ python3-minimal (= 3.13.4-1),
  python3-packaging (= 25.0-1),
- python3.13 (= 3.13.3-4),
- python3.13-minimal (= 3.13.3-4),
+ python3.13 (= 3.13.4-1),
+ python3.13-minimal (= 3.13.4-1),
  readline-common (= 8.2-6),
  rpcsvc-proto (= 1.4.3-1+b1),
  sed (= 4.9-2+b1),
