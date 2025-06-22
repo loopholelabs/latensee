@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- c038c6321e92fdd6fa0ee368e91ea889 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
- 771634c3f54ef6f8f4d0eabdf4e9002f 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
- c9473294a50e4272dff33b7e218c17ad 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
+ fb841c70131249af27e369210808d55d 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 186bd4739a138efbf7691e21038038c1 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
+ d294ad5b9bf8943bc5473b6259064be0 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- f0f10b31452abbae62962559807a4002bc0e1440 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
- 310f22e261afe7f254efb713b2eeaaef18e86c10 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
- 4592de92b667d4c8c3ca73711ce2be67dec42070 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
+ 49c601f59cfc4f83fe1054d20cb8b3d44d11fa41 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ b179f7146a9d682bd74fbcf3f781f2c66eede8ce 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
+ 1005e2681e8f09e09f0c1d210cfda62a76595365 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- 0a074089ab511bc1354cf23d8f22d6d34e44c360ec86ab1a65ca00155979cb16 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
- 6edc031e20bc1bbd4d12ecba6044b29ed8857baebec52faa1798730424cc9bd3 4090792 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
- a5788f04207354d5d355f82f8e95e8fe6037c753d9d6effcbb7991806af90261 5299108 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
+ 06f836ab1399273502eef69961d5364c07aecd2054fbd23fe69e30f82e6b673f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 2f24399a95c8905c1d12e353a30a782276690a3019bbd50bab36778880cef307 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
+ 212b85c9343e754dc4fc83d231de62bd12ca448319cde2b7108708ebb3d34d9d 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 15 Jun 2025 00:13:19 +0000
+Build-Date: Sun, 22 Jun 2025 00:12:56 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -68,10 +68,10 @@ Installed-Build-Depends:
  gcc-aarch64-linux-gnu (= 4:14.2.0-1),
  gettext (= 0.23.1-2),
  gettext-base (= 0.23.1-2),
- git (= 1:2.49.0-2),
- git-man (= 1:2.49.0-2),
- golang-1.24-go (= 1.24.2-2),
- golang-1.24-src (= 1.24.2-2),
+ git (= 1:2.50.0-1),
+ git-man (= 1:2.50.0-1),
+ golang-1.24-go (= 1.24.4-1),
+ golang-1.24-src (= 1.24.4-1),
  golang-go (= 2:1.24~2),
  golang-src (= 2:1.24~2),
  grep (= 3.11-4+b1),
@@ -94,10 +94,10 @@ Installed-Build-Depends:
  libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
  libbz2-1.0 (= 1.0.8-6),
- libc-bin (= 2.41-8),
- libc-dev-bin (= 2.41-8),
- libc6 (= 2.41-8),
- libc6-dev (= 2.41-8),
+ libc-bin (= 2.41-9),
+ libc-dev-bin (= 2.41-9),
+ libc6 (= 2.41-9),
+ libc6-dev (= 2.41-9),
  libcap-ng0 (= 0.8.5-4+b1),
  libcap2 (= 1:2.75-8),
  libcares2 (= 1.34.5-1),
@@ -107,7 +107,7 @@ Installed-Build-Depends:
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
  libctf0 (= 2.44-3),
- libcurl3t64-gnutls (= 8.14.1-1),
+ libcurl3t64-gnutls (= 8.14.1-2),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
  libdebconfclient0 (= 0.278),
  libdebhelper-perl (= 13.24.2),
@@ -121,7 +121,7 @@ Installed-Build-Depends:
  libgcc-s1 (= 14.2.0-19),
  libgdbm-compat4t64 (= 1.24-2),
  libgdbm6t64 (= 1.24-2),
- libglib2.0-0t64 (= 2.84.2-1),
+ libglib2.0-0t64 (= 2.84.3-1),
  libgmp10 (= 2:6.3.0+dfsg-3),
  libgnutls30t64 (= 3.8.9-2),
  libgomp1 (= 14.2.0-19),
@@ -208,7 +208,7 @@ Installed-Build-Depends:
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.32-1),
+ linux-libc-dev (= 6.12.33-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -248,11 +248,11 @@ Installed-Build-Depends:
  node-binary-extensions (= 2.2.0-2),
  node-brace-expansion (= 2.0.1+~1.1.0-2),
  node-braces (= 3.0.3+~3.0.5-1),
- node-browserslist (= 4.24.4+~cs6.3.22-1),
+ node-browserslist (= 4.25.0+~cs6.3.22-1),
  node-builtins (= 5.0.1-1),
  node-cacache (= 17.0.3+~cs10.3.7-2),
  node-camelcase (= 7.0.0-3),
- node-caniuse-lite (= 1.0.30001705+dfsg+~1.0.5-1),
+ node-caniuse-lite (= 1.0.30001723+dfsg+~1.0.5-1),
  node-chalk (= 5.3.0-1),
  node-chokidar (= 3.6.0-3),
  node-chownr (= 2.0.0-3),
@@ -296,7 +296,7 @@ Installed-Build-Depends:
  node-depd (= 2.0.0-2),
  node-diff (= 5.0.0~dfsg+~5.0.1-4),
  node-doctrine (= 3.0.0-4),
- node-electron-to-chromium (= 1.5.109-1),
+ node-electron-to-chromium (= 1.5.166-1),
  node-encoding (= 0.1.13-2),
  node-enhanced-resolve (= 5.15.0-1),
  node-envinfo (= 7.11.0+~cs14.3.0-3),
