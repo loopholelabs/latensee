@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- e6f77b2ee1b6837c77b67978f8219cca 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 8c0ff3e5f23b2758295e7e1264f4c3d4 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  d06f6fe6a72701ef744b634e1f1b6ea0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  274ed7ad9c2719f5188e519dfeaca434 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 1db619827f3eea7cfa8c01e029a7bd44f828c58e 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ a210f8b3fb3c4569e02ceb3e285bdf15164a2302 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  546a65e26e2703fb72939c4bdbf7a112884cc1e0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  72d6ef7750ba35f1c7722b9c246eb2fdca7d7738 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- e3c7a49570d1441aa294cf994ec52a05b96c00ec8aacf85586bc43089a32b6d8 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ fa8aebfe2e98c28133169395386a0a37bf606caef59c4e345e085b92ad80098d 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  ffb510f0bb9fe6bfd7b3fe5086ecd5568c751674e924671d5e240f7fbb109bb0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  978d32c951f30617eaff4abaf34118e15a9dac9ef4daf0405efa9b9cf759912f 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 29 Jun 2025 00:13:44 +0000
+Build-Date: Sun, 06 Jul 2025 00:13:36 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -49,8 +49,8 @@ Installed-Build-Depends:
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.14.1-2),
  diffutils (= 1:3.10-4),
- dpkg (= 1.22.20),
- dpkg-dev (= 1.22.20),
+ dpkg (= 1.22.21),
+ dpkg-dev (= 1.22.21),
  dwz (= 0.15-1+b1),
  eslint (= 6.4.0~dfsg+~6.1.9-12),
  file (= 1:5.46-5),
@@ -86,8 +86,8 @@ Installed-Build-Depends:
  libasan8 (= 14.2.0-19),
  libatomic1 (= 14.2.0-19),
  libattr1 (= 1:2.5.2-3),
- libaudit-common (= 1:4.0.2-2),
- libaudit1 (= 1:4.0.2-2+b2),
+ libaudit-common (= 1:4.0.5-1),
+ libaudit1 (= 1:4.0.5-1),
  libbinutils (= 2.44-3),
  libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
@@ -109,7 +109,7 @@ Installed-Build-Depends:
  libdb5.3t64 (= 5.3.28+dfsg2-9),
  libdebconfclient0 (= 0.279),
  libdebhelper-perl (= 13.24.2),
- libdpkg-perl (= 1.22.20),
+ libdpkg-perl (= 1.22.21),
  libelf1t64 (= 0.192-4),
  liberror-perl (= 0.17030-1),
  libexpat1 (= 2.7.1-1),
@@ -164,15 +164,15 @@ Installed-Build-Depends:
  libnode-dev (= 20.19.2+dfsg-1),
  libnode115 (= 20.19.2+dfsg-1),
  libp11-kit0 (= 0.25.5-3),
- libpam-modules (= 1.7.0-3),
- libpam-modules-bin (= 1.7.0-3),
- libpam-runtime (= 1.7.0-3),
- libpam0g (= 1.7.0-3),
+ libpam-modules (= 1.7.0-5),
+ libpam-modules-bin (= 1.7.0-5),
+ libpam-runtime (= 1.7.0-5),
+ libpam0g (= 1.7.0-5),
  libpcre2-8-0 (= 10.45-1),
- libperl5.40 (= 5.40.1-3),
+ libperl5.40 (= 5.40.1-5),
  libpipeline1 (= 1.5.8-1),
  libpsl5t64 (= 0.21.2-1.1+b1),
- libpython3-stdlib (= 3.13.4-1),
+ libpython3-stdlib (= 3.13.5-1),
  libpython3.13-minimal (= 3.13.5-2),
  libpython3.13-stdlib (= 3.13.5-2),
  libquadmath0 (= 14.2.0-19),
@@ -207,7 +207,7 @@ Installed-Build-Depends:
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.33-1),
+ linux-libc-dev (= 6.12.35-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -561,12 +561,12 @@ Installed-Build-Depends:
  openssl (= 3.5.0-2),
  openssl-provider-legacy (= 3.5.0-2),
  patch (= 2.8-2),
- perl (= 5.40.1-3),
- perl-base (= 5.40.1-3),
- perl-modules-5.40 (= 5.40.1-3),
+ perl (= 5.40.1-5),
+ perl-base (= 5.40.1-5),
+ perl-modules-5.40 (= 5.40.1-5),
  po-debconf (= 1.0.21+nmu1),
- python3 (= 3.13.4-1),
- python3-minimal (= 3.13.4-1),
+ python3 (= 3.13.5-1),
+ python3-minimal (= 3.13.5-1),
  python3-packaging (= 25.0-1),
  python3.13 (= 3.13.5-2),
  python3.13-minimal (= 3.13.5-2),
