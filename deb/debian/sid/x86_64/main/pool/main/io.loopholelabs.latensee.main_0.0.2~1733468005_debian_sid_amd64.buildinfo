@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- 8c0ff3e5f23b2758295e7e1264f4c3d4 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 39ab76607d64dd5e0d919577251fd8c2 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  d06f6fe6a72701ef744b634e1f1b6ea0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  274ed7ad9c2719f5188e519dfeaca434 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- a210f8b3fb3c4569e02ceb3e285bdf15164a2302 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ d04e23c8ff2bf0727610db7b9ec4ba6ceeb0562f 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  546a65e26e2703fb72939c4bdbf7a112884cc1e0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  72d6ef7750ba35f1c7722b9c246eb2fdca7d7738 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- fa8aebfe2e98c28133169395386a0a37bf606caef59c4e345e085b92ad80098d 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ e98bd231af07256f3eb29c3c052f3a563da39e51a2145e8b4b12398c2af5be77 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  ffb510f0bb9fe6bfd7b3fe5086ecd5568c751674e924671d5e240f7fbb109bb0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  978d32c951f30617eaff4abaf34118e15a9dac9ef4daf0405efa9b9cf759912f 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 06 Jul 2025 00:13:36 +0000
+Build-Date: Sun, 13 Jul 2025 00:14:35 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -121,7 +121,7 @@ Installed-Build-Depends:
  libgdbm6t64 (= 1.24-2),
  libglib2.0-0t64 (= 2.84.3-1),
  libgmp10 (= 2:6.3.0+dfsg-3),
- libgnutls30t64 (= 3.8.9-2),
+ libgnutls30t64 (= 3.8.9-3),
  libgomp1 (= 14.2.0-19),
  libgprofng0 (= 2.44-3),
  libgssapi-krb5-2 (= 1.21.3-5),
@@ -207,7 +207,7 @@ Installed-Build-Depends:
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
- linux-libc-dev (= 6.12.35-1),
+ linux-libc-dev (= 6.12.37-1),
  m4 (= 1.4.19-8),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
