@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- a42e22ca9626106ca4ae0b6ff68f2c80 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ e540d1d0f60400bc15744ccc68b4fb03 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  186bd4739a138efbf7691e21038038c1 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  d294ad5b9bf8943bc5473b6259064be0 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- 3eda0fc992c9e2a6648ae6b5a8e97a89d62fd866 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 1ba3587e888e5960e3dc5f1ece5778c56833bd10 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  b179f7146a9d682bd74fbcf3f781f2c66eede8ce 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  1005e2681e8f09e09f0c1d210cfda62a76595365 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- a8c0023acddefc4a74b7efabaaaef9c4a0643d2d9000a19d4c7a754aced17b12 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 780ebe20369b5d056f1f40aea50c9d9734ea3078127e7d7e913be0084ef089cd 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  2f24399a95c8905c1d12e353a30a782276690a3019bbd50bab36778880cef307 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  212b85c9343e754dc4fc83d231de62bd12ca448319cde2b7108708ebb3d34d9d 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 20 Jul 2025 00:13:47 +0000
+Build-Date: Sun, 27 Jul 2025 00:14:32 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -27,7 +27,7 @@ Installed-Build-Depends:
  autotools-dev (= 20240727.1),
  base-files (= 13.8),
  base-passwd (= 3.6.7),
- bash (= 5.2.37-2+b3),
+ bash (= 5.2.37-2+b4),
  binutils (= 2.44-3),
  binutils-aarch64-linux-gnu (= 2.44-3),
  binutils-common (= 2.44-3),
@@ -102,14 +102,14 @@ Installed-Build-Depends:
  libcap2 (= 1:2.75-9),
  libcares2 (= 1.34.5-1),
  libcc1-0 (= 14.2.0-19),
- libcom-err2 (= 1.47.2-3+b1),
+ libcom-err2 (= 1.47.2-3+b2),
  libcrypt-dev (= 1:4.4.38-1),
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
  libctf0 (= 2.44-3),
  libcurl3t64-gnutls (= 8.14.1-2),
  libdb5.3t64 (= 5.3.28+dfsg2-9),
- libdebconfclient0 (= 0.279),
+ libdebconfclient0 (= 0.280),
  libdebhelper-perl (= 13.24.2),
  libdpkg-perl (= 1.22.21),
  libelf1t64 (= 0.192-4),
@@ -185,7 +185,7 @@ Installed-Build-Depends:
  libselinux1 (= 3.8.1-1),
  libsframe1 (= 2.44-3),
  libsmartcols1 (= 2.41-5),
- libsqlite3-0 (= 3.46.1-6),
+ libsqlite3-0 (= 3.46.1-7),
  libssh2-1t64 (= 1.11.1-1),
  libssl-dev (= 3.5.1-1),
  libssl3t64 (= 3.5.1-1),
