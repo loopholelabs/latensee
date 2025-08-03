@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- e540d1d0f60400bc15744ccc68b4fb03 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 6c4e68b263d375186f5df46356006ca4 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  186bd4739a138efbf7691e21038038c1 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  d294ad5b9bf8943bc5473b6259064be0 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha1:
- 1ba3587e888e5960e3dc5f1ece5778c56833bd10 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 994a642fdc2f630fb95b7b4894ba05004421e4d7 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  b179f7146a9d682bd74fbcf3f781f2c66eede8ce 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  1005e2681e8f09e09f0c1d210cfda62a76595365 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Checksums-Sha256:
- 780ebe20369b5d056f1f40aea50c9d9734ea3078127e7d7e913be0084ef089cd 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 928a47525a9637af1f2d7ae9303a06a59acae0589ec68d8296ebcef4e9df2851 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  2f24399a95c8905c1d12e353a30a782276690a3019bbd50bab36778880cef307 4091540 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_arm64.deb
  212b85c9343e754dc4fc83d231de62bd12ca448319cde2b7108708ebb3d34d9d 5297620 io.loopholelabs.latensee.main_0.0.2~1733468005_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 27 Jul 2025 00:14:32 +0000
+Build-Date: Sun, 03 Aug 2025 00:14:06 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -27,7 +27,7 @@ Installed-Build-Depends:
  autotools-dev (= 20240727.1),
  base-files (= 13.8),
  base-passwd (= 3.6.7),
- bash (= 5.2.37-2+b4),
+ bash (= 5.2.37-2+b5),
  binutils (= 2.44-3),
  binutils-aarch64-linux-gnu (= 2.44-3),
  binutils-common (= 2.44-3),
@@ -46,7 +46,7 @@ Installed-Build-Depends:
  dash (= 0.5.12-12),
  debconf (= 1.5.91),
  debhelper (= 13.24.2),
- debianutils (= 5.23.1),
+ debianutils (= 5.23.2),
  desktop-file-utils (= 0.28-1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.14.1-2),
@@ -68,8 +68,8 @@ Installed-Build-Depends:
  gcc-aarch64-linux-gnu (= 4:14.2.0-1),
  gettext (= 0.23.1-2),
  gettext-base (= 0.23.1-2),
- git (= 1:2.50.0-1),
- git-man (= 1:2.50.0-1),
+ git (= 1:2.50.1-0.1),
+ git-man (= 1:2.50.1-0.1),
  golang-1.24-go (= 1.24.4-1),
  golang-1.24-src (= 1.24.4-1),
  golang-go (= 2:1.24~2),
@@ -94,15 +94,15 @@ Installed-Build-Depends:
  libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
  libbz2-1.0 (= 1.0.8-6),
- libc-bin (= 2.41-10),
- libc-dev-bin (= 2.41-10),
- libc6 (= 2.41-10),
- libc6-dev (= 2.41-10),
+ libc-bin (= 2.41-11),
+ libc-dev-bin (= 2.41-11),
+ libc6 (= 2.41-11),
+ libc6-dev (= 2.41-11),
  libcap-ng0 (= 0.8.5-4+b1),
- libcap2 (= 1:2.75-9),
+ libcap2 (= 1:2.75-10+b1),
  libcares2 (= 1.34.5-1),
  libcc1-0 (= 14.2.0-19),
- libcom-err2 (= 1.47.2-3+b2),
+ libcom-err2 (= 1.47.2-3+b3),
  libcrypt-dev (= 1:4.4.38-1),
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.44-3),
@@ -171,7 +171,7 @@ Installed-Build-Depends:
  libpam-runtime (= 1.7.0-5),
  libpam0g (= 1.7.0-5),
  libpcre2-8-0 (= 10.45-1),
- libperl5.40 (= 5.40.1-5),
+ libperl5.40 (= 5.40.1-6),
  libpipeline1 (= 1.5.8-1),
  libpsl5t64 (= 0.21.2-1.1+b1),
  libpython3-stdlib (= 3.13.5-1),
@@ -204,7 +204,7 @@ Installed-Build-Depends:
  libuuid1 (= 2.41-5),
  libuv1-dev (= 1.50.0-2),
  libuv1t64 (= 1.50.0-2),
- libxml2 (= 2.12.7+dfsg+really2.9.14-2),
+ libxml2 (= 2.12.7+dfsg+really2.9.14-2.1),
  libxmlb2 (= 0.3.22-1),
  libyaml-0-2 (= 0.2.5-2),
  libzstd1 (= 1.5.7+dfsg-1),
@@ -562,9 +562,9 @@ Installed-Build-Depends:
  openssl (= 3.5.1-1),
  openssl-provider-legacy (= 3.5.1-1),
  patch (= 2.8-2),
- perl (= 5.40.1-5),
- perl-base (= 5.40.1-5),
- perl-modules-5.40 (= 5.40.1-5),
+ perl (= 5.40.1-6),
+ perl-base (= 5.40.1-6),
+ perl-modules-5.40 (= 5.40.1-6),
  po-debconf (= 1.0.21+nmu1),
  python3 (= 3.13.5-1),
  python3-minimal (= 3.13.5-1),
