@@ -2,7 +2,7 @@
   "METADATA_VERSION": 20002,
   "allow_disabled_algorithms": false,
   "io.loopholelabs.latensee.main.apk": {
-    "hash": "e32f8a5ae6d22b42da867b74d6d9674551a828ab4e6aded340be6faf252d3cca",
+    "hash": "c9de4dd6940bad8d09f70b45384fd45f7f86ab474a6f982688e2cbc78cefeacb",
     "hashType": "sha256",
     "uses-permission": [
       [
@@ -40,6 +40,6 @@
     "size": 56559339,
     "apkName": "io.loopholelabs.latensee.main.apk",
     "icon": "io.loopholelabs.latensee.main.1733468005.png",
-    "added": 1754179992.03245
+    "added": 1754784790.229943
   }
 }

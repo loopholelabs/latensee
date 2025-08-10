@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1733468005
 Checksums-Md5:
- a94023234c95687b0aaf8cfbc02e674d 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 13f68578485abf9c2ec2b983b0dabae7 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  d06f6fe6a72701ef744b634e1f1b6ea0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  274ed7ad9c2719f5188e519dfeaca434 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha1:
- 08363716859b164328b277a0f19dd676d7a9e144 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ a22742d5abc5dbad1b96a281cbc2e245b1e91700 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  546a65e26e2703fb72939c4bdbf7a112884cc1e0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  72d6ef7750ba35f1c7722b9c246eb2fdca7d7738 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Checksums-Sha256:
- 41c8476b849a25e1b340aa28aea85edab0243fba200a6d1887ceaf942eb092b0 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
+ 4f12de02d0b4a393bdb4444b3428a97438d58013ee915899c56ef49131e6642a 986 io.loopholelabs.latensee.main_0.0.2~1733468005.dsc
  ffb510f0bb9fe6bfd7b3fe5086ecd5568c751674e924671d5e240f7fbb109bb0 4359812 io.loopholelabs.latensee.main-dbgsym_0.0.2~1733468005_amd64.deb
  978d32c951f30617eaff4abaf34118e15a9dac9ef4daf0405efa9b9cf759912f 5890312 io.loopholelabs.latensee.main_0.0.2~1733468005_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 03 Aug 2025 00:13:54 +0000
+Build-Date: Sun, 10 Aug 2025 00:13:55 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1733468005
 Installed-Build-Depends:
  appstream (= 1.0.5-1),
@@ -92,10 +92,10 @@ Installed-Build-Depends:
  libblkid1 (= 2.41-5),
  libbrotli1 (= 1.1.0-2+b7),
  libbz2-1.0 (= 1.0.8-6),
- libc-bin (= 2.41-11),
- libc-dev-bin (= 2.41-11),
- libc6 (= 2.41-11),
- libc6-dev (= 2.41-11),
+ libc-bin (= 2.41-12),
+ libc-dev-bin (= 2.41-12),
+ libc6 (= 2.41-12),
+ libc6-dev (= 2.41-12),
  libcap-ng0 (= 0.8.5-4+b1),
  libcap2 (= 1:2.75-10+b1),
  libcares2 (= 1.34.5-1),
