@@ -15,20 +15,20 @@ Changes:
  .
    * Maintenance updates to match the state of the art of hydrapp apps
 Checksums-Sha1:
- 6906f5b8e8b0e1bc0cc687283f4c141a5cc3d94a 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- 72bd14067d179fddcf2cc610b6c892c17e7a292b 862628 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- 0f2160a99dd616d28df754e62cd220b4e6b5c097 4092280 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
- 1c947d864a6a9e0c6f764f4ac1150a38c4b9887f 20273 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
- e35e9db1c0d9d597e0c41b051bb70f97b62aa105 5299384 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
+ 20de6ab34ede5cab72f99f7f18ff67cb637fe6c5 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 2991354033f67b0cd2b2a7d0384c1ffc6d41a5c7 862576 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 1ad6dcc343c3cd95d513dd326f8d67b2155244e8 4092860 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
+ 8d8073f356a50a26bf82e5d24ba16e0f9a9070bd 20277 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
+ 69cef3322e6ded24ee5e22ba574e7502791a3d5a 5301060 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
 Checksums-Sha256:
- 3c7655a850dcdc019e601216e408003f5b48362302f5aad1c41581930151f06b 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- df09c97673425993b5557d3890002357d254c38c3deed0b90c74301acb300263 862628 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- e91b5aa273742ef4efa624bb7a6606d24952c0f7fa2e3e4ec539aa0939e0019e 4092280 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
- 0486fe46fc88f766c9504e75f2535eddeda1827663027155b8fef989dffea821 20273 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
- 80abd81890386675ed6ad0390e7a02821a03a8cc2dcff5ff881bb6475cd19a69 5299384 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
+ 08efb7dec6371604add7035e92128f9b35da199040a3bc661e525e462c8f9af3 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 7051ad12332a6753393f9273875783980899f88845c7b5e2ffa3d1f94fb98405 862576 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 19e685de9102af46202c230625fd86c029845dae2b1d5926947b98c640949fac 4092860 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
+ b49c4aa1432ccd07bf9ebb89673d1d4707b37929c5231b9382149fad3eb07352 20277 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
+ 32b5353227961086545b2041381b11e54e78cd703bf4949befa8120e59ed750e 5301060 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
 Files:
- 15368a9d449c81fad3eb6961be066dc5 986 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- 848d508b9fed53f549fef4789902cde0 862628 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- 2b00ce2bebccef5200d7a71179b6a8e5 4092280 debug optional io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
- ab979a95558ef823a29fcfad3c7337af 20273 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
- b37232a1312193525c47b7b290967080 5299384 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
+ 67eeb437dfbb3e0ecfe94f1da36695b5 986 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 5aad309e7f5ef84b43852efc698fa3b6 862576 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 46a74c9a03250517709b891607a7a01b 4092860 debug optional io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
+ 8ecca22d57fcfa84b82432b5628f3c64 20277 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.buildinfo
+ d1c70b1966a72251b3242f4dd05bb2a6 5301060 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
