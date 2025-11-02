@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: amd64 source
 Version: 0.0.2~1758498850
 Checksums-Md5:
- 0716f398e2fc829a4058fb777af62f1f 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 399c19385542b7f0ff89a93125d6b470 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  dce1d1ddfa7093fd91e540aeeaaa8c4f 4362240 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_amd64.deb
  d47282d4fd7c2851ea61ef3e2f5e5035 5893096 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.deb
 Checksums-Sha1:
- f937d42c0bcd482d9669c6e2eecfe210d398cbac 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 7e2aba77d1ef88226cd36e718860fc48d4fd2307 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  554be1ecf984b423acfb16d077e9337ab77a8406 4362240 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_amd64.deb
  6ed1ff7b64e77d8f4d20b610a3b009a26cd62bab 5893096 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.deb
 Checksums-Sha256:
- c94f70f6642d690feeab0869899f280f17b8b26c58355e7cb96068cd63152e87 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 987d6d81d114a47efe33136ee49f6895bd84778f87d1e0fd46a65487e78f407f 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  fe1e8960eccd66d927f805993eebb096741a22c7f009e2cc050bba3eff42e412 4362240 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_amd64.deb
  cd99ed6c01d061f4c542f5456d6fd2b781151fc499c31207b90b0e45d918b083 5893096 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sun, 26 Oct 2025 00:12:49 +0000
+Build-Date: Sun, 02 Nov 2025 00:12:54 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1758498850
 Installed-Build-Depends:
  appstream (= 1.1.1-1),
@@ -104,12 +104,12 @@ Installed-Build-Depends:
  libcrypt1 (= 1:4.4.38-1),
  libctf-nobfd0 (= 2.45-8),
  libctf0 (= 2.45-8),
- libcurl3t64-gnutls (= 8.17.0~rc2-1),
+ libcurl3t64-gnutls (= 8.17.0~rc3-1),
  libdb5.3t64 (= 5.3.28+dfsg2-10),
  libdebconfclient0 (= 0.280),
  libdebhelper-perl (= 13.28),
  libdpkg-perl (= 1.22.21),
- libelf1t64 (= 0.193-3),
+ libelf1t64 (= 0.194-1),
  liberror-perl (= 0.17030-1),
  libexpat1 (= 2.7.3-1),
  libffi8 (= 3.5.2-2),
@@ -121,7 +121,7 @@ Installed-Build-Depends:
  libgdbm6t64 (= 1.26-1),
  libglib2.0-0t64 (= 2.86.1-1),
  libgmp10 (= 2:6.3.0+dfsg-5),
- libgnutls30t64 (= 3.8.10-2),
+ libgnutls30t64 (= 3.8.10-3),
  libgomp1 (= 15.2.0-7),
  libgprofng0 (= 2.45-8),
  libgssapi-krb5-2 (= 1.21.3-5),
@@ -191,14 +191,14 @@ Installed-Build-Depends:
  libstdc++-15-dev (= 15.2.0-7),
  libstdc++6 (= 15.2.0-7),
  libstemmer0d (= 3.0.1-1),
- libsystemd0 (= 258.1-1),
+ libsystemd0 (= 258.1-2),
  libtasn1-6 (= 4.20.0-2),
  libtinfo6 (= 6.5+20250216-2),
  libtool (= 2.5.4-7),
  libtsan2 (= 15.2.0-7),
  libubsan1 (= 15.2.0-7),
  libuchardet0 (= 0.0.8-2),
- libudev1 (= 258.1-1),
+ libudev1 (= 258.1-2),
  libunistring5 (= 1.3-2),
  libuuid1 (= 2.41.2-4),
  libuv1-dev (= 1.51.0-2),
@@ -206,7 +206,7 @@ Installed-Build-Depends:
  libxml2-16 (= 2.15.1+dfsg-0.3),
  libxmlb2 (= 0.3.24-2),
  libzstd1 (= 1.5.7+dfsg-2),
- linux-libc-dev (= 6.16.12-2),
+ linux-libc-dev (= 6.17.6-1),
  m4 (= 1.4.20-2),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -217,7 +217,7 @@ Installed-Build-Depends:
  netbase (= 6.5),
  node-abbrev (= 1.1.1+~1.1.2-1),
  node-acorn (= 8.8.1+ds+~cs25.17.7-2),
- node-agent-base (= 7.1.4~0~2025070717-2),
+ node-agent-base (= 7.1.4~0~2025070717-6),
  node-ajv (= 8.12.0~ds+~2.1.1-5),
  node-ajv-keywords (= 5.1.0-4),
  node-ampproject-remapping (= 2.2.0+~cs5.15.37-1),
@@ -231,7 +231,7 @@ Installed-Build-Depends:
  node-argparse (= 2.0.1-2),
  node-arrify (= 2.0.1-3),
  node-assert (= 2.0.0+~cs3.9.8-2),
- node-async (= 3.2.6+dfsg-2),
+ node-async (= 3.2.6+dfsg-3),
  node-async-each (= 1.0.3-3),
  node-babel-helper-define-polyfill-provider (= 0.3.3~0~20220913+ds1-1),
  node-babel-plugin-add-module-exports (= 1.0.4+dfsg1~cs5.8.0-4),
@@ -239,8 +239,8 @@ Installed-Build-Depends:
  node-babel-plugin-polyfill-corejs2 (= 0.3.3~0~20220913+ds1-1),
  node-babel-plugin-polyfill-corejs3 (= 0.6.0~0~20220913+ds1-1),
  node-babel-plugin-polyfill-regenerator (= 0.4.1~0~20220913+ds1-1),
- node-babel7 (= 7.20.15+ds1+~cs214.269.168-8),
- node-babel7-runtime (= 7.20.15+ds1+~cs214.269.168-8),
+ node-babel7 (= 7.20.15+ds1+~cs214.269.168-9),
+ node-babel7-runtime (= 7.20.15+ds1+~cs214.269.168-9),
  node-balanced-match (= 2.0.0-1),
  node-base64-js (= 1.5.1+dfsg+~1.3.0-2),
  node-binary-extensions (= 2.2.0-2),
@@ -248,9 +248,9 @@ Installed-Build-Depends:
  node-braces (= 3.0.3+~3.0.5-1),
  node-browserslist (= 4.26.0+~cs8.11.27-1),
  node-builtins (= 5.0.1-1),
- node-cacache (= 17.0.3+~cs10.3.7-2),
+ node-cacache (= 17.0.3+~cs10.3.7-3),
  node-camelcase (= 7.0.0-3),
- node-caniuse-lite (= 1.0.30001742+dfsg+~1.0.5-1),
+ node-caniuse-lite (= 1.0.30001752+dfsg+~1.0.5-1),
  node-chalk (= 5.6.0-1),
  node-chokidar (= 3.6.0-3),
  node-chownr (= 2.0.0-3),
@@ -278,7 +278,7 @@ Installed-Build-Depends:
  node-corepack (= 0.24.0-5),
  node-css-loader (= 6.8.1+~cs14.0.17-1),
  node-css-selector-tokenizer (= 0.8.0+~cs4.8.3-1),
- node-data-uri-to-buffer (= 6.0.2~0~2025070717-2),
+ node-data-uri-to-buffer (= 6.0.2~0~2025070717-6),
  node-debbundle-es-to-primitive (= 1.2.1+~cs9.7.25-2),
  node-debug (= 4.4.1+~4.1.12-1),
  node-decamelize (= 4.0.0-2),
@@ -305,7 +305,7 @@ Installed-Build-Depends:
  node-es-module-lexer (= 1.1.0+dfsg-3),
  node-es6-error (= 4.1.1-5),
  node-escape-string-regexp (= 4.0.0-2),
- node-escodegen (= 2.1.0+dfsg+~0.0.8-1),
+ node-escodegen (= 2.1.0+dfsg+~0.0.8-2),
  node-eslint-scope (= 7.1.1+~3.7.4-1),
  node-eslint-utils (= 3.0.0-3),
  node-eslint-visitor-keys (= 3.3.0+~1.0.0-1),
@@ -348,8 +348,8 @@ Installed-Build-Depends:
  node-has-flag (= 5.0.1-1),
  node-has-unicode (= 2.0.1-5),
  node-hosted-git-info (= 6.1.1-2),
- node-http-proxy-agent (= 7.0.2~0~2025070717-2),
- node-https-proxy-agent (= 7.0.6~0~2025070717-2),
+ node-http-proxy-agent (= 7.0.2~0~2025070717-6),
+ node-https-proxy-agent (= 7.0.6~0~2025070717-6),
  node-iconv-lite (= 0.6.3-3),
  node-icss-utils (= 5.1.0+~5.1.0-1),
  node-ieee754 (= 1.2.1-3),
@@ -382,8 +382,8 @@ Installed-Build-Depends:
  node-isexe (= 2.0.0+~2.0.1-5),
  node-isobject (= 4.0.0-2),
  node-istanbul (= 0.4.5+repack10+~cs98.25.59-3),
- node-jest-debbundle (= 29.6.2~ds1+~cs73.45.28-7),
- node-jest-worker (= 29.6.2~ds1+~cs73.45.28-7),
+ node-jest-debbundle (= 29.6.2~ds1+~cs73.45.28-8),
+ node-jest-worker (= 29.6.2~ds1+~cs73.45.28-8),
  node-js-tokens (= 8.0.0-2),
  node-js-yaml (= 4.1.0+dfsg+~4.0.5-7),
  node-jsesc (= 3.0.2+~3.0.1-1),
@@ -484,7 +484,7 @@ Installed-Build-Depends:
  node-resolve-from (= 5.0.0+~3.1.0+~3.3.0+~2.0.0-1),
  node-resumer (= 0.0.0-6),
  node-retry (= 0.13.1.+~cs2.19.16-1),
- node-rimraf (= 3.0.2-2),
+ node-rimraf (= 3.0.2-3),
  node-run-queue (= 2.0.0-3),
  node-safe-buffer (= 5.2.1+~cs2.1.2-3),
  node-schema-utils (= 4.2.0~ds-3),
@@ -512,9 +512,9 @@ Installed-Build-Depends:
  node-strip-bom (= 4.0.0-2),
  node-strip-eof (= 3.0.0-5),
  node-strip-json-comments (= 4.0.0-4),
- node-supports-color (= 8.1.1+~8.1.1-1),
+ node-supports-color (= 10.2.2+ds-2),
  node-tapable (= 2.2.1-3),
- node-tape (= 5.6.1+~cs8.20.19-3),
+ node-tape (= 5.6.1+~cs8.20.19-4),
  node-tar (= 6.2.1+~cs7.0.8-1),
  node-terser (= 5.38.0-1),
  node-text-table (= 0.2.0-4),
@@ -532,7 +532,7 @@ Installed-Build-Depends:
  node-unicode-match-property-value-ecmascript (= 2.2.0+ds-1),
  node-unicode-property-aliases-ecmascript (= 2.1.0+ds-1),
  node-unique-filename (= 1.1.1+ds-2),
- node-uri-js (= 4.4.0+dfsg-8),
+ node-uri-js (= 4.4.0+dfsg-9),
  node-util (= 0.12.5+~1.0.10-1),
  node-util-deprecate (= 1.0.2-4),
  node-uuid (= 8.3.2+~8.3.4-1),
