@@ -4,20 +4,20 @@ Binary: io.loopholelabs.latensee.main io.loopholelabs.latensee.main-dbgsym
 Architecture: arm64 source
 Version: 0.0.2~1758498850
 Checksums-Md5:
- a4918780d839fc9f8fd76cb43e886d13 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 5eff63dcc96f6cfc8a60f29a95338d95 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  e4e498460fcdc3ebdb0951be431d9e3d 4092852 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
  af3eb88c60f6a8b38092f16490359dc0 5302284 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
 Checksums-Sha1:
- bceb0a511f58d9aaae03662c18585837594747c6 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 19b08c813a450821d647ba56c3fd6e4ceb319d06 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  b51a799793417e6602cdb993755c697d1c89d3df 4092852 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
  3af28d6801675d8d05cf7232ed86d995df47028a 5302284 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
 Checksums-Sha256:
- 33b06e657df7284ba81a052f642ab5a22088717f5d8a61793d4e57da06be0404 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 7c296b388b51cb6258d1ca5c2ba8f95387010cec2a9d130ce8f59c3451c5dfba 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
  569f9f54578487a512ac9b7e12c5733910b8b35f5aac01c994560e28bc6e4211 4092852 io.loopholelabs.latensee.main-dbgsym_0.0.2~1758498850_arm64.deb
  52032d030c3c051f2d275220f6588aa479d6be896e81976e1e093d0fac0299aa 5302284 io.loopholelabs.latensee.main_0.0.2~1758498850_arm64.deb
 Build-Origin: Debian
 Build-Architecture: arm64
-Build-Date: Sun, 02 Nov 2025 00:12:02 +0000
+Build-Date: Sun, 09 Nov 2025 00:13:02 +0000
 Build-Path: /build/io.loopholelabs.latensee.main-0.0.2~1758498850
 Installed-Build-Depends:
  appstream (= 1.1.1-1),
@@ -26,7 +26,7 @@ Installed-Build-Depends:
  autopoint (= 0.23.1-2),
  autotools-dev (= 20240727.1),
  base-files (= 14),
- base-passwd (= 3.6.7),
+ base-passwd (= 3.6.8),
  bash (= 5.3-1),
  binutils (= 2.45-8),
  binutils-aarch64-linux-gnu (= 2.45-8),
@@ -102,11 +102,11 @@ Installed-Build-Depends:
  libcares2 (= 1.34.5-1),
  libcc1-0 (= 15.2.0-7),
  libcom-err2 (= 1.47.2-3+b3),
- libcrypt-dev (= 1:4.4.38-1),
- libcrypt1 (= 1:4.4.38-1),
+ libcrypt-dev (= 1:4.5.1-1),
+ libcrypt1 (= 1:4.5.1-1),
  libctf-nobfd0 (= 2.45-8),
  libctf0 (= 2.45-8),
- libcurl3t64-gnutls (= 8.17.0~rc3-1),
+ libcurl3t64-gnutls (= 8.17.0-1),
  libdb5.3t64 (= 5.3.28+dfsg2-10),
  libdebconfclient0 (= 0.280),
  libdebhelper-perl (= 13.28),
@@ -121,7 +121,7 @@ Installed-Build-Depends:
  libgcc-s1 (= 15.2.0-7),
  libgdbm-compat4t64 (= 1.26-1),
  libgdbm6t64 (= 1.26-1),
- libglib2.0-0t64 (= 2.86.1-1),
+ libglib2.0-0t64 (= 2.86.1-2),
  libgmp10 (= 2:6.3.0+dfsg-5),
  libgnutls30t64 (= 3.8.10-3),
  libgomp1 (= 15.2.0-7),
@@ -163,8 +163,8 @@ Installed-Build-Depends:
  libnghttp3-9 (= 1.12.0-1),
  libngtcp2-16 (= 1.16.0-1),
  libngtcp2-crypto-gnutls8 (= 1.16.0-1),
- libnode-dev (= 20.19.5+dfsg+~cs20.19.12-4),
- libnode115 (= 20.19.5+dfsg+~cs20.19.12-4),
+ libnode-dev (= 20.19.5+dfsg+~cs20.19.24-1),
+ libnode115 (= 20.19.5+dfsg+~cs20.19.24-1),
  libp11-kit0 (= 0.25.9-2),
  libpam-modules (= 1.7.0-5),
  libpam-modules-bin (= 1.7.0-5),
@@ -184,6 +184,7 @@ Installed-Build-Depends:
  libseccomp2 (= 2.6.0-2),
  libselinux1 (= 3.9-2),
  libsframe2 (= 2.45-8),
+ libsimdutf27 (= 7.5.0-2),
  libsmartcols1 (= 2.41.2-4),
  libsqlite3-0 (= 3.46.1-8),
  libssh2-1t64 (= 1.11.1-1),
@@ -207,7 +208,7 @@ Installed-Build-Depends:
  libxml2-16 (= 2.15.1+dfsg-0.3),
  libxmlb2 (= 0.3.24-2),
  libzstd1 (= 1.5.7+dfsg-2),
- linux-libc-dev (= 6.17.6-1),
+ linux-libc-dev (= 6.17.7-2),
  m4 (= 1.4.20-2),
  make (= 4.4.1-2),
  man-db (= 2.13.1-1),
@@ -247,7 +248,7 @@ Installed-Build-Depends:
  node-binary-extensions (= 2.2.0-2),
  node-brace-expansion (= 2.0.1+~1.1.0-2),
  node-braces (= 3.0.3+~3.0.5-1),
- node-browserslist (= 4.26.0+~cs8.11.27-1),
+ node-browserslist (= 4.27.0+~cs8.11.53-2),
  node-builtins (= 5.0.1-1),
  node-cacache (= 17.0.3+~cs10.3.7-3),
  node-camelcase (= 7.0.0-3),
@@ -295,7 +296,7 @@ Installed-Build-Depends:
  node-depd (= 2.0.0-2),
  node-diff (= 5.0.0~dfsg+~5.0.1-4),
  node-doctrine (= 3.0.0-4),
- node-electron-to-chromium (= 1.5.218-1),
+ node-electron-to-chromium (= 1.5.244-1),
  node-encoding (= 0.1.13-2),
  node-enhanced-resolve (= 5.15.0-1),
  node-envinfo (= 7.11.0+~cs14.3.0-4),
@@ -485,7 +486,7 @@ Installed-Build-Depends:
  node-resolve-from (= 5.0.0+~3.1.0+~3.3.0+~2.0.0-1),
  node-resumer (= 0.0.0-6),
  node-retry (= 0.13.1.+~cs2.19.16-1),
- node-rimraf (= 3.0.2-3),
+ node-rimraf (= 3.0.2-4),
  node-run-queue (= 2.0.0-3),
  node-safe-buffer (= 5.2.1+~cs2.1.2-3),
  node-schema-utils (= 4.2.0~ds-3),
@@ -513,7 +514,7 @@ Installed-Build-Depends:
  node-strip-bom (= 4.0.0-2),
  node-strip-eof (= 3.0.0-5),
  node-strip-json-comments (= 4.0.0-4),
- node-supports-color (= 10.2.2+ds-2),
+ node-supports-color (= 10.2.2+ds-3),
  node-tapable (= 2.2.1-3),
  node-tape (= 5.6.1+~cs8.20.19-4),
  node-tar (= 6.2.1+~cs7.0.8-1),
@@ -557,7 +558,7 @@ Installed-Build-Depends:
  node-yallist (= 4.0.0+~4.0.1-2),
  node-yargs (= 16.2.0+~16.0.4-7),
  node-yargs-parser (= 21.1.1+~21.0.0-4),
- nodejs (= 20.19.5+dfsg+~cs20.19.12-4),
+ nodejs (= 20.19.5+dfsg+~cs20.19.24-1),
  npm (= 9.2.0~ds1-3),
  openssl (= 3.5.4-1),
  openssl-provider-legacy (= 3.5.4-1),
