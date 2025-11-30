@@ -12,8 +12,8 @@ Build-Depends: debhelper (>= 12.10), git (>= 2.20.1), golang-go (>= 1.21), ca-ce
 Package-List:
  io.loopholelabs.latensee.main deb utils optional arch=any
 Checksums-Sha1:
- a8596102abc57e2fc298b18b21be08edf87e55ef 862648 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 07ad1cad4ef3f753cfb1d28ce53fe83ba518cad5 862608 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
 Checksums-Sha256:
- fcbc9ffad46f9663e602ba4285489b7da451aa6b49e0299b71bb6861439e0dbc 862648 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 4447711d1ed09ffe6305a3a068e16093d77903997742db14a8029c0e2e9b5bb3 862608 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
 Files:
- dab4b3d7627bf8a70b6c8eb7cf1320da 862648 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ b60eb562e9cf16a1a2b9f9d74e06ca91 862608 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
