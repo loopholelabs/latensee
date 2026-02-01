@@ -12,14 +12,14 @@ Changes:
  .
    * Maintenance updates to match the state of the art of hydrapp apps
 Checksums-Sha1:
- 7599b5e236b293c06783fc46e6063af400cefbef 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- ebbb9a199bb1d1238ce4fabcba33f332a1d794ee 862584 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- ba4c440cb31ee9ada88cd7bf4ae0f8a94ef42b24 20507 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
+ 00cf71d6e3b553aa8b8c777385674bef7f4f5b55 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 97cc89014795f3e4d1b49dbbac0b6fe74fc7c5e4 862616 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 41a454c16e8be6b178af8d7cf418b0bce20616d7 20477 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
 Checksums-Sha256:
- e5eb07d8877d898c2aee18010d2db9d6e047c991ad107ca73d60a4dbfddf3cad 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- e7c92ed7837286e707bf01c022672d2c670e35f0df314be2fc8e42eea7e575ad 862584 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- 3e93e5f42a9d00cf759a6e77b6749ef4479e413695c127d9de0733c3347c08bb 20507 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
+ 9e10bec4bf7e480a9eb4e528befe36139685c370583e195952b26ee7cb340224 986 io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 4dbf72b622edc6b2455378095eee5061196d7a7a8810b6326a9e15596c51486a 862616 io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ 9dc48cfe269e24913be737733ecf0d8b829d4df44965c7b611462c8cfc96379e 20477 io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
 Files:
- 16ad5230b8a39058a044ed08ee1e4655 986 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
- b886fb269ac212d7c4199fc066323586 862584 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
- 85b86a85da1563795de4bab6b767e32b 20507 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
+ 5e4fbda36c7f63b0ea9bca9277d952de 986 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.dsc
+ 8e3db8195884242cfd04b50623d2a2ec 862616 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850.tar.xz
+ b12bd5f103c68319f8a96d3e10496a53 20477 utils optional io.loopholelabs.latensee.main_0.0.2~1758498850_amd64.buildinfo
